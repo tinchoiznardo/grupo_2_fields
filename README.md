@@ -9,15 +9,15 @@ Publico: Nuestros productos estan destinados a un publico de clase media-alta ju
 Sitios de Referencia 
 
 General - Estetica
-https://www.fieldsoutfitting.com/ - Marca real con pagina template de tiendanube
-https://peppersarg.com/
-https://www.aynotdead.com/
-https://www.garzongarcia.com.ar/
-https://www.thisisfeliznavidad.com
+https://www.fieldsoutfitting.com/ - Marca real con pagina template de tiendanube  
+https://peppersarg.com/ 
+https://www.aynotdead.com/  
+https://www.garzongarcia.com.ar/  
+https://www.thisisfeliznavidad.com  
 
 Especifico
 https://peppersarg.com/ - Pop up con compras recientes
-https://roparevolver.com/tienda/ - galeria con cambio de foto en hover
+https://roparevolver.com/tienda/ - galeria con cambio de foto en hover y nav con fondo blanco en hover y menu desplegable
 
 
 Integrantes:
