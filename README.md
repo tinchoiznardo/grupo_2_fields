@@ -19,6 +19,8 @@ Especifico
 https://peppersarg.com/ - Pop up con compras recientes
 https://roparevolver.com/tienda/ - galeria con cambio de foto en hover y nav con fondo blanco en hover y menu desplegable
 
+Link al wireframe:
+https://www.figma.com/file/bqUkF4yFBVMbHytrIIRbNa/Fields-Wireframe?node-id=0%3A1
 
 Integrantes:
 Martin Iznardo: 28 años. Estudios: Licenciado en Administracion. Profesión: Credit Risk Analyst
