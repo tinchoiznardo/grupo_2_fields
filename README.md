@@ -32,3 +32,5 @@ Integrantes:
 Martin Iznardo: 28 años. Estudios: Licenciado en Administracion. Profesión: Credit Risk Analyst
 Matias Gonzalo: 28 años. Margin Analyst
 Santiago Rodriguez: 21 años. Estudiante: Ingenieria en sonido. Profesión: Musico
+
+Tablero de Trello: https://trello.com/b/yRxEMjdY/dh-fields-outfitting
