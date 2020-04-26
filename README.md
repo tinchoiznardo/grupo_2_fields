@@ -24,5 +24,7 @@ https://www.figma.com/file/bqUkF4yFBVMbHytrIIRbNa/Fields-Wireframe?node-id=0%3A1
 
 Integrantes:
 Martin Iznardo: 28 años. Estudios: Licenciado en Administracion. Profesión: Credit Risk Analyst
-Matias Gonzalo: 28 años. Margin Analyst
+Matias Gonzalo: 28 años.Estudiante: Contador Público. Profesión: Margin Analyst
 Santiago Rodriguez: 21 años. Estudiante: Ingenieria en sonido. Profesión: Musico
+
+Tablero: https://trello.com/b/yRxEMjdY/dh-fields-outfitting
