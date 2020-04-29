@@ -1,0 +1,61 @@
+*{
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.contenedor{
+    width: 100%;
+    border-bottom: 1px solid black;
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 100px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.nav{
+    width: 25px;
+    margin: auto;
+}
+
+.carrito{
+    width: 25px;
+    margin: auto;
+}
+
+.navbar{
+    border: 1px solid black;
+    /*display: none;*/
+}
+
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar a{
+    color: black; 
+}
+
+.cwcontainer{
+    width: 100%;
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.conoceMas{
+}
