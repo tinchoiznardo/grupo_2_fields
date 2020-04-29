@@ -33,4 +33,8 @@ Martin Iznardo: 28 años. Estudios: Licenciado en Administracion. Profesión: Cr
 Matias Gonzalo: 28 años.Estudiante: Contador Público. Profesión: Margin Analyst
 Santiago Rodriguez: 21 años. Estudiante: Ingenieria en sonido. Profesión: Musico
 
+<<<<<<< HEAD
 Tablero: https://trello.com/b/yRxEMjdY/dh-fields-outfitting
+=======
+Tablero de Trello: https://trello.com/b/yRxEMjdY/dh-fields-outfitting
+>>>>>>> b278f189aad2dd63fa0ed6a1ddf0f9dd21fd7522
