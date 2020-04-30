@@ -5,18 +5,27 @@
 
 .contenedor{
     width: 100%;
-    border-bottom: 1px solid black;
-
+    border-bottom: 1px  ;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+    position: fixed;
+    background-color: rgba(255,255,255, 0.5);
+}
+.menu{
+    display: none;
+}
+
+.desplegable{
+    background-color: ;
 }
 
 .logo{
     width: 100px;
+    background-color: ;
 }
 
 .logo img{
@@ -31,6 +40,7 @@
 .carrito{
     width: 25px;
     margin: auto;
+    background-color: ;
 }
 
 .navbar{
@@ -48,14 +58,57 @@
 
 .cwcontainer{
     width: 100%;
-
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 
-.conoceMas{
+.cwcontainer img{
+    object-fit: cover;
+    height: 406px;
+    width: auto;
+}
+.conoceMas img{
+    width: 100%;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    height: 81.11vh;
+}
+.galeriaFooter {
+   position: relative;
+   display: flex;
+    
+}
+
+.mision{
+    background-color: rgba(95, 93, 93, 0.5);;
+    color: white;
+    font-size: 0.7em;
+    font-style: italic;
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    font-weight: bold;
+    margin: 10% ;
+    padding: 10%;
+    width: auto;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul{
+    
+    text-decoration: none;
+    list-style: none;
+     ;
+}
+
+footer a{
+    color: white;
 }
