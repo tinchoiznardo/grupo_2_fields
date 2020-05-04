@@ -42,7 +42,8 @@
 }
 
 .navbar{
-    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
     /*display: none;*/
     /* position: fixed;
     width: 100%;
@@ -149,3 +150,18 @@ footer a{
     margin-left: 35%;
     margin-top: 0%
 }
+
+.galeria{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.fg{
+    padding: 5%;
+}
+
+.fg img{
+    width: 70%;
+} 
