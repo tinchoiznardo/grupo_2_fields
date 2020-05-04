@@ -1,0 +1,53 @@
+*{
+    font-family: sans-serif;
+}
+
+.logo{
+    width: 100px;
+    background-color: ;
+}
+
+.logo img{
+    width: 100%;
+}
+
+
+.carrito img{
+    width: 40px;
+    margin-top: 5px;
+}
+
+.logo{
+    width: 100px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.contenedor{
+    width: 100%;
+    border-bottom: 1px  ;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: rgba(255,255,255, 0.5);
+}
+
+.navegacion{
+    background-color: rgba(255,255,255, 0.5);
+    border: none;
+}
+
+.boton{
+    background-color: rgba(255,255,255, 0.5);
+}
+
+.navbar-toggler .line{
+    background-color: black;
+}
+

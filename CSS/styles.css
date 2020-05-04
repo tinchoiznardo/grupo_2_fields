@@ -1,13 +1,10 @@
 *{
     font-family: sans-serif;
-    width: 100%;
 }
 
 .contenedor{
     width: 100%;
     border-bottom: 1px  ;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -15,6 +12,7 @@
     position: fixed;
     background-color: rgba(255,255,255, 0.5);
 }
+
 .menu{
     display: none;
 }
@@ -37,8 +35,8 @@
     margin: auto;
 }
 
-.carrito{
-    width: 25px;
+.carrito img{
+    width: 40px;
     margin: auto;
     background-color: ;
 }
@@ -46,6 +44,9 @@
 .navbar{
     border: 1px solid black;
     /*display: none;*/
+    /* position: fixed;
+    width: 100%;
+    margin-top: 0%; */
 }
 
 .navbar ul{
@@ -111,4 +112,40 @@ footer ul{
 
 footer a{
     color: white;
+}
+
+.compras{
+    display: block;
+    color: black;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5%;
+    margin-bottom: 2%;
+    border-radius: 20px;;
+    background-color:  rgba(97, 97, 97, 0.5);
+
+    
+}
+
+.compras img{
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.comprasSub{
+    margin-bottom: 10%;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.close{
+    position:absolute;
+    margin-left: 35%;
+    margin-top: 0%
 }
