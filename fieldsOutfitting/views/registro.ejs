@@ -1,0 +1,79 @@
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/header.ejs') %>
+    
+    
+    <main>
+             
+        <div class="container">
+            
+            <div class="card bg-light">
+                <article class="card-body mx-auto" style="max-width: 400px;">
+                    <h4 class="card-title mt-3 text-center">Creá tu Cuenta</h4>
+                    <p class="text-center">Bienvenido/a a Fields!</p>
+                    <p>
+                        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Registro via facebook</a>
+                    </p>
+                    <p class="divider-text">
+                        <span class="bg-light">Ó</span>
+                    </p>
+                    <form>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+                            <input name="" class="form-control" placeholder="Nombre Completo" type="text">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                            </div>
+                            <input name="" class="form-control" placeholder="Email" type="email">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                            </div>
+                            <select class="custom-select" style="max-width: 120px;">
+                                <option selected="">+54 9</option>
+                                <option value="1">+972</option>
+                                <option value="2">+198</option>
+                                <option value="3">+701</option>
+                            </select>
+                            <input name="" class="form-control" placeholder="Número de Celular" type="text">
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                            </div>
+                            <input class="form-control" placeholder="Contraseña" type="password">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                            </div>
+                            <input class="form-control" placeholder="Repetir Contraseña" type="password">
+                        </div> <!-- form-group// -->                                      
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block"> Crear Cuenta </button>
+                        </div> <!-- form-group// -->      
+                        <p class="text-center">Tenés una cuenta? <a href="">Ingresá</a> </p>                                                                 
+                    </form>
+                </article>
+            </div> <!-- card.// -->
+            
+        </div> 
+        <!--container end.//-->
+        
+            </main> 
+            
+            <%- include('./partials/footer.ejs') %>
+            
+            
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            
+        </div>
+    </body>
+    </html>
