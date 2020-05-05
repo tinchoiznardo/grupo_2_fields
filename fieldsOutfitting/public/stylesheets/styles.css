@@ -1,0 +1,166 @@
+*{
+    font-family: sans-serif;
+}
+
+.contenedor{
+    width: 100%;
+    border-bottom: 1px  ;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: rgba(255,255,255, 0.5);
+}
+
+.menu{
+    display: none;
+}
+
+.desplegable{
+    background-color: ;
+}
+
+.logo{
+    width: 100px;
+    background-color: ;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.nav{
+    width: 25px;
+    margin: auto;
+}
+
+.carrito img{
+    width: 40px;
+    margin: auto;
+    background-color: ;
+}
+
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+    /*display: none;*/
+    width: 100%;
+    margin-top: px; 
+}
+
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar a{
+    color: black; 
+}
+
+.cwcontainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.cwcontainer img{
+    object-fit: cover;
+    height: 406px;
+    width: auto;
+}
+.conoceMas img{
+    width: 100%;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    height: 81.11vh;
+}
+.galeriaFooter {
+   position: relative;
+   display: flex;
+    
+}
+
+.mision{
+    background-color: rgba(95, 93, 93, 0.5);;
+    color: white;
+    font-size: 0.7em;
+    font-style: italic;
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    font-weight: bold;
+    margin: 10% ;
+    padding: 10%;
+    width: auto;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul{
+    
+    text-decoration: none;
+    list-style: none;
+     ;
+}
+
+footer a{
+    color: white;
+}
+
+.compras{
+    display: block;
+    color: black;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5%;
+    margin-bottom: 2%;
+    border-radius: 20px;;
+    background-color:  rgba(97, 97, 97, 0.5);
+
+    
+}
+
+.compras img{
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.comprasSub{
+    margin-bottom: 10%;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.close{
+    position:absolute;
+    margin-left: 35%;
+    margin-top: 0%
+}
+
+.galeria{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.fg{
+    padding: 5%;
+}
+
+.fg img{
+    width: 70%;
+} 
