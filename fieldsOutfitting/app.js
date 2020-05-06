@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 var homeRouter = require('./routes/home');
 var carritoRouter = require('./routes/carrito');
 var registroRouter = require('./routes/registro');
+var galeriaRouter = require('./routes/galeriaProductos');
+
 
 
 
@@ -29,6 +31,8 @@ app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use('/carrito', carritoRouter);
 app.use('/registro', registroRouter);
+app.use('/galeria', galeriaRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
