@@ -218,3 +218,10 @@ footer a{
 .selector{
     border-right: solid 1px black;
 }
+
+/*DetalleProducto*/
+.detalleProducto{
+    background-color: ;
+    height: auto;
+    width: auto;
+}
