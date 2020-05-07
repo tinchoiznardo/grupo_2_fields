@@ -215,6 +215,25 @@ footer a{
 
 .selector{
     border-right: solid 1px black;
+
+}
+
+/*DetalleProducto*/
+.detalleProducto{
+    background-color: ;
+    height: auto;
+    width: auto;
+}
+.talles{
+    width: 750px;
+    height: 300px; 
+    overflow: hidden;
+}
+.talles img{
+    width: 100%;
+    height: auto;
+}
+=======
     padding: 2%;
 
 }

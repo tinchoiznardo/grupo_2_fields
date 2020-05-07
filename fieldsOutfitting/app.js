@@ -11,6 +11,7 @@ var carritoRouter = require('./routes/carrito');
 var registroRouter = require('./routes/registro');
 var galeriaRouter = require('./routes/galeriaProductos');
 var cargaRouter = require('./routes/cargaProductos')
+var detalleRouter = require("./routes/detalleProducto")
 
 
 var app = express();
@@ -31,7 +32,8 @@ app.use('/home', homeRouter);
 app.use('/carrito', carritoRouter);
 app.use('/registro', registroRouter);
 app.use('/galeria', galeriaRouter);
-app.use('/carga', cargaRouter)
+app.use('/carga', cargaRouter);
+app.use('/detalleProducto', detalleRouter);
 
 
 // catch 404 and forward to error handler
