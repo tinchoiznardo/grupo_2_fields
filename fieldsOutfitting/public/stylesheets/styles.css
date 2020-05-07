@@ -17,8 +17,7 @@
     display: none;
 }
 
-.desplegable{
-}
+
 
 .logo{
     width: 100px;
@@ -221,7 +220,7 @@ footer a{
 
 /*DetalleProducto*/
 .detalleProducto{
-    background-color: ;
+    
     height: auto;
     width: auto;
 }
