@@ -225,3 +225,12 @@ footer a{
     height: auto;
     width: auto;
 }
+.talles{
+    width: 750px;
+    height: 300px; 
+    overflow: hidden;
+}
+.talles img{
+    width: 100%;
+    height: auto;
+}
