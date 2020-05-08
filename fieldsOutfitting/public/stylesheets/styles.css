@@ -215,7 +215,18 @@ footer a{
 
 .selector{
     border-right: solid 1px black;
+    width: 100%;
 
+}
+.selector ul{
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.selector a{
+    color: black;
+    padding: 2%;
 }
 
 /*DetalleProducto*/
@@ -233,12 +244,18 @@ footer a{
     width: 100%;
     height: auto;
 }
-=======
-    padding: 2%;
-
-}
 
 .selector ul{
     list-style: none;
 }
 
+@media(max-width: 320px){
+
+.selector{
+    display: hidden;
+}
+
+.galeria{
+
+}
+}
