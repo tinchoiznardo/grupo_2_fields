@@ -1,103 +1,123 @@
-*{
+* {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.contenedor{
+/*HEADER*/
+.nav {
+    width: 25px;
+    margin: auto;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo img {
     width: 100%;
-    border-bottom: 1px  ;
+}
+
+
+.carrito img {
+    width: 40px;
+    margin: auto;
+}
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    /*display: none;*/
+    width: 100%;
+    margin-top: 0px;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar a {
+    color: black;
+}
+
+/* FOOTER*/
+footer {
+    background-color: black;
+    color: white;
+    height: 60vh;
+    width: auto;
+}
+
+footer ul {
+
+    text-decoration: none;
+    list-style: none;
+    ;
+}
+
+footer a {
+    color: white;
+}
+
+.contenedor {
+    width: 100%;
+    border-bottom: 1px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     position: fixed;
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-.menu{
+.menu {
     display: none;
 }
 
-.desplegable{
-}
 
-.logo{
-    width: 100px;
-}
 
-.logo img{
-    width: 100%;
-}
-
-.nav{
-    width: 25px;
-    margin: auto;
-}
-
-.carrito img{
-    width: 40px;
-    margin: auto;
-}
-
-.navbar{
-    justify-content: space-between;
-    align-items: center;
-    /*display: none;*/
-    width: 100%;
-    margin-top: 0px; 
-}
-
-.navbar ul{
-    list-style-type: none;
-}
-
-.navbar a{
-    color: black; 
-}
-
-.cwcontainer{
+.cwcontainer {
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    background-color: black;
+
 }
 
-.cwcontainer img{
+.cwcontainer img {
     object-fit: cover;
     height: 406px;
     width: auto;
 }
-.conoceMas img{
+
+.conoceMas img {
     width: 100%;
 }
 
-.carousel img{
+.carousel img {
     width: 100%;
 
 }
 
-footer{
-    background-color: black;
-    color: white;
-    height: 81.11vh;
-}
+
 
 .galeriaFooter {
-   position: relative;
-   display: flex;
-   width: 100%;
-    
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+
 }
 
-.galeriaFooter img{
+.galeriaFooter img {
     position: relative;
     width: 100%;
-     
- }
 
-.mision{
-    background-color: rgba(95, 93, 93, 0.5);;
+}
+
+.mision {
+    background-color: rgba(95, 93, 93, 0.5);
+    ;
     color: white;
     font-size: 0.7em;
     font-style: italic;
@@ -105,7 +125,7 @@ footer{
     z-index: 5;
     text-align: center;
     font-weight: bold;
-    margin: 10% ;
+    margin: 10%;
     padding: 10%;
     width: auto;
     align-self: center;
@@ -113,18 +133,9 @@ footer{
     justify-content: center;
 }
 
-footer ul{
-    
-    text-decoration: none;
-    list-style: none;
-     ;
-}
 
-footer a{
-    color: white;
-}
 
-.compras{
+.compras {
     display: block;
     color: black;
     margin-top: 2%;
@@ -132,47 +143,48 @@ footer a{
     margin-right: 10%;
     padding: 5%;
     margin-bottom: 2%;
-    border-radius: 20px;;
-    background-color:  rgba(158, 158, 158, 0.5);
-    
+    border-radius: 20px;
+    ;
+    background-color: rgba(158, 158, 158, 0.5);
+
 }
 
-.compras img{
+.compras img {
     width: 50%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-.comprasSub{
+.comprasSub {
     margin-bottom: 10%;
 }
 
-.img{
+.img {
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-.close{
-    position:absolute;
+.close {
+    position: absolute;
     margin-left: 35%;
     margin-top: 0%
 }
 
-.galeria{
+.galeria {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-.fg{
+.fg {
     padding: 5%;
 }
 
-.fg img{
+.fg img {
     width: 70%;
-} 
+}
 
 /* AGREGADO PA REGISTRO */
 
@@ -182,12 +194,14 @@ footer a{
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
 .divider-text span {
     padding: 7px;
     font-size: 12px;
-    position: relative;   
+    position: relative;
     z-index: 2;
 }
+
 .divider-text:after {
     content: "";
     position: absolute;
@@ -202,6 +216,7 @@ footer a{
     background-color: #405D9D;
     color: #fff;
 }
+
 .btn-twitter {
     background-color: #42AEEC;
     color: #fff;
@@ -209,36 +224,35 @@ footer a{
 
 /* FIN AGREGADO PA REGISTRO */
 
-.footer h3{
+.footer h3 {
     padding: 2%
 }
 
-.selector{
+.selector {
     border-right: solid 1px black;
 
 }
 
 /*DetalleProducto*/
-.detalleProducto{
-    background-color: ;
+.detalleProducto {
+  
     height: auto;
     width: auto;
 }
-.talles{
+
+.talles {
     width: 750px;
-    height: 300px; 
+    height: 300px;
     overflow: hidden;
 }
-.talles img{
+
+.talles img {
     width: 100%;
     height: auto;
 }
-=======
-    padding: 2%;
 
-}
 
-.selector ul{
+
+.selector ul {
     list-style: none;
 }
-
