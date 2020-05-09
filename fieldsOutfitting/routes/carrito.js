@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var carritoController = require('../controllers/carritoController');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('carrito', { title: 'Express' });
-});
+router.get('/', carritoController);
 
 module.exports = router;
