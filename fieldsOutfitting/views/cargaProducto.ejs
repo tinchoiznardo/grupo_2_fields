@@ -15,7 +15,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                             </div>
-                            <input name="" class="form-control" placeholder="Nombre Producto" type="text">
+                            <input name="" class="form-control" placeholder="Nombre Producto" type="text" required>
                         </div> 
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
@@ -27,27 +27,22 @@
                         <!-- repite 4 veces  -->
 
                         <div class="form-group input-group row">
-                            <div class="btn-group col-4">
-                                <button type="button" class="btn btn-default dropdown-toggle"
-                                        data-toggle="dropdown">
-                                  Talles <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                  <li><a href="#">XS</a></li>
-                                  <li><a href="#">S</a></li>
-                                  <li><a href="#">M</a></li>
-                                  <li><a href="#">L</a></li>
-                                  <li><a href="#">XL</a></li>
-                                </ul>
-                              </div>
-                            <div class="input-group-prepend col-4">
+                            <div class="btn-toolbar" role="toolbar">
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default">XS</button>
+                                  <button type="button" class="btn btn-default">S</button>
+                                  <button type="button" class="btn btn-default">M</button>
+                                  <button type="button" class="btn btn-default">L</button>
+                                  <button type="button" class="btn btn-default">XL</button>
+                                </div>
                             </div>
-                            <input name="" class="form-control" placeholder="Cantidad" type="number">
+                            <div class="input-group-prepend col-2">
+                            </div>
+                            <input name="" class="form-control" placeholder="Cant." type="number" required>
                         </div>
-
                         <div class="form-group input-group row">
                             <div class="btn-group col-4">
-                                <input name="" class="form-control" placeholder="Precio" type="number">
+                                <input name="" class="number" placeholder="Precio" type="number" required>
                             </div>
                         </div>
                         <div class="form-group">
