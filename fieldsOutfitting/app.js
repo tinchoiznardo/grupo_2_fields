@@ -10,7 +10,7 @@ var homeRouter = require('./routes/home');
 var carritoRouter = require('./routes/carrito');
 var registroRouter = require('./routes/registro');
 var galeriaRouter = require('./routes/galeriaProductos');
-var cargaRouter = require('./routes/cargaProductos')
+var cargaRouter = require('./routes/cargaProducto')
 var detalleRouter = require("./routes/detalleProducto")
 
 
@@ -32,7 +32,7 @@ app.use('/home', homeRouter);
 app.use('/carrito', carritoRouter);
 app.use('/registro', registroRouter);
 app.use('/galeria', galeriaRouter);
-app.use('/carga', cargaRouter);
+app.use('/cargaProducto', cargaRouter);
 app.use('/detalleProducto', detalleRouter);
 
 
