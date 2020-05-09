@@ -32,13 +32,11 @@ body{
 }
 
 .navbar {
-    /*display: none;*/
     width: 100%;
     margin-top: 0px;
     display: flex;
     margin-left: 0px;
-    
-    
+    justify-content: space-between;
 }
 
 .navbar ul {
@@ -48,6 +46,7 @@ body{
 .navbar a {
     color: black;
 }
+@
 /*FIN HEADER*/
 
 /* FOOTER*/
@@ -75,11 +74,6 @@ footer a {
     color: white;
 }
 
-footer .container{
-    margin: none;
-}
-
-
 /*FIN FOOTER*/
 
 /*INDEX*/
@@ -92,10 +86,6 @@ footer .container{
     flex-wrap: wrap;
     position: fixed;
     background-color: rgba(255, 255, 255, 0.5);
-}
-
-.menu {
-    display: none;
 }
 
 .cwcontainer {
@@ -114,9 +104,16 @@ footer .container{
     width: auto;
 }
 
-.conoceMas img {
-    width: 100%;
+.conoceMas{
+    position: relative;
 }
+.conoceMas img {
+    width: 100%;  
+}
+.zoom  {
+    position: absolute
+}
+
 
 .carousel img {
     width: 100%;
