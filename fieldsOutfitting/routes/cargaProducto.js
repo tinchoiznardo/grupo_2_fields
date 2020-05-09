@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var cargaController = require('../controllers/cargaController');
+
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('cargaProducto', { title: 'Express' });
-});
+router.get('/', cargaController);
 
 module.exports = router;

@@ -28,12 +28,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/home', homeRouter);
 app.use('/carrito', carritoRouter);
 app.use('/registro', registroRouter);
-app.use('/galeria', galeriaRouter);
+app.use('/productos', galeriaRouter);
 app.use('/cargaProducto', cargaRouter);
-app.use('/detalleProducto', detalleRouter);
+app.use('/detalle', detalleRouter);
 
 
 // catch 404 and forward to error handler
