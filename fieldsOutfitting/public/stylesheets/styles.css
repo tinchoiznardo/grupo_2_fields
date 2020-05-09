@@ -57,6 +57,19 @@ footer a {
     color: white;
 }
 
+}
+
+footer ul {
+
+    text-decoration: none;
+    list-style: none;
+    ;
+}
+
+footer a {
+    color: white;
+}
+
 .contenedor {
     width: 100%;
     border-bottom: 1px;
@@ -238,7 +251,6 @@ footer a {
     width: 100%;
 }
 
-
 .selector a{
     color: black;
     padding: 2%;
@@ -263,6 +275,10 @@ footer a {
 }
 
 
+.selector ul {
+    list-style: none;
+}
+
 @media(max-width: 320px){
 
 .selector{
@@ -272,3 +288,4 @@ footer a {
 .galeria{
 
 }
+
