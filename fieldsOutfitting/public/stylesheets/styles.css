@@ -51,18 +51,16 @@ body{
 /*FIN HEADER*/
 
 /* FOOTER*/
-footer {
+.footer {
     background-color: black;
     color: white;
     height: 60vh;
     width: auto;
     padding: 0px;
+    margin: none;
     
 }
 
- .footer{
-    margin: none;
-}
 
 footer ul {
 
@@ -78,6 +76,15 @@ footer a {
 /*FIN FOOTER*/
 
 /*INDEX*/
+.galeria {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
 .contenedor {
     width: 100%;
     border-bottom: 1px;
@@ -92,10 +99,12 @@ footer a {
 .cwcontainer {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    justify-self: center;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: black;
+    position: relative;
 
 }
 
@@ -104,25 +113,25 @@ footer a {
     height: 406px;
     width: auto;
 }
-
-.conoceMas{
-    position: relative;
+.cwcontainer a{
+    text-decoration: none;
+    color: white;
 }
 .conoceMas img {
     width: 100%;  
 }
 .zoom  {
-    position: absolute
+    position: absolute;
+    z-index: 10;
+    align-self: center;
+    color: white;
+    text-decoration: none;
 }
-
 
 .carousel img {
     width: 100%;
 
 }
-
-
-
 .imagenbottom {
     position: relative;
     display: flex;
@@ -193,12 +202,7 @@ footer a {
     margin-top: 0%
 }
 
-.galeria {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
+
 
 .fg {
     padding: 5%;
