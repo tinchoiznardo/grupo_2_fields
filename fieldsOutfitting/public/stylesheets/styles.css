@@ -114,7 +114,7 @@ footer a {
     width: 100%;
 }
 
-.cwcontainer a {
+.zoom a {
     text-decoration: none;
     color: white;
 }
@@ -162,6 +162,27 @@ footer a {
     justify-content: center;
 }
 
+
+.galeriaIndex{
+    height: 60vh;
+    margin: 2%;
+}
+
+.productoIndex img{
+    justify-content: center;
+    padding: 25%;
+    width: 100%;
+
+}
+
+.productoIndex{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 /*FIN INDEX*/
 
