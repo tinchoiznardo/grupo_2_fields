@@ -4,14 +4,17 @@
     padding: 0px;
 }
 
-body{
+body {
     margin: 0px;
     padding: 0px;
-    
+
 }
 
 /*HEADER*/
 
+.navbar{
+    height: 15vh;
+}
 .nav {
     width: 25px;
     margin: auto;
@@ -51,33 +54,39 @@ body{
 /*FIN HEADER*/
 
 /* FOOTER*/
-footer {
+.footer {
     background-color: black;
     color: white;
-    height: 60vh;
+    height: 30vh;
     width: auto;
-    padding: 0px;
-    
-}
-
- .footer{
+    padding: none;
     margin: none;
 }
 
 footer ul {
-
     text-decoration: none;
     list-style: none;
-    ;
+   
+    
 }
 
 footer a {
     color: white;
 }
 
+
 /*FIN FOOTER*/
 
 /*INDEX*/
+.galeria {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
 .contenedor {
     width: 100%;
     border-bottom: 1px;
@@ -92,10 +101,12 @@ footer a {
 .cwcontainer {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    justify-self: center;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: black;
+    position: relative;
 
 }
 
@@ -105,23 +116,27 @@ footer a {
     width: auto;
 }
 
-.conoceMas{
-    position: relative;
-}
-.conoceMas img {
-    width: 100%;  
-}
-.zoom  {
-    position: absolute
+.cwcontainer a {
+    text-decoration: none;
+    color: white;
 }
 
+.conoceMas img {
+    width: 100%;
+}
+
+.zoom {
+    position: absolute;
+    z-index: 10;
+    align-self: center;
+    color: white;
+    text-decoration: none;
+}
 
 .carousel img {
     width: 100%;
 
 }
-
-
 
 .imagenbottom {
     position: relative;
@@ -193,12 +208,7 @@ footer a {
     margin-top: 0%
 }
 
-.galeria {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
+
 
 .fg {
     padding: 5%;
@@ -255,22 +265,28 @@ footer a {
     width: 100%;
 
 }
-.selector ul{
+
+.selector ul {
     margin-top: 20px;
     width: 100%;
 }
 
-
-.selector a{
+.selector a {
     color: black;
     padding: 2%;
 }
 
-/*DetalleProducto*/
+/*DETALLE PRODUCTO*/
 .detalleProducto {
-  
     height: auto;
     width: auto;
+    margin-bottom: 0px;
+}
+
+.page-header{
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-left: 15px;
 }
 
 .talles {
@@ -285,12 +301,12 @@ footer a {
 }
 
 
-@media(max-width: 320px){
-
-.selector{
-    display: hidden;
-}
-
-.galeria{
+@media(max-width: 576px) {
 
 }
+@media (min-width: 577px) {
+   
+     
+}
+
+    /*FIN DETALLE PRODUCTO*/
