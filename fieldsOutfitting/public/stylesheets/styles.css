@@ -4,14 +4,17 @@
     padding: 0px;
 }
 
-body{
+body {
     margin: 0px;
     padding: 0px;
-    
+
 }
 
 /*HEADER*/
 
+.navbar{
+    height: 15vh;
+}
 .nav {
     width: 25px;
     margin: auto;
@@ -54,24 +57,23 @@ body{
 .footer {
     background-color: black;
     color: white;
-    height: 60vh;
+    height: 30vh;
     width: auto;
-    padding: 0px;
+    padding: none;
     margin: none;
-    
 }
 
-
 footer ul {
-
     text-decoration: none;
     list-style: none;
-    ;
+   
+    
 }
 
 footer a {
     color: white;
 }
+
 
 /*FIN FOOTER*/
 
@@ -113,14 +115,17 @@ footer a {
     height: 406px;
     width: auto;
 }
-.cwcontainer a{
+
+.cwcontainer a {
     text-decoration: none;
     color: white;
 }
+
 .conoceMas img {
-    width: 100%;  
+    width: 100%;
 }
-.zoom  {
+
+.zoom {
     position: absolute;
     z-index: 10;
     align-self: center;
@@ -132,6 +137,7 @@ footer a {
     width: 100%;
 
 }
+
 .imagenbottom {
     position: relative;
     display: flex;
@@ -259,22 +265,28 @@ footer a {
     width: 100%;
 
 }
-.selector ul{
+
+.selector ul {
     margin-top: 20px;
     width: 100%;
 }
 
-
-.selector a{
+.selector a {
     color: black;
     padding: 2%;
 }
 
-/*DetalleProducto*/
+/*DETALLE PRODUCTO*/
 .detalleProducto {
-  
     height: auto;
     width: auto;
+    margin-bottom: 0px;
+}
+
+.page-header{
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-left: 15px;
 }
 
 .talles {
@@ -289,12 +301,12 @@ footer a {
 }
 
 
-@media(max-width: 320px){
-
-.selector{
-    display: hidden;
-}
-
-.galeria{
+@media(max-width: 576px) {
 
 }
+@media (min-width: 577px) {
+   
+     
+}
+
+    /*FIN DETALLE PRODUCTO*/
