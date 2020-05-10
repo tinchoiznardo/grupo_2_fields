@@ -163,6 +163,28 @@ footer a {
     justify-content: center;
 }
 
+.galeriaIndex{
+    height: 60vh;
+    margin: 2%;
+}
+
+.productoIndex img{
+    justify-content: center;
+    padding: 25%;
+    height: 50vh;
+    width: 50vw;
+
+}
+
+.productoIndex{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 /*FIN INDEX*/
 
 .compras {
