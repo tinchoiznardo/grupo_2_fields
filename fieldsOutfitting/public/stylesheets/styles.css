@@ -102,20 +102,16 @@ footer a {
 }
 
 .cwcontainer {
-    width: 100%;
     display: flex;
     justify-content: center;
     justify-self: center;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: black;
     position: relative;
 }
 
 .cwcontainer img {
-    object-fit: cover;
-    height: 406px;
-    width: auto;
+    width: 100%;
 }
 
 .cwcontainer a {
@@ -123,9 +119,6 @@ footer a {
     color: white;
 }
 
-.conoceMas img {
-    width: 100%;
-}
 
 .zoom {
     position: absolute;
@@ -181,7 +174,6 @@ footer a {
     padding: 5%;
     margin-bottom: 2%;
     border-radius: 20px;
-    ;
     background-color: rgba(158, 158, 158, 0.5);
 }
 
@@ -204,7 +196,7 @@ footer a {
 .close {
     position: absolute;
     margin-left: 35%;
-    margin-top: 0%
+    margin-top: 0%;
 }
 
 .fg {
