@@ -171,8 +171,7 @@ footer a {
 .productoIndex img{
     justify-content: center;
     padding: 25%;
-    height: 50vh;
-    width: 50vw;
+    width: 100%;
 
 }
 
