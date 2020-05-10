@@ -174,8 +174,6 @@ footer a {
     padding: 5%;
     margin-bottom: 2%;
     border-radius: 20px;
-    ;
-    background-color: rgba(158, 158, 158, 0.5);
 
 }
 
@@ -198,8 +196,9 @@ footer a {
 .close {
     position: absolute;
     margin-left: 35%;
-    margin-top: 0%
+    margin-top: 0%;
 }
+
 
 
 
