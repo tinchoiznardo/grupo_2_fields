@@ -119,7 +119,6 @@ footer a {
     color: white;
 }
 
-
 .zoom {
     position: absolute;
     z-index: 10;
@@ -132,16 +131,22 @@ footer a {
     width: 100%;
 }
 
+.carouselIndex {
+    margin-bottom: 5px;
+}
+
 .imagenbottom {
     position: relative;
     display: flex;
     width: 100%;
     height: auto;
+    margin-top: 5px;
 }
 
 .imagenbottom img {
     position: relative;
     width: 100%;
+    margin: 0%
 }
 
 .mision {
@@ -157,25 +162,24 @@ footer a {
     margin: 10%;
     padding: 10%;
     width: auto;
+    height: 100%;
     align-self: center;
     align-items: center;
     justify-content: center;
 }
 
-
-.galeriaIndex{
+.galeriaIndex {
     height: 50vh;
     margin: 2%;
 }
 
-.productoIndex img{
+.productoIndex img {
     justify-content: center;
     padding: 25%;
     width: 100%;
-
 }
 
-.productoIndex{
+.productoIndex {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -183,6 +187,16 @@ footer a {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+@media (max-width: 576px) {
+    .zoom h2 {
+        font-size: 0.8em;
+    }
+    .carouselIndex {
+        display: none;
+    }
+}
+
 
 /*FIN INDEX*/
 
