@@ -12,6 +12,7 @@ var registroRouter = require('./routes/registro');
 var galeriaRouter = require('./routes/galeriaProductos');
 var cargaRouter = require('./routes/cargaProducto')
 var detalleRouter = require("./routes/detalleProducto")
+var ingresoRouter = require("./routes/ingreso")
 
 
 var app = express();
@@ -30,6 +31,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/carrito', carritoRouter);
 app.use('/registro', registroRouter);
+app.use('/ingreso', ingresoRouter);
 app.use('/productos', galeriaRouter);
 app.use('/cargaProducto', cargaRouter);
 app.use('/detalle', detalleRouter);
