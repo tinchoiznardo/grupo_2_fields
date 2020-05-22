@@ -3,18 +3,18 @@
 
     <%- include('./partials/header.ejs') %>
 
-    <main>
+        <main>
 
 
-    <section class="galeria">
-        <img src="/images/inicio.jpg">
-        <!-- <img src="/images/handstand.PNG"> -->
-        <div class="zoom">
-            <a href="/productos">
-                <h2>20% DE DESCUENTO <br> EN WALKERS!</h2>
-            </a>
-        </div>
-    </section>
+            <section class="galeria">
+                <img src="/images/inicio.jpg">
+                <!-- <img src="/images/handstand.PNG"> -->
+                <div class="zoom">
+                    <a href="/productos">
+                        <h2>20% DE DESCUENTO <br> EN WALKERS!</h2>
+                    </a>
+                </div>
+            </section>
 
             <!-- <section class="galeria">
                 <img src="/images/inicio.jpg">
@@ -41,46 +41,92 @@
                     </a>
                 </div> -->
 
-    <div class='cwcontainer row'>
+            <div class='cwcontainer row'>
 
-        <div class="col-12">
-                <img src="/images/indexDiv.png" alt="">
-        </div>
+                <div class="col-12">
+                    <img src="/images/indexDiv.png" alt="">
+                </div>
 
-        <div class="zoom">
-            <a href="/productos">
-                <h2>CONOCE NUESTRAS FIELDS!</h2>
-            </a>
-        </div>
+                <div class="zoom">
+                    <a href="/productos">
+                        <h2>CONOCE NUESTRAS FIELDS!</h2>
+                    </a>
+                </div>
 
-    </div>
-
-    <div class="row galeriaIndex card bg-light ">
-        <div class="col-6 row productoIndex">
-            <img src="/images/fields1.jpg" class="rounded float-right" alt="...">
-            <div class="col-12">
-                <h5>Classic</h5>
-                <p>$5000</p>
             </div>
-        </div>
-        <div class="col-6 row productoIndex">
-            <img src="/images/fields1.jpg" class="rounded float-right" alt="...">
-            <div class="col-12">
-                <h5>Classic</h5>
-                <p>$5000</p>
+
+            <div class="row carouselIndex">
+                <div class="col-md-12">
+                    <h2>Favoritos del Mes!</h2>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                        <div class="carousel-inner">
+                            <div class="    ">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="/images/fields1.jpg" class="img-responsive img-fluid" alt="">
+                                            </div>
+                                            <div class="thumb-content">
+                                                <h4>Fields</h4>
+                                                <p class="item-price"> <span>$369.00</span></p>
+                                                <a href="#" class="btn btn-dark">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="/images/fields1.jpg" class="img-responsive img-fluid" alt="">
+                                            </div>
+                                            <div class="thumb-content">
+                                                <h4>Fields</h4>
+                                                <p class="item-price"> <span>$369.00</span></p>
+                                                <a href="#" class="btn btn-dark">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="/images/fields1.jpg" class="img-responsive img-fluid" alt="">
+                                            </div>
+                                            <div class="thumb-content">
+                                                <h4>Fields</h4>
+                                                <p class="item-price"> <span>$369.00</span></p>
+                                                <a href="#" class="btn btn-dark">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="/images/fields1.jpg" class="img-responsive img-fluid" alt="">
+                                            </div>
+                                            <div class="thumb-content">
+                                                <h4>Fields</h4>
+                                                <p class="item-price"> <span>$369.00</span></p>
+                                                <a href="#" class="btn btn-dark">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="imagenbottom">
-        <img src="/images/rails.PNG">
-        <!-- <img src="/images/handstand.PNG"> -->
-        <div class="mision">
-            <p>Nuestra misión es combinar la pasión por las tradiciones     argentinas y el amor por el diseño,
-                redefiniendo la bombacha de campo como un pantalón que se pueda usar tanto recorriendo las calles
-                de Buenos Aires, como cabalgando en La Patagonia. </p>
-        </div>
-    </div>
-</main>
+            <div class="imagenbottom ">
+                <img src="/images/rails.PNG">
+                <!-- <img src="/images/handstand.PNG"> -->
+                <div class="mision">
+                    <p>Nuestra misión es combinar la pasión por las tradiciones argentinas y el amor por el diseño, redefiniendo la bombacha de campo como un pantalón que se pueda usar tanto recorriendo las calles de Buenos Aires, como cabalgando en
+                        La Patagonia. </p>
+                </div>
+            </div>
 
-<%- include('./partials/footer.ejs') %>
+
+        </main>
+
+        <%- include('./partials/footer.ejs') %>
