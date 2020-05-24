@@ -10,18 +10,18 @@
                 <article class="card-body mx-auto" style="max-width: 400px;">
                     <h4 class="card-title mt-3 text-center">Cargá Tu Field</h4>
                     <p class="text-center">Bienvenido/a a Fields!</p>
-                    <form>
+                    <form method="POST" enctype="multipart/form-data">
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                             </div>
-                            <input name="" class="form-control" placeholder="Nombre Producto" type="text" required>
+                            <input name="nombre" class="form-control" placeholder="Nombre Producto" type="text" required>
                         </div> 
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                             </div>
-                            <input name="" class="form-control" placeholder="Descripción" type="text">
+                            <input name="descripcion" class="form-control" placeholder="Descripción" type="text">
                         </div>
 
                         <!-- repite 4 veces  -->
@@ -41,17 +41,39 @@
                             <input name="" class="form-control" placeholder="Cant." type="number" required>
                         </div>
                         <div class="form-group input-group row">
-                            <div class="btn-group col-4">
-                                <input name="" class="number" placeholder="Precio" type="number" required>
+                            <div class="btn-group col-12">
+                                <label for="">Precio:</label>
+                                <input name="precio" class="number" placeholder="Precio" type="number" required>
                             </div>
                         </div>
+                        <div class="form-group input-group row">
+                        <div class="btn-group col-12">
+                            <label for="">Descuento:</label>
+                            <input name="descuento" class="number" placeholder="Descuento" type="number" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="categoria" class="form-label">Categoría:</label>
+                            <select name="categoria" id="category" class="form-input">
+                                <option value="">Elegí</option>
+                                <option value="destacado">Destacado</option>
+                                <option value="visited"></option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-12 col-md-6">
+                            <label for="tipo" class="form-label">Tipo de Producto:</label>
+                            <select name="tipo" id="tipo" class="form-input">
+                                <option value="">Elegí</option>
+                                <option value="fields">Fields</option>
+                                <option value="walkers">Walkers</option>
+                            </select>
+                        </div>
+                        
                         <div class="form-group">
-                              <div class="form group input-group">
-                                  <label class="input-group-btn">
-                                  <input accept=".jpg,.png,.jpeg,.gif" class="form-control" id="banner_captura" name="ImageProducto" type="file" value="">
-                                </label>
-                              </div>
-                          </div>                      
+                            <label for='foto-producto' class='form-label input-group-btn'>Imágen del producto: </label>
+                            <input accept=".jpg,.png,.jpeg,.gif" class="" id="banner_captura" name="foto-producto" type="file">
+                        </div> 
+                                            
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block"> Cargar Producto </button>
                         </div>                                                                       
@@ -59,7 +81,6 @@
                 </article>
             </div>  
         </div> 
-
         
             </main> 
             

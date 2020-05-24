@@ -62,54 +62,20 @@
                         <div class="carousel-inner">
                             <div class="    ">
                                 <div class="row">
+                                    <% for (producto of productosDestacados) { %>
                                     <div class="col-sm-3">
                                         <div class="thumb-wrapper">
                                             <div class="img-box">
-                                                <img src="/images/fields1.jpg" class="img-responsive img-fluid" alt="">
+                                                <img src="<%= producto.imagen %>" class="img-responsive img-fluid" alt="">
                                             </div>
                                             <div class="thumb-content">
-                                                <h4>Fields</h4>
-                                                <p class="item-price"> <span>$369.00</span></p>
+                                                <h4><a href='/productos/detalle/<%= producto.id %>'><%= producto.nombre %></a></h4>
+                                                <p class="item-price"> <span><%= producto.precio %></span></p>
                                                 <a href="#" class="btn btn-dark">Add to Cart</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper">
-                                            <div class="img-box">
-                                                <img src="/images/fields1.jpg" class="img-responsive img-fluid" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-                                                <h4>Fields</h4>
-                                                <p class="item-price"> <span>$369.00</span></p>
-                                                <a href="#" class="btn btn-dark">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper">
-                                            <div class="img-box">
-                                                <img src="/images/fields1.jpg" class="img-responsive img-fluid" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-                                                <h4>Fields</h4>
-                                                <p class="item-price"> <span>$369.00</span></p>
-                                                <a href="#" class="btn btn-dark">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper">
-                                            <div class="img-box">
-                                                <img src="/images/fields1.jpg" class="img-responsive img-fluid" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-                                                <h4>Fields</h4>
-                                                <p class="item-price"> <span>$369.00</span></p>
-                                                <a href="#" class="btn btn-dark">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <% } %>
                                 </div>
                             </div>
                         </div>
