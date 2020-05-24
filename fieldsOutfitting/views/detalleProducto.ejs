@@ -11,16 +11,21 @@
     <div class="row detalleProducto">
       <div class="col-lg-6 mb-4">
         <div class="main-product-image">
-          <img src="/images/fields2.jpg" class="img-fluid">
+          <img src="<%= producto.imagen %>" class="img-fluid">
         </div>
       </div>
       <div class="col-lg-6">
-        <form class="form-horizontal" action="/cart/add/:id" method="post" enctype="multipart/form-data" name="buy">
+          
+          <div class="form-group row">
+            <div class="col-sm-8 col-md-9 description">
+              <h1><%= producto.nombre %></h1>
+            </div>
+          </div>
 
           <div class="form-group row">
             <label class="col-sm-3 col-md-3 form-control-label">Description:</label>
             <div class="col-sm-8 col-md-9 description">
-              <p>Bomabacha de campo unisex. Orgullosamente 100% Industria Argentina</p>
+              <p><%= producto.descripcion %></p>
             </div>
           </div>
 
@@ -28,7 +33,7 @@
           <div class="form-group row">
             <label class="col-sm-3 col-md-3 form-control-label nopaddingtop">Precio:</label>
             <div class="col-sm-8 col-md-9">
-              <span class="product-form-price" id="product-form-price">$500.00</span>
+              <span class="product-form-price" id="product-form-price"><%= producto.precio %></span>
             </div>
           </div>
 
@@ -59,7 +64,10 @@
             </div>
           </div>
 
-
+          	<a href="/productos/editar/<%= producto.id %>" class="action-button edit btn-primary">EDITAR PRODUCTO</a>
+            <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST">
+							<button type="submit" class="action-button delete bg-danger">ELIMINAR</button>
+						</form>
 
           <div class="talles img-fluid rounded float-left">
             <img src="/images/talles.jpg" class="img">
@@ -67,7 +75,7 @@
           </div>
 
           <input type="hidden" value="nDolT3hRvGuCl5YcE9D1e3DIe1z0Kg127Xg43qTwtqA=" name="authenticity_token">
-        </form>
+        
       </div>
 
     </div>

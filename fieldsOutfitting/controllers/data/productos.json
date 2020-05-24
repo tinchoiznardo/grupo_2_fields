@@ -1,71 +1,102 @@
-[{
-    "id": 1,
-    "nombre": "azul camo",
-    "tipo": "fields",
-    "precio": 2.299,
-    "descuento": 40,
-    "imagen": "../public/images/fields1.jpg"
-}, {
-    "id": 2,
-    "nombre": "negra floreada",
-    "tipo": "fields",
-    "precio": 2.299,
-    "descuento": 40,
-    "imagen": "../public/images/fields9.jpg"
-}, {
-    "id": 3,
-    "nombre": "bordo pluma",
-    "tipo": "fields",
-    "precio": 2.299,
-    "descuento": 40,
-    "imagen": "../public/images/fields3.jpg"
-}, {
-    "id": 4,
-    "nombre": "bordo floreada",
-    "tipo": "fields",
-    "precio": 2.299,
-    "descuento": 40,
-    "imagen": "../public/images/fields8.jpg"
-}, {
-    "id": 5,
-    "nombre": "azul zigzag",
-    "tipo": "fields",
-    "precio": 2.299,
-    "descuento": 40,
-    "imagen": "../public/images/fields7.jpg"
-}, {
-    "id": 6,
-    "nombre": "tostada floreada",
-    "tipo": "fields",
-    "precio": 2.299,
-    "descuento": 40,
-    "imagen": "../public/images/fields5.jpg"
-}, {
-    "id": 7,
-    "nombre": "tostada geométrica",
-    "tipo": "fields",
-    "precio": 2.299,
-    "descuento": 40,
-    "imagen": "../public/images/fields2.jpg"
-}, {
-    "id": 8,
-    "nombre": "negra azteca",
-    "tipo": "fields",
-    "precio": 2.299,
-    "descuento": 40,
-    "imagen": "../public/images/fields4.jpg"
-}, {
-    "id": 9,
-    "nombre": "flores walkers",
-    "tipo": "walkers",
-    "precio": 2.499,
-    "descuento": 20,
-    "imagen": "../public/images/fieldsW.jpg"
-}, {
-    "id": 10,
-    "nombre": "walkers night",
-    "tipo": "walkers",
-    "precio": 2.499,
-    "descuento": 20,
-    "imagen": "../public/images/fieldsB.jpg"
-}]
+[
+ {
+  "id": 1,
+  "nombre": "azul camo",
+  "tipo": "fields",
+  "precio": 2.299,
+  "descuento": 40,
+  "imagen": "/images/productos/fields1.jpg",
+  "descripcion": "Alto pantalon.",
+  "categoria": "destacado"
+ },
+ {
+  "id": 2,
+  "nombre": "negra floreada",
+  "tipo": "fields",
+  "precio": 2.299,
+  "descuento": 40,
+  "imagen": "/images/productos/fields9.jpg",
+  "descripcion": "Alto pantalon.",
+  "categoria": "destacado"
+ },
+ {
+  "id": 3,
+  "nombre": "bordo pluma",
+  "tipo": "fields",
+  "precio": 2.299,
+  "descuento": 40,
+  "imagen": "/images/productos/fields3.jpg",
+  "descripcion": "Alto pantalon.",
+  "categoria": "destacado"
+ },
+ {
+  "id": 4,
+  "nombre": "bordo floreada",
+  "tipo": "fields",
+  "precio": 2.299,
+  "descuento": 40,
+  "imagen": "/images/productos/fields8.jpg",
+  "descripcion": "Alto pantalon.",
+  "categoria": "destacado"
+ },
+ {
+  "id": 5,
+  "nombre": "azul zigzag",
+  "tipo": "fields",
+  "precio": 2.299,
+  "descuento": 40,
+  "imagen": "/images/productos/fields7.jpg",
+  "descripcion": "Alto pantalon.",
+  "categoria": ""
+ },
+ {
+  "id": 6,
+  "nombre": "tostada floreada",
+  "tipo": "fields",
+  "precio": 2.299,
+  "descuento": 40,
+  "imagen": "/images/productos/fields5.jpg",
+  "descripcion": "Alto pantalon.",
+  "categoria": ""
+ },
+ {
+  "id": 7,
+  "nombre": "tostada geométrica",
+  "tipo": "fields",
+  "precio": 2.299,
+  "descuento": 40,
+  "imagen": "/images/productos/fields2.jpg",
+  "descripcion": "Alto pantalon.",
+  "categoria": ""
+ },
+ {
+  "id": 8,
+  "nombre": "negra azteca",
+  "tipo": "fields",
+  "precio": 2.299,
+  "descuento": 40,
+  "imagen": "/images/productos/fields4.jpg",
+  "descripcion": "Alto pantalon.",
+  "categoria": ""
+ },
+ {
+  "id": 9,
+  "nombre": "flores walkers",
+  "tipo": "walkers",
+  "precio": 2.499,
+  "descuento": 20,
+  "imagen": "/images/productos/fieldsW.jpg",
+  "descripcion": "Alto pantalon.",
+  "categoria": ""
+ },
+ {
+  "id": 10,
+  "nombre": "walkers night",
+  "tipo": "walkers",
+  "precio": 2.499,
+  "descuento": 20,
+  "imagen": "/images/productos/fieldsB.jpg",
+  "descripcion": "Alto pantalon.",
+  "categoria": ""
+ }
+]
