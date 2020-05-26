@@ -57,7 +57,7 @@
   "descuento": 40,
   "imagen": "/images/productos/fields5.jpg",
   "descripcion": "Alto pantalon.",
-  "categoria": ""
+  "categoria": "destacado"
  },
  {
   "id": 7,
@@ -67,7 +67,7 @@
   "descuento": 40,
   "imagen": "/images/productos/fields2.jpg",
   "descripcion": "Alto pantalon.",
-  "categoria": ""
+  "categoria": "destacado"
  },
  {
   "id": 8,
@@ -77,7 +77,7 @@
   "descuento": 40,
   "imagen": "/images/productos/fields4.jpg",
   "descripcion": "Alto pantalon.",
-  "categoria": ""
+  "categoria": "destacado"
  },
  {
   "id": 9,
@@ -87,7 +87,7 @@
   "descuento": 20,
   "imagen": "/images/productos/fieldsW.jpg",
   "descripcion": "Alto pantalon.",
-  "categoria": ""
+  "categoria": "destacado"
  },
  {
   "id": 10,
