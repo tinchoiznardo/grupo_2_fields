@@ -14,6 +14,7 @@ body {
 
 .navbar {
     height: 15vh;
+    z-index: 100;
 }
 
 .nav {
@@ -60,7 +61,7 @@ body {
 .footer {
     background-color: black;
     color: white;
-    height: 30vh;
+    height: 50vh;
     width: auto;
     padding: none;
     margin: none;
@@ -161,7 +162,23 @@ footer a {
     margin: 10%;
     padding: 10%;
     width: auto;
-    height: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.mision2 {
+    background-color: rgba(49, 39, 66, 0.5);
+    color: white;
+    font-size: 0.7em;
+    font-style: italic;
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    font-weight: bold;
+    margin: 10%;
+    padding: 10%;
+    width: auto;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -194,8 +211,18 @@ footer a {
     .carouselIndex {
         display: none;
     }
+    .prod {
+        display: none;
+    }
 }
 
+.cart{
+    margin-top: 5px;
+}
+
+.prod{
+    text-align: center;
+}
 
 /*FIN INDEX*/
 
