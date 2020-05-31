@@ -20,18 +20,24 @@
                     <p class="divider-text">
                         <span class="bg-light">Ó</span>
                     </p>
-                    <form>
+                    <form action= "registro/create">
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                             </div>
-                            <input name="" class="form-control" placeholder="Nombre Completo" type="text">
+                            <input name="name" id="name" class="form-control" placeholder="Nombre" type="text">
                         </div> 
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+                            <input name="lastname" id="lastname" class="form-control" placeholder="Apellido" type="text">
+                        </div>
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                             </div>
-                            <input name="" class="form-control" placeholder="Email" type="email">
+                            <input name="email" id="email" class="form-control" placeholder="Email" type="email">
                         </div> 
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
@@ -43,13 +49,13 @@
                                 <option value="2">+198</option>
                                 <option value="3">+701</option>
                             </select>
-                            <input name="" class="form-control" placeholder="Número de Celular" type="text">
+                            <input name="telefono" id= "telefono" class="form-control" placeholder="Número de Celular" type="text">
                         </div>
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                             </div>
-                            <input class="form-control" placeholder="Contraseña" type="password">
+                            <input class="form-control" name= "password" id = "password" placeholder="Contraseña" type="password">
                         </div> 
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
@@ -58,7 +64,7 @@
                             <input class="form-control" placeholder="Repetir Contraseña" type="password">
                         </div>                                       
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block"> Crear Cuenta </button>
+                            <button type="submit" id= "submit" name= "submit" class="btn btn-primary btn-block"> Crear Cuenta </button>
                         </div>       
                         <p class="text-center">Tenés una cuenta? <a href="">Ingresá</a> </p>                                                                 
                     </form>
