@@ -2,14 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
 
-const registroController = function(req, res, next) {
-  res.render('registro', { title: 'Express' });
-}
-
 const usersFilePath = path.join(__dirname, './data/usuarios.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-const controller = {
+const registroController = {
     root: (req, res) => {
         res.render('registro');
     },
