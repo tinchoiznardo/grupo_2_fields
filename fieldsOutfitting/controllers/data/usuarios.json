@@ -1,1 +1,12 @@
-[]
+[
+ {
+  "id": 0
+ },
+ {
+  "id": 1,
+  "name": "Santiago",
+  "lastname": "Rodríguez Salinas",
+  "password": "$2b$10$JViY3/XymevasAUuApJC9uY9YsWNx0acRV5l5AZ3Wya8qqdZwbmKe",
+  "email": "santirodriguezsalinas@gmail.com"
+ }
+]

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    width: 100%;
+    position: relative;
+}
+.wrap .section{
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    background-size: cover;
+    top: 0;
+    display: inline-block;
+}
+
+.wrap .section:nth-child(1) {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.wrap .section:nth-child(2) {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    /* background-image: url(../images/banner2.PNG); */
+}
+
+.wrap .section:nth-child(3) {
+    background-size: cover;
+    /* background-image: url(../images/banner3.PNG); */
+}
+.wrap .section:nth-child(4) {
+    background-image: url(../images/rails2.jpeg);
+    background-size: cover;
+    height: 50vh;
+}
+
+.wrap .section:nth-child(5) {
+    background-image: url(../images/banner3.PNG);
+    background-size: cover;
+    height: 50vh;
+}
+
+@media (max-width: 576px) {
+    .wrap .section:nth-child(3) {
+        display: none;
+        /* background-image: url(../images/banner3.PNG); */
+    }
+}

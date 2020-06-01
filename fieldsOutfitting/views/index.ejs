@@ -1,48 +1,49 @@
 <%- include('./partials/head.ejs') %>
 
 
-    <%- include('./partials/header.ejs') %>
+<%- include('./partials/header.ejs') %>
 
-        <main>
-
-
-            <section class="galeria">
-                <img src="/images/inicio.jpg">
-                <!-- <img src="/images/handstand.PNG"> -->
-                <div class="zoom">
-                    <a href="/productos">
-                        <h2>20% DE DESCUENTO <br> EN WALKERS!</h2>
-                    </a>
+<main>
+    
+    <div class="wrap">
+        <section class="galeria section">
+            <img src="/images/inicio.jpg">
+            <!-- <img src="/images/handstand.PNG"> -->
+            <div class="zoom">
+                <a href="/productos">
+                    <h2>20% DE DESCUENTO <br> EN WALKERS!</h2>
+                </a>
+            </div>
+        </section>
+        
+        <!-- <section class="galeria">
+            <img src="/images/inicio.jpg">
+            <img src="/images/handstand.PNG"> 
+        </section> -->
+        
+        <!-- <div class='cwcontainer '>
+            
+            <div class="col-6">
+                <div class="conoceMas img-fluid">
+                    <img src="/images/B1.PNG">
                 </div>
-            </section>
-
-            <!-- <section class="galeria">
-                <img src="/images/inicio.jpg">
-                <img src="/images/handstand.PNG"> 
-            </section> -->
-
-            <!-- <div class='cwcontainer '>
-
-                <div class="col-6">
-                    <div class="conoceMas img-fluid">
-                        <img src="/images/B1.PNG">
-                    </div>
+            </div>
+            
+            <div class="col-6">
+                <div class="conoceMas img-fluid">
+                    <img src="/images/WalkersW2.PNG">
                 </div>
-
-                <div class="col-6">
-                    <div class="conoceMas img-fluid">
-                        <img src="/images/WalkersW2.PNG">
-                    </div>
-                </div>
-
-                <div class="zoom">
-                    <a href="/productos">
-                        <h2>CONOCE NUESTRAS FIELDS!</h2>
-                    </a>
-                </div> -->
-
-            <div class='cwcontainer row'>
-
+            </div>
+            
+            <div class="zoom">
+                <a href="/productos">
+                    <h2>CONOCE NUESTRAS FIELDS!</h2>
+                </a>
+            </div> -->
+            
+            <div class='cwcontainer section'> 
+                <!-- SAQUE EL ROW -->
+                
                 <div class="col-12">
                     <img src="/images/indexDiv.png" alt="">
                 </div>
@@ -52,47 +53,58 @@
                         <h2>CONOCE NUESTRAS FIELDS!</h2>
                     </a>
                 </div>
-
+                
             </div>
-
-            <div class="row carouselIndex">
-                <div class="col-md-12">
+            
+            <div class=" carouselIndex section">
+                <!-- SAQUE EL ROW -->
+                <div class="col-md-12 prod">
                     <h2>Favoritos del Mes!</h2>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
                         <div class="carousel-inner">
                             <div class="    ">
                                 <div class="row">
                                     <% for (producto of productosDestacados) { %>
-                                    <div class="col-sm-3">
-                                        <div class="thumb-wrapper">
-                                            <div class="img-box">
-                                                <img src="<%= producto.imagen %>" class="img-responsive img-fluid" alt="">
-                                            </div>
-                                            <div class="thumb-content">
-                                                <h4><a href='/productos/detalle/<%= producto.id %>'><%= producto.nombre %></a></h4>
-                                                <p class="item-price"> <span><%= producto.precio %></span></p>
-                                                <a href="#" class="btn btn-dark">Add to Cart</a>
+                                        <div class="col-sm-3 cart">
+                                            <div class="thumb-wrapper">
+                                                <div class="img-box">
+                                                    <img src="<%= producto.imagen %>" class="img-responsive img-fluid" alt="">
+                                                </div>
+                                                <div class="thumb-content prod">
+                                                    <h4><a href='/productos/detalle/<%= producto.id %>'><%= producto.nombre %></a></h4>
+                                                    <p class="item-price"> <span><%= producto.precio %></span></p>
+                                                    <a href="#" class="btn btn-dark">Add to Cart</a>
+                                                </div>
                                             </div>
                                         </div>
+                                        <% } %>
                                     </div>
-                                    <% } %>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="imagenbottom ">
-                <img src="/images/rails.PNG">
-                <!-- <img src="/images/handstand.PNG"> -->
-                <div class="mision">
-                    <p>Nuestra misión es combinar la pasión por las tradiciones argentinas y el amor por el diseño, redefiniendo la bombacha de campo como un pantalón que se pueda usar tanto recorriendo las calles de Buenos Aires, como cabalgando en
-                        La Patagonia. </p>
+                
+                <div class="imagenbottom section">
+                    <!-- <div class="box">
+                        <img src="/images/rails.PNG">
+                    </div>   -->
+                    <div class="mision">
+                        <p>Nuestra misión es combinar la pasión por las tradiciones argentinas y el amor por el diseño, redefiniendo la bombacha de campo como un pantalón que se pueda usar tanto recorriendo las calles de Buenos Aires, como cabalgando en
+                            La Patagonia. </p>
+                    </div>
                 </div>
-            </div>
-
-
-        </main>
-
-        <%- include('./partials/footer.ejs') %>
+                <div class="imagenbottom section">
+                    <!-- <div class="box">
+                        <img src="/images/rails.PNG">
+                    </div>   -->
+                    <div class="mision2">
+                        <p>Nuestra misión es combinar la pasión por las tradiciones argentinas y el amor por el diseño, redefiniendo la bombacha de campo como un pantalón que se pueda usar tanto recorriendo las calles de Buenos Aires, como cabalgando en
+                            La Patagonia. </p>
+                    </div>
+                </div>
+                    
+    </div>
+</main>
+            
+            <%- include('./partials/footer.ejs') %>
