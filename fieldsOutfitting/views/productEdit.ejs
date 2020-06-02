@@ -4,24 +4,24 @@
 
 <main>
     
-    <form action="/productos/editar/<%= productToEdit.id %>?_method=PUT" method="POST">
+    <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST">
         
         <div class="card bg-light">
             <article class="card-body mx-auto" style="max-width: 400px;">
-                <h4 class="card-title mt-3 text-center">Editá Tu Field</h4>
-                <p class="text-center">Bienvenido/a a Fields!</p>
+                <h4 class="card-title mt-3 text-center">Edit your Field</h4>
+                <p class="text-center">Welcome to Fields!</p>
                 <form>
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                         </div>
-                        <input name="nombre" class="form-control" placeholder="Nombre Producto" value="<%= productToEdit.nombre %>" type="text" required>
+                        <input name="name" class="form-control" placeholder="Product Name" value="<%= productToEdit.name %>" type="text" required>
                     </div> 
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                         </div>
-                        <input name="descripcion" class="form-control" value="<%= productToEdit.descripcion %>" placeholder="Descripción" type="text">
+                        <input name="description" class="form-control" value="<%= productToEdit.description %>" placeholder="Descripción" type="text">
                     </div>
                     
                     <!-- repite 4 veces  -->
@@ -38,38 +38,38 @@
                         </div>
                         <div class="input-group-prepend col-2">
                         </div>
-                        <input name="" class="form-control" placeholder="Cant." type="number" required>
+                        <input name="quantity" class="form-control" placeholder="Quantity" value="1"type="number" required>
                     </div>
                     <div class="form-group input-group row">
                         <div class="btn-group col-12">
-                            <label for="">Precio:</label>
-                            <input name="precio" class="number" placeholder="Precio" type="number" value="<%= productToEdit.precio %>"required>
+                            <label for="price">Price:</label>
+                            <input name="price" class="number" placeholder="Precio" type="number" value="<%= productToEdit.price %>"required>
                         </div>
                     </div>
                     <div class="form-group input-group row">
                     <div class="btn-group col-12">
-                        <label for="">Descuento:</label>
-                        <input name="descuento" class="number" placeholder="Descuento" value="<%= productToEdit.descuento %>" type="number" required>
+                        <label for="discount">Discount:</label>
+                        <input name="discount" class="number" placeholder="Discount" value="<%= productToEdit.discount %>" type="number" required>
                     </div>
                     <div class="col-12 col-md-6">
-                        <label for="categoria" class="form-label">Categoría:</label>
-                        <select name="categoria" id="category" class="form-input"  value="<%= productToEdit.categoria %>">
-                            <option value="">Elegí</option>
-                            <option value="destacado">Destacado</option>
+                        <label for="category" class="form-label">Category:</label>
+                        <select name="category" id="category" class="form-input"  value="<%= productToEdit.category %>">
+                            <option value="">Choose</option>
+                            <option value="destacado">Highlighted</option>
                             <option value="visited"></option>
                         </select>
                     </div>
                     
                     <div class="col-12 col-md-6">
-                        <label for="tipo" class="form-label">Tipo de Producto:</label>
-                        <select name="tipo" id="tipo" class="form-input"  value="<%= productToEdit.tipo %>">
-                            <option value="">Elegí</option>
+                        <label for="type" class="form-label">Type of Producto:</label>
+                        <select name="type" id="tipo" class="form-input"  value="<%= productToEdit.type %>">
+                            <option value="">Choose</option>
                             <option value="fields">Fields</option>
                             <option value="walkers">Walkers</option>
                         </select>
                     </div>
                                 
-                        <button type="submit" class="btn btn-primary btn-block">Guardar Producto</button>
+                        <button type="submit" class="btn btn-primary btn-block">Save Product</button>
         </article>
     </form>
     </div>  

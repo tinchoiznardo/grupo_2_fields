@@ -10,8 +10,8 @@
             <img src="/images/inicio.jpg">
             <!-- <img src="/images/handstand.PNG"> -->
             <div class="zoom">
-                <a href="/productos">
-                    <h2>20% DE DESCUENTO <br> EN WALKERS!</h2>
+                <a href="/products">
+                    <h2>20% OFF <br> IN WALKERS!</h2>
                 </a>
             </div>
         </section>
@@ -36,7 +36,7 @@
             </div>
             
             <div class="zoom">
-                <a href="/productos">
+                <a href="/products">
                     <h2>CONOCE NUESTRAS FIELDS!</h2>
                 </a>
             </div> -->
@@ -49,8 +49,8 @@
                 </div>
 
                 <div class="zoom">
-                    <a href="/productos">
-                        <h2>CONOCE NUESTRAS FIELDS!</h2>
+                    <a href="/products">
+                        <h2>SHOP WALKERS / FIELDS</h2>
                     </a>
                 </div>
                 
@@ -59,20 +59,20 @@
             <div class=" carouselIndex section">
                 <!-- SAQUE EL ROW -->
                 <div class="col-md-12 prod">
-                    <h2>Favoritos del Mes!</h2>
+                    <h2>Highlighted!</h2>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
                         <div class="carousel-inner">
                             <div class="    ">
                                 <div class="row">
-                                    <% for (producto of productosDestacados) { %>
+                                    <% for (product of highlightedProducts) { %>
                                         <div class="col-sm-3 cart">
                                             <div class="thumb-wrapper">
                                                 <div class="img-box">
-                                                    <img src="<%= producto.imagen %>" class="img-responsive img-fluid" alt="">
+                                                    <img src="<%= product.image %>" class="img-responsive img-fluid" alt="">
                                                 </div>
                                                 <div class="thumb-content prod">
-                                                    <h4><a href='/productos/detalle/<%= producto.id %>'><%= producto.nombre %></a></h4>
-                                                    <p class="item-price"> <span><%= producto.precio %></span></p>
+                                                    <h4><a href='/products/detail/<%= product.id %>'><%= product.name %></a></h4>
+                                                    <p class="item-price"> <span><%= product.price %></span></p>
                                                     <a href="#" class="btn btn-dark">Add to Cart</a>
                                                 </div>
                                             </div>
@@ -90,8 +90,8 @@
                         <img src="/images/rails.PNG">
                     </div>   -->
                     <div class="mision">
-                        <p>Nuestra misión es combinar la pasión por las tradiciones argentinas y el amor por el diseño, redefiniendo la bombacha de campo como un pantalón que se pueda usar tanto recorriendo las calles de Buenos Aires, como cabalgando en
-                            La Patagonia. </p>
+                        <p>Our mission is to combine argentinian passions and fashion design, redefining the "bombacha de campo" as a trouser which can be used not only for daily life, 
+                            but also for riding a horse in the Patagonia. </p>
                     </div>
                 </div>
                 <div class="imagenbottom section">
@@ -99,8 +99,8 @@
                         <img src="/images/rails.PNG">
                     </div>   -->
                     <div class="mision2">
-                        <p>Nuestra misión es combinar la pasión por las tradiciones argentinas y el amor por el diseño, redefiniendo la bombacha de campo como un pantalón que se pueda usar tanto recorriendo las calles de Buenos Aires, como cabalgando en
-                            La Patagonia. </p>
+                        <p>Our mission is to combine , redefining the "bombacha de campo" as a trouser which can be used not only for daily life, 
+                            but also for riding a horse in the Patagonia.  </p>
                     </div>
                 </div>
                     
