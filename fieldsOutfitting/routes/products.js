@@ -17,6 +17,8 @@ var upload = multer({ storage: storage })
 
 /* GET home page. */
 router.get('/', productsController.root);
+
+/*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', productsController.detail);
 
 /*** CREATE ONE PRODUCT ***/ 
