@@ -70,6 +70,7 @@ const productsController = {
 			description: req.body.description,
 			discount: req.body.discount,
 			category: req.body.category,
+			type: req.body.type,
 			price: req.body.price
 		});
 

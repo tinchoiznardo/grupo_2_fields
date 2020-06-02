@@ -15,5 +15,12 @@
   "lastname": "Rodríguez Salinas",
   "password": "$2b$10$r50aqQYNmI.BOVUYVmCVaunfqD477N.MAw7uv0xeGGF6ii.qabCma",
   "email": "santirodriguezsalinas@gmail.com"
+ },
+ {
+  "id": 3,
+  "name": "Santiago Rodríguez Salinas",
+  "lastname": "Rodríguez Salinas",
+  "password": "$2b$10$l9wYCY9OwSFY5ccYzoyMH.TSpjTaEHvZIDnTAVic6vwC4epcb7GGW",
+  "email": "santirodriguezsalinas@gmail.com"
  }
 ]

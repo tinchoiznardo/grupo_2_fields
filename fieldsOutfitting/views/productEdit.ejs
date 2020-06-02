@@ -38,7 +38,7 @@
                         </div>
                         <div class="input-group-prepend col-2">
                         </div>
-                        <input name="quantity" class="form-control" placeholder="Quantity" value="1"type="number" required>
+                        <input name="quantity" class="form-control" placeholder="Quantity" value="1" type="number" required>
                     </div>
                     <div class="form-group input-group row">
                         <div class="btn-group col-12">
@@ -54,18 +54,33 @@
                     <div class="col-12 col-md-6">
                         <label for="category" class="form-label">Category:</label>
                         <select name="category" id="category" class="form-input"  value="<%= productToEdit.category %>">
-                            <option value="">Choose</option>
-                            <option value="destacado">Highlighted</option>
-                            <option value="visited"></option>
+                            <%if (productToEdit.category === "highlighted") {%>
+                                <option value="">Choose</option>
+                                <option value="highlighted" selected>Highlighted</option>
+                            <%} else {%>
+                                <option value="">Choose</option>
+                                <option value="highlighted">Highlighted</option>
+                            <% } %>
                         </select>
                     </div>
                     
                     <div class="col-12 col-md-6">
                         <label for="type" class="form-label">Type of Producto:</label>
                         <select name="type" id="tipo" class="form-input"  value="<%= productToEdit.type %>">
-                            <option value="">Choose</option>
-                            <option value="fields">Fields</option>
-                            <option value="walkers">Walkers</option>
+                            
+                            <%if (productToEdit.type === "fields") {%>
+                                <option value="">Choose</option>
+                                <option value="fields" selected>Fields</option>
+                                <option value="walkers">Walkers</option>
+                            <%} else if (productToEdit.type === "walkers") {%>
+                                <option value="">Choose</option>
+                                <option value="fields">Fields</option>
+                                <option value="walkers" selected>Walkers</option>
+                            <%} else {%>
+                                <option value="">Choose</option>
+                                <option value="fields">Fields</option>
+                                <option value="walkers">Walkers</option>
+                            <% } %>
                         </select>
                     </div>
                                 

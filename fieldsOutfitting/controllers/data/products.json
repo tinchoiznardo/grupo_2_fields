@@ -101,11 +101,11 @@
  },
  {
   "id": 11,
-  "name": "Parlantito XD",
-  "type": "fields",
-  "price": "123",
+  "name": "Parlantito",
+  "type": "walkers",
+  "price": "58",
   "discount": "10",
-  "image": "/images/products/image-product-1591112432379.jpg",
+  "image": "/images/products/image-product-1591114809706.jpg",
   "description": "asdasd",
   "category": ""
  }
