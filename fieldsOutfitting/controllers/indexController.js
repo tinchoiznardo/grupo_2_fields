@@ -1,13 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-const productosFilePath = path.join(__dirname, './data/productos.json');
-const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, './data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const indexController = function(req, res, next) {
-    let productosDestacados = productos.filter(producto => producto.categoria == "destacado");
-    res.render('index', { productosDestacados: productosDestacados });
+    let highlightedProducts = products.filter(product => product.category == "highlighted");
+    res.render('index', { highlightedProducts: highlightedProducts });
   }
 
 module.exports = indexController;

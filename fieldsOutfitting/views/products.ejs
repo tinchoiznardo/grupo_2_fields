@@ -16,7 +16,7 @@
                             <div class="mask rgba-black-light"></div>
                         </div>
                         <div class="carousel-caption">
-                            <h3 class="h3-responsive">10% Off En Walkers!</h3>
+                            <h3 class="h3-responsive">10% Off in Walkers!</h3>
                             <p>Fields Outfitting</p>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             <div class="mask rgba-black-light"></div>
                         </div>
                         <div class="carousel-caption">
-                            <h3 class="h3-responsive">Nuevos Productos!</h3>
+                            <h3 class="h3-responsive">New products!</h3>
                             <p>Fields Outfitting</p>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                             <div class="mask rgba-black-light"></div>
                         </div>
                         <div class="carousel-caption">
-                            <h3 class="h3-responsive">Compra Gato</h3>
+                            <h3 class="h3-responsive">Buy Cat</h3>
                             <p>Fields Outfitting</p>
                         </div>
                     </div>
@@ -79,12 +79,12 @@
 
 
                 <div class="row col-9 galeria">
-                    <% for (producto of productos) { %>
+                    <% for (product of products) { %>
                     <div class="col-lg-4 sm-12 fg">
-                        <img src="<%= producto.imagen %>" alt="">
-                        <h5><a href="/productos/detalle/<%= producto.id %>"><%= producto.nombre %></a></h5>
-                        <p><%= producto.precio %></p>
-                        <a href="#" class="btn btn-dark">Añadir al carrito</a>
+                        <img src="<%= product.image %>" alt="">
+                        <h5><a href="/products/detail/<%= product.id %>"><%= product.name %></a></h5>
+                        <p><%= product.price %></p>
+                        <a href="#" class="btn btn-dark">Add to cart</a>
                     </div>
                     <% } %>
                 </div>

@@ -9,29 +9,29 @@
             
             <div class="card bg-light">
                 <article class="card-body mx-auto" style="max-width: 400px;">
-                    <h4 class="card-title mt-3 text-center">Creá tu Cuenta</h4>
-                    <p class="text-center">Bienvenido/a a Fields!</p>
+                    <h4 class="card-title mt-3 text-center">Sign In</h4>
+                    <p class="text-center">Welcome to Fields!</p>
                     <p>
-                        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Registro vía facebook</a>
+                        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Sign in with facebook</a>
                     </p>
                     <p>
-                        <a href="" class="btn btn-block bg-warning"> <i class="fab"></i>   Registro vía gmail</a>
+                        <a href="" class="btn btn-block bg-warning"> <i class="fab"></i>   Sign in with gmail</a>
                     </p>
                     <p class="divider-text">
-                        <span class="bg-light">Ó</span>
+                        <span class="bg-light">Or</span>
                     </p>
-                    <form action= "/registro" method="POST">
+                    <form action= "/user/sign-in" method="POST">
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                             </div>
-                            <input name="name" id="name" class="form-control" placeholder="Nombre" type="text">
+                            <input name="name" id="name" class="form-control" placeholder="Name" type="text">
                         </div> 
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                             </div>
-                            <input name="lastname" id="lastname" class="form-control" placeholder="Apellido" type="text">
+                            <input name="lastname" id="lastname" class="form-control" placeholder="Lastname" type="text">
                         </div>
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
@@ -49,24 +49,24 @@
                                 <option value="2">+198</option>
                                 <option value="3">+701</option>
                             </select>
-                            <input name="telefono" id= "telefono" class="form-control" placeholder="Número de Celular" type="text">
+                            <input name="telefono" id= "telefono" class="form-control" placeholder="Cellphone" type="text">
                         </div>
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                             </div>
-                            <input class="form-control" name= "password" id = "password" placeholder="Contraseña" type="password">
+                            <input class="form-control" name= "password" id = "password" placeholder="Password" type="password">
                         </div> 
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                             </div>
-                            <input class="form-control" placeholder="Repetir Contraseña" type="password">
+                            <input class="form-control" placeholder="Repeat Password" type="password">
                         </div>                                       
                         <div class="form-group">
-                            <button type="submit" id= "submit" name= "submit" class="btn btn-primary btn-block"> Crear Cuenta </button>
+                            <button type="submit" id= "submit" name= "submit" class="btn btn-primary btn-block"> Log In </button>
                         </div>       
-                        <p class="text-center">Tenés una cuenta? <a href="">Ingresá</a> </p>                                                                 
+                        <p class="text-center">Already registered? <a href="/users/log-in">Log In</a> </p>                                                                 
                     </form>
                 </article>
             </div> 
