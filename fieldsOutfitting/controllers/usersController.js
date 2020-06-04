@@ -2,12 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
 
-const usersFilePath = path.join(__dirname, './data/usuarios.json');
+const usersFilePath = path.join(__dirname, './data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-const registroController = {
-    root: (req, res) => {
-        res.render('registro');
+const usersController = {
+    logIn: (req, res) => {
+        res.render('logIn', {
+            error: undefined
+        });
     },
     store: (req, res, next) => {
         const newUser = {
@@ -25,8 +27,8 @@ const registroController = {
         fs.writeFileSync(usersFilePath, JSON.stringify(userToSave, null, ' '));
         res.redirect('/');
     },
-    login: (req, res) => {
-        res.render('submit');
+    signIn: (req, res) => {
+        res.render('signIn');
     },
     validate: (req, res) => {
         // Validar la contraseña utilizando bcrypt.compareSync()
@@ -40,18 +42,18 @@ const registroController = {
         });
 
         if (!user) {
-            res.render('submit', {
+            res.render('logIn', {
                 error: 'Usuario no encontrado!'
             });
         }  
         if(!bcrypt.compareSync(password, user.password)) {
-            res.render('submit', {
+            res.render('logIn', {
                 error: 'Password incorrecto!'
             });
         }
 
-        res.send(user)
+        res.redirect('/')
     }
 };
 
-module.exports = registroController;
+module.exports = usersController;

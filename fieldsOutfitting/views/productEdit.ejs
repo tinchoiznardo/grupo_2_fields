@@ -1,0 +1,96 @@
+<%- include('./partials/head.ejs') %>
+
+<%- include('./partials/header.ejs') %>
+
+<main>
+    
+    <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST">
+        
+        <div class="card bg-light">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="card-title mt-3 text-center">Edit your Field</h4>
+                <p class="text-center">Welcome to Fields!</p>
+                <form>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="name" class="form-control" placeholder="Product Name" value="<%= productToEdit.name %>" type="text" required>
+                    </div> 
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                        <input name="description" class="form-control" value="<%= productToEdit.description %>" placeholder="Descripción" type="text">
+                    </div>
+                    
+                    <!-- repite 4 veces  -->
+                    
+                    <div class="form-group input-group row">
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">XS</button>
+                                <button type="button" class="btn btn-default">S</button>
+                                <button type="button" class="btn btn-default">M</button>
+                                <button type="button" class="btn btn-default">L</button>
+                                <button type="button" class="btn btn-default">XL</button>
+                            </div>
+                        </div>
+                        <div class="input-group-prepend col-2">
+                        </div>
+                        <input name="quantity" class="form-control" placeholder="Quantity" value="1" type="number" required>
+                    </div>
+                    <div class="form-group input-group row">
+                        <div class="btn-group col-12">
+                            <label for="price">Price:</label>
+                            <input name="price" class="number" placeholder="Precio" type="number" value="<%= productToEdit.price %>"required>
+                        </div>
+                    </div>
+                    <div class="form-group input-group row">
+                    <div class="btn-group col-12">
+                        <label for="discount">Discount:</label>
+                        <input name="discount" class="number" placeholder="Discount" value="<%= productToEdit.discount %>" type="number" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="category" class="form-label">Category:</label>
+                        <select name="category" id="category" class="form-input"  value="<%= productToEdit.category %>">
+                            <%if (productToEdit.category === "highlighted") {%>
+                                <option value="">Choose</option>
+                                <option value="highlighted" selected>Highlighted</option>
+                            <%} else {%>
+                                <option value="">Choose</option>
+                                <option value="highlighted">Highlighted</option>
+                            <% } %>
+                        </select>
+                    </div>
+                    
+                    <div class="col-12 col-md-6">
+                        <label for="type" class="form-label">Type of Producto:</label>
+                        <select name="type" id="tipo" class="form-input"  value="<%= productToEdit.type %>">
+                            
+                            <%if (productToEdit.type === "fields") {%>
+                                <option value="">Choose</option>
+                                <option value="fields" selected>Fields</option>
+                                <option value="walkers">Walkers</option>
+                            <%} else if (productToEdit.type === "walkers") {%>
+                                <option value="">Choose</option>
+                                <option value="fields">Fields</option>
+                                <option value="walkers" selected>Walkers</option>
+                            <%} else {%>
+                                <option value="">Choose</option>
+                                <option value="fields">Fields</option>
+                                <option value="walkers">Walkers</option>
+                            <% } %>
+                        </select>
+                    </div>
+                                
+                        <button type="submit" class="btn btn-primary btn-block">Save Product</button>
+        </article>
+    </form>
+    </div>  
+</div> 
+
+
+</main> 
+
+<%- include('./partials/footer.ejs') %>

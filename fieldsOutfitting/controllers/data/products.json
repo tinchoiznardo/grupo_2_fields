@@ -1,0 +1,112 @@
+[
+ {
+  "id": 1,
+  "name": "azul camo",
+  "type": "fields",
+  "price": 2.299,
+  "discount": 40,
+  "image": "/images/products/fields1.jpg",
+  "description": "Alto pantalon.",
+  "category": "highlighted"
+ },
+ {
+  "id": 2,
+  "name": "negra floreada",
+  "type": "fields",
+  "price": "2.299",
+  "discount": "40",
+  "image": "/images/products/fields9.jpg",
+  "description": "Alto pantalon.",
+  "category": ""
+ },
+ {
+  "id": 3,
+  "name": "bordo pluma",
+  "type": "fields",
+  "price": 2.299,
+  "discount": 40,
+  "image": "/images/products/fields3.jpg",
+  "description": "Alto pantalon.",
+  "category": "highlighted"
+ },
+ {
+  "id": 4,
+  "name": "bordo floreada",
+  "type": "fields",
+  "price": 2.299,
+  "discount": 40,
+  "image": "/images/products/fields8.jpg",
+  "description": "Alto pantalon.",
+  "category": "highlighted"
+ },
+ {
+  "id": 5,
+  "name": "azul zigzag",
+  "type": "fields",
+  "price": 2.299,
+  "discount": 40,
+  "image": "/images/products/fields7.jpg",
+  "description": "Alto pantalon.",
+  "category": ""
+ },
+ {
+  "id": 6,
+  "name": "tostada floreada",
+  "type": "fields",
+  "price": 2.299,
+  "discount": 40,
+  "image": "/images/products/fields5.jpg",
+  "description": "Alto pantalon.",
+  "category": "highlighted"
+ },
+ {
+  "id": 7,
+  "name": "tostada geométrica",
+  "type": "fields",
+  "price": 2.299,
+  "discount": 40,
+  "image": "/images/products/fields2.jpg",
+  "description": "Alto pantalon.",
+  "category": "highlighted"
+ },
+ {
+  "id": 8,
+  "name": "negra azteca",
+  "type": "fields",
+  "price": 2.299,
+  "discount": 40,
+  "image": "/images/products/fields4.jpg",
+  "description": "Alto pantalon.",
+  "category": "highlighted"
+ },
+ {
+  "id": 9,
+  "name": "flores walkers",
+  "type": "walkers",
+  "price": 2.499,
+  "discount": 20,
+  "image": "/images/products/fieldsW.jpg",
+  "description": "Alto pantalon.",
+  "category": "highlighted"
+ },
+ {
+  "id": 10,
+  "name": "walkers night",
+  "type": "walkers",
+  "price": 2.499,
+  "discount": 20,
+  "image": "/images/products/fieldsB.jpg",
+  "description": "Alto pantalon.",
+  "category": ""
+ },
+ {
+  "id": 11,
+  "name": "Parlantito",
+  "type": "walkers",
+  "price": "58",
+  "discount": "10",
+  "image": "/images/products/image-product-1591114809706.jpg",
+  "description": "asdasd",
+  "category": ""
+ }
+]

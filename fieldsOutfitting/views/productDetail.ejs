@@ -5,27 +5,27 @@
 <main>
   <div class="">
     <div class="row">
-      <h1 class="page-header"> TOSTADA GEOMETRICA</h1>
+      <h1 class="page-header"> GEOMETRICAL TOAST</h1>
     </div>
 
     <div class="row detalleProducto">
       <div class="col-lg-6 mb-4">
         <div class="main-product-image">
-          <img src="<%= producto.imagen %>" class="img-fluid">
+          <img src="<%= product.image %>" class="img-fluid">
         </div>
       </div>
       <div class="col-lg-6">
           
           <div class="form-group row">
             <div class="col-sm-8 col-md-9 description">
-              <h1><%= producto.nombre %></h1>
+              <h1><%= product.name %></h1>
             </div>
           </div>
 
           <div class="form-group row">
             <label class="col-sm-3 col-md-3 form-control-label">Description:</label>
             <div class="col-sm-8 col-md-9 description">
-              <p><%= producto.descripcion %></p>
+              <p><%= product.description %></p>
             </div>
           </div>
 
@@ -33,7 +33,7 @@
           <div class="form-group row">
             <label class="col-sm-3 col-md-3 form-control-label nopaddingtop">Precio:</label>
             <div class="col-sm-8 col-md-9">
-              <span class="product-form-price" id="product-form-price"><%= producto.precio %></span>
+              <span class="product-form-price" id="product-form-price"><%= product.price %></span>
             </div>
           </div>
 
@@ -64,14 +64,14 @@
             </div>
           </div>
 
-          	<a href="/productos/editar/<%= producto.id %>" class="action-button edit btn-primary">EDITAR PRODUCTO</a>
-            <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST">
-							<button type="submit" class="action-button delete bg-danger">ELIMINAR</button>
+          	<a href="/products/edit/<%= product.id %>" class="action-button edit btn-primary">EDIT PRODUCT</a>
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+							<button type="submit" class="action-button delete bg-danger">DELETE</button>
 						</form>
 
           <div class="talles img-fluid rounded float-left">
             <img src="/images/talles.jpg" class="img">
-            <p><a href="/images/fieldsTalles.jpg"> Ver medidas</a></p>
+            <p><a href="/images/fieldsTalles.jpg"> Sizes</a></p>
           </div>
 
           <input type="hidden" value="nDolT3hRvGuCl5YcE9D1e3DIe1z0Kg127Xg43qTwtqA=" name="authenticity_token">

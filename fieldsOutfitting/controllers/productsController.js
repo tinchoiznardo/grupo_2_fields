@@ -1,78 +1,80 @@
 const fs = require('fs');
 const path = require('path');
 
-const productosFilePath = path.join(__dirname, './data/productos.json');
-const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, './data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const productosController = {
-    // Root - Show all productos
+const productsController = {
+    // Root - Show all products
 	root: (req, res) => {
-		res.render('galeriaProductos', {
-			productos: productos,
+		res.render('products', {
+			products: products,
 		});
 	},
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		const id = req.params.id;
-		const producto = productos.find(p => p.id == id);
-		res.render('detalleProducto',{
-			producto: producto,
+		const product = products.find(p => p.id == id);
+		res.render('productDetail',{
+			product: product,
 		});
 	},
 
 	// Create - Form to create
 	create: (req, res) => {
-		res.render('cargaProducto');
+		res.render('productLoad');
 	},
 	
 	// Create -  Method to store
 	store: (req, res, next) => {
-		const newId = productos[productos.length - 1].id + 1;
+		const newId = products[products.length - 1].id + 1;
 
 		const image = req.files[0].filename
 
 		const newProduct = {
 			id : newId,
-			nombre: req.body.nombre,
-			tipo: req.body.tipo,
-			precio: req.body.precio,
-			descuento: req.body.descuento,
-			imagen: "/images/productos/" + image,
-			descripcion: req.body.descripcion,
-			categoria: req.body.categoria
+			name: req.body.name,
+			type: req.body.type,
+			price: req.body.price,
+			discount: req.body.discount,
+			image: "/images/products/" + image,
+			description: req.body.description,
+			category: req.body.category
 
 		};
 
 		console.log(req.body)
-		const finalproductos = [...productos, newProduct];
-		fs.writeFileSync(productosFilePath, JSON.stringify(finalproductos, null, ' '));
+		const finalproducts = [...products, newProduct];
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalproducts, null, ' '));
 		res.redirect('/');
 	},
 
 	// Update - Form to edit
 	edit: (req, res) => {
 		const id = req.params.id;
-		const productToEdit = productos.find(p => p.id == id);
-		res.render('edicionProducto',{
+		const productToEdit = products.find(p => p.id == id);
+		res.render('productEdit',{
 			productToEdit: productToEdit
 		});
 	},
+
 	// Update - Method to update
 	update: (req, res) => {
 		const id = req.params.id;
-		const productToEdit = productos.find(p => p.id == id);
+		const productToEdit = products.find(p => p.id == id);
 		console.log(productToEdit)
-		productos[id - 1] =({
+		products[id - 1] =({
 			...productToEdit,
-			nombre: req.body.nombre,
-			descripcion: req.body.descripcion,
-			descuento: req.body.descuento,
-			categoria: req.body.categoria,
-			precio: req.body.precio
+			name: req.body.name,
+			description: req.body.description,
+			discount: req.body.discount,
+			category: req.body.category,
+			type: req.body.type,
+			price: req.body.price
 		});
 
-		fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, ' '));
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		
 		res.redirect('/');
 		
@@ -81,11 +83,11 @@ const productosController = {
 	// Delete - Delete one product from DB
 	delete : (req, res) => {
 		const id = req.params.id;
-		const productosWithout = productos.filter( product => id != product.id);
-		fs.writeFileSync(productosFilePath, JSON.stringify(productosWithout, null, ' '));
+		const productsWithout = products.filter( product => id != product.id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(productsWithout, null, ' '));
 		res.redirect('/');
 
 	}
 }
 
-module.exports = productosController;
+module.exports = productsController;
