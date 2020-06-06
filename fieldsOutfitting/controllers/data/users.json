@@ -22,5 +22,12 @@
   "lastname": "Rodríguez Salinas",
   "password": "$2b$10$l9wYCY9OwSFY5ccYzoyMH.TSpjTaEHvZIDnTAVic6vwC4epcb7GGW",
   "email": "santirodriguezsalinas@gmail.com"
+ },
+ {
+  "id": 4,
+  "name": "Juan",
+  "lastname": "Perez",
+  "password": "$2b$10$aS3lkoyBs79NBUh5Y7PxpukIT3iiWOfNSUgUNR/Im/pMwVlKCii8G",
+  "email": "JuanP@gmail.com"
  }
 ]

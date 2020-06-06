@@ -26,10 +26,15 @@ const usersController = {
         const userToSave = [...users, newUser];
         fs.writeFileSync(usersFilePath, JSON.stringify(userToSave, null, ' '));
         res.redirect('/');
+        next()
     },
     signIn: (req, res) => {
-        res.render('signIn');
-    },
+        res.render('signIn', req.session.mail = req.body.mail);
+        const fieldform = req.body.name;
+        res.cookie ('mail', fieldForm, {
+            maxAge: 60 * 1000 * 24
+        })},
+
     validate: (req, res) => {
         // Validar la contraseña utilizando bcrypt.compareSync()
              // mostrar la view de login con un error.
