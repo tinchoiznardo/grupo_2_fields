@@ -15,6 +15,7 @@ body {
 .navbar {
     height: 15vh;
     z-index: 100;
+    align-items: baseline;
 }
 
 .nav {
@@ -25,10 +26,14 @@ body {
 
 .logo {
     width: 100px;
+    top: 0;
+    margin-top: 10px;
+    
 }
 
 .logo img {
     width: 100%;
+    margin-top: 10px;
 }
 
 .carrito img {
@@ -59,24 +64,6 @@ body {
 /* FOOTER*/
 
 
-/*.footer {
-    background-color: black;
-    color: white;
-    height: 50vh;
-    width: auto;
-    padding: none;
-    margin: none;
-}
-
-footer ul {
-    text-decoration: none;
-    list-style: none;
-}
-
-footer a {
-    color: white;
-}
-*/
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
 body {
@@ -89,7 +76,8 @@ body {
 .card {
     padding: 2% 7%;
     color: #646771;
-    background-color: #16151a
+    background-color: #16151a;
+    border-radius: 0%;
 }
 
 ul {
@@ -103,7 +91,7 @@ ul>li {
 }
 
 ul>li:hover {
-    color: #957bda;
+    color: #FAD919;
     cursor: pointer
 }
 
@@ -117,7 +105,7 @@ hr {
 }
 
 .social>i:hover {
-    color: #957bda;
+    color: #FAD919;
     cursor: pointer
 }
 
@@ -138,11 +126,82 @@ hr {
     text-align: right;
 }
 
-.logoFooter img {
-    width: 100px;
+.pagos li img{
+    width: 30px;
 }
 
+.logoFooter {
+    margin: auto;
+}
+.logoFooter img {
+    width: 58%;
+}
 
+.suscribirse{
+
+}
+
+.footerContainer{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+}
+.contacto li{
+    
+    margin-bottom: 10px;
+}
+
+.contacto a {
+    color: #646771;
+}
+a:hover {
+    color: #FAD919;
+}
+
+.envios{
+    margin-top: 20px;
+}
+
+.pagos li{
+    float: right;
+}
+
+.policyContainer{
+
+    display: flex;
+}
+
+.policy{
+    justify-content: end;
+    align-items: ;
+}
+
+.policy a{
+    color: #646771;
+}
+
+.policy a:hover{
+    color: #FAD919;
+}
+
+@media (max-width: 576px){
+    .footerContainer{
+        display:flex;
+        flex-flow: column;
+    }
+    .contacto{
+        order: 2;
+    }
+
+    .logoFooter{
+        order: 1;
+        margin-bottom: 25px;
+    }
+
+    .pagos{
+        order: 3;
+    }
+}
 /*FIN FOOTER*/
 
 
