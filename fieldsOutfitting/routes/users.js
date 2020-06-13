@@ -6,6 +6,7 @@ var multer = require('multer');
 var fs = require('fs');
 var path = require('path');
 var authMiddleware = require('../middlewares/authMiddleware');
+var userExistenceMiddleware = require('../middlewares/userExistenceMiddleware');
 
 const usersFilePath = path.join(__dirname, '../controllers/data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -22,7 +23,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 /* GET home page. */
-router.get('/log-in/', usersController.logIn);
+router.get('/log-in/', userExistenceMiddleware, usersController.logIn);
 router.post('/log-in/', usersController.validate);
 
 router.get('/sign-in/', usersController.signIn);
