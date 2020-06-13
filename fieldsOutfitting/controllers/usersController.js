@@ -41,7 +41,7 @@ const usersController = {
 
         if(req.body.remember){
             res.cookie('user', user.id, {
-                maxAge: 100000000
+                maxAge: 10000
             });
         };
 
@@ -83,6 +83,11 @@ const usersController = {
     res.render('profile', {
         user: req.session.user
     });    
+    },
+    logOut: (req, res) => {
+        req.session.user = null;
+        res.cookie('user', null, { maxAge: -1});
+        res.redirect('/user/log-in')
     }
 };
 

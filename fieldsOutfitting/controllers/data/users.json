@@ -31,5 +31,13 @@
   "password": "$2b$10$X9xMbMZ.sX1argFCDLICeudDOJxtjiDZRgv5MtVTjFkSVo57n1vH6",
   "email": "santirodriguezsalinas@gmail.com",
   "avatar": "/images/users/avatar-1592089529345.png"
+ },
+ {
+  "id": 8,
+  "name": "jose",
+  "lastname": "lopez",
+  "password": "$2b$10$Lkjye1Eum6z5ukGWUKFyW.JP5yzdKT43PC4U1AB4iSYyDR0e2CFUu",
+  "email": "joselopez@gmail.com",
+  "avatar": "/images/users/avatar-1592091006142.jpg"
  }
 ]

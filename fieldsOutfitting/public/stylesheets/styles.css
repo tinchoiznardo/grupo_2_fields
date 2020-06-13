@@ -9,6 +9,9 @@ body {
     padding: 0px;
 }
 
+.name{
+    text-transform: capitalize;
+}
 
 /*HEADER*/
 

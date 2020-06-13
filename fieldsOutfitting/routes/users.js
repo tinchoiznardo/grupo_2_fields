@@ -46,8 +46,9 @@ router.post('/sign-in/', upload.any(), [
     }).withMessage('Passwords doesn´t match')
 ], usersController.store);
 
-router.get('/profile', authMiddleware, usersController.profile);
+router.get('/profile/', authMiddleware, usersController.profile);
 
+router.post('/log-out/', usersController.logOut)
 
 module.exports = router;
 

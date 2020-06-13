@@ -72,7 +72,7 @@
                     <% for (product of products) { %>
                     <div class="col-lg-4 sm-12 fg">
                         <img src="<%= product.image %>" alt="">
-                        <h5><a href="/products/detail/<%= product.id %>"><%= product.name %></a></h5>
+                        <h5><a class='name' href="/products/detail/<%= product.id %>"><%= product.name %></a></h5>
                         <p><%= product.price %></p>
                         <a href="#" class="btn btn-dark">Add to cart</a>
                     </div>
