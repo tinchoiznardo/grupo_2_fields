@@ -1,0 +1,33 @@
+<%- include('./partials/head.ejs') %>
+
+<%- include('./partials/header.ejs') %>
+
+<main>
+  <div class="">
+    <div class="row">
+      <h1 class="page-header"> Profile </h1>
+    </div>
+
+    <div class="row detalleProducto">
+      <div class="col-lg-6 mb-4">
+        <div class="main-product-image">
+          <img src="<%= user.avatar %>" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-6">
+          
+          <div class="form-group row">
+            <div class="col-sm-8 col-md-9 description">
+              <h2><%= user.name %> <%= user.lastname %></h2>
+              <h2><%= user.email %></h2>
+            </div>
+          </div>
+        
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<%- include('./partials/footer.ejs') %>
