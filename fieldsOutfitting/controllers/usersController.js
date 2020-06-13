@@ -48,9 +48,6 @@ const usersController = {
     },
     store: (req, res, next) => {
         const errors = validationResult(req);
-        
-        console.log(req.body)
-        console.log(errors.errors)
 
         if (!errors.isEmpty()) {
             return res.render('signIn', {
@@ -67,11 +64,9 @@ const usersController = {
             avatar: "/images/users/" + req.files[0].filename
         };
 
-        console.log(newUser)
-
         const usersToSave = [...users, newUser];
         fs.writeFileSync(usersFilePath, JSON.stringify(usersToSave, null, ' '));
-        res.redirect('/');
+        res.redirect('/user/log-in');
         next()
     },
     signIn: (req, res) => {
