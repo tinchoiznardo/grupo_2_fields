@@ -8,6 +8,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     logIn: (req, res) => {
+        
         res.render('logIn', {
             error: undefined
         });
@@ -48,6 +49,10 @@ const usersController = {
     },
     store: (req, res, next) => {
         const errors = validationResult(req);
+
+        console.log(req.body)
+        console.log(errors.errors);
+        
 
         if (!errors.isEmpty()) {
             return res.render('signIn', {

@@ -26,33 +26,33 @@ var upload = multer({ storage: storage })
 router.get('/log-in/', userExistenceMiddleware, usersController.logIn);
 router.post('/log-in/', usersController.validate);
 
-router.get('/sign-in/', userExistenceMiddleware, usersController.signIn);
-router.post('/sign-in/', upload.any(), usersController.store);
+router.get('/sign-in/', usersController.signIn);
+router.post('/sign-in/', upload.any(), [
+    check('email').isEmail().withMessage('Invalid email'),
+    check('name').isLength({
+        min: 3,
+        max: 50
+    }).withMessage('Invalid name'),
+    check('lastname').isLength({
+        min: 3,
+        max: 50
+    }).withMessage('Invalid lastname'),
+    check('password').isLength({
+        min: 3,
+        max: 50
+    }).withMessage('Invalid password'),
+    body('password').custom((value, { req }) => {
+        return value === req.body.re_password;
+    }).withMessage('Passwords doesn´t match')
+], usersController.store);
 
 router.get('/profile', authMiddleware, usersController.profile);
 
 
 module.exports = router;
 
-// , [
-//     check('email').isEmail().withMessage('Invalid email'),
-//     check('name').isLength({
-//         min: 3,
-//         max: 50
-//     }).withMessage('Invalid name'),
-//     check('lastname').isLength({
-//         min: 3,
-//         max: 50
-//     }).withMessage('Invalid lastname'),
-//     check('password').isLength({
-//         min: 3,
-//         max: 50
-//     }).withMessage('Invalid password'),
-//     body('password').custom((value, { req }) => {
-//         return value === req.body.re_password;
-//     }).withMessage('Passwords doesn´t match'),
+// ,
 //     body('email').custom((email, { req }) => {
 //         const user = users.find(user => user.email == req.body.email)
 //         return !user
 //     }).withMessage("Email already registered")
-// ]

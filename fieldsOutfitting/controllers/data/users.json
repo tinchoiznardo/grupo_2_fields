@@ -23,5 +23,13 @@
   "password": "$2b$10$KpqaV14T.qF8Kq2NzzVrfuTfbwVUYsFKV6UT11T8YDDwtxB1Yxj4e",
   "email": "santirodriguezsalinas@gmail.com",
   "avatar": "/images/users/avatar-1592081978974.png"
+ },
+ {
+  "id": 7,
+  "name": "Santiago Rodríguez Salinas",
+  "lastname": "Rodríguez Salinas",
+  "password": "$2b$10$X9xMbMZ.sX1argFCDLICeudDOJxtjiDZRgv5MtVTjFkSVo57n1vH6",
+  "email": "santirodriguezsalinas@gmail.com",
+  "avatar": "/images/users/avatar-1592089529345.png"
  }
 ]
