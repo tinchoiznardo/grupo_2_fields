@@ -48,16 +48,9 @@ const usersController = {
     },
     store: (req, res, next) => {
         const errors = validationResult(req);
-
-        const userExistenceValidator = users.find((user) => {
-            return user.email == req.body.email;
-        });
-
-        if (userExistenceValidator){
-            errors.errors.push({
-                msg: "Email already registered"
-            })
-        }
+        
+        console.log(req.body)
+        console.log(errors.errors)
 
         if (!errors.isEmpty()) {
             return res.render('signIn', {
@@ -74,10 +67,10 @@ const usersController = {
             avatar: "/images/users/" + req.files[0].filename
         };
 
-        console.log(errors.errors);
+        console.log(newUser)
 
-        const userToSave = [...users, newUser];
-        fs.writeFileSync(usersFilePath, JSON.stringify(userToSave, null, ' '));
+        const usersToSave = [...users, newUser];
+        fs.writeFileSync(usersFilePath, JSON.stringify(usersToSave, null, ' '));
         res.redirect('/');
         next()
     },
