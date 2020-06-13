@@ -26,7 +26,7 @@ var upload = multer({ storage: storage })
 router.get('/log-in/', userExistenceMiddleware, usersController.logIn);
 router.post('/log-in/', usersController.validate);
 
-router.get('/sign-in/', usersController.signIn);
+router.get('/sign-in/', userExistenceMiddleware, usersController.signIn);
 router.post('/sign-in/', upload.any(), usersController.store);
 
 router.get('/profile', authMiddleware, usersController.profile);
