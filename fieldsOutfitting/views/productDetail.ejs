@@ -63,11 +63,14 @@
 
             </div>
           </div>
+            <% if(flag) { %>
+              <a href="/products/edit/<%= product.id %>" class="btn btn-primary">EDIT PRODUCT</a>
+                
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                  <button type="submit" class="btn btn-danger">DELETE</button>
+                </form>
+            <% } %>
 
-          	<a href="/products/edit/<%= product.id %>" class="action-button edit btn-primary">EDIT PRODUCT</a>
-            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-							<button type="submit" class="action-button delete bg-danger">DELETE</button>
-						</form>
 
           <div class="talles img-fluid rounded float-left">
             <img src="/images/talles.jpg" class="img">

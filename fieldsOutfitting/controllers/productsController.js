@@ -16,8 +16,12 @@ const productsController = {
 	detail: (req, res) => {
 		const id = req.params.id;
 		const product = products.find(p => p.id == id);
+
+		var flag = req.session.user? true: false;
+
 		res.render('productDetail',{
-			product: product,
+			product: product, 
+			flag: flag
 		});
 	},
 

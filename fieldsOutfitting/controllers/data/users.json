@@ -15,12 +15,5 @@
   "lastname": "Perez",
   "password": "$2b$10$jkVENGwUAlJlvTFyjat06eIw4HgEunfop9zpaal9UgXjhvRQoynwq",
   "email": "jorgeperez@gmail.com"
- },
- {
-  "id": 6,
-  "name": "Santiago ",
-  "lastname": "Rodríguez Salinas",
-  "password": "$2b$10$oh4ZMqJF/BVzeSoSvcHd0.GmsMOja7qtcv/onUUr01ygybT1axmF.",
-  "email": "santirodriguezsalinas@gmail.com"
  }
 ]
