@@ -2,36 +2,54 @@
 
 <%- include('./partials/header.ejs') %>
 
-<main>
-  <div class="">
-    <div class="row">
-      <h1 class="page-header"> Profile </h1>
-    </div>
-
-    <div class="row detalleProducto">
-      <div class="col-lg-6 mb-4">
-        <div class="main-product-image">
-          <img src="<%= user.avatar %>" class="img-fluid">
-        </div>
-      </div>
-      <div class="col-lg-6">
-          
-          <div class="form-group row">
-            <div class="col-sm-8 col-md-9 description">
-              <h2><%= user.name %> <%= user.lastname %></h2>
-              <h2><%= user.email %></h2>
-            </div>
-          </div>
-        
-      </div>
-
-      <form action="/user/log-out" method="POST">
-        <button type="submit" class="btn btn-light">Log out</button>
-      </form>
-
-    </div>
-  </div>
-
-</main>
-
+<div class="container">
+    <div class="row profile">
+		<div class="col-md-6">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="<%= user.avatar %>"class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						<h2><%= user.name %> <%= user.lastname %></h2>
+					</div>
+					<div class="profile-usermail">
+						<h2><%= user.email %></h2>
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav-info">
+						<li class="">
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>
+							Mis Compras</a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							Mis Datos </a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+							<i class="glyphicon glyphicon-ok"></i>
+							Reclamos y sugerencias</a>
+						</li>
+					</ul>
+				</div>
+				<!-- SIDEBAR BUTTONS -->
+				<div class="profile-userbuttons">
+					<button type="submit" class="btn btn-light">Log out</button>
+				</div>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- END MENU -->
+			</div>
+		</div>
+	</div>
+</div>
+<br>
 <%- include('./partials/footer.ejs') %>

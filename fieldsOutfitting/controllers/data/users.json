@@ -39,5 +39,13 @@
   "password": "$2b$10$Lkjye1Eum6z5ukGWUKFyW.JP5yzdKT43PC4U1AB4iSYyDR0e2CFUu",
   "email": "joselopez@gmail.com",
   "avatar": "/images/users/avatar-1592091006142.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Matias ",
+  "lastname": "Gonzalo",
+  "password": "$2b$10$GlvFaHVZ.453cwxfh4GNXuGqURvf8sDmaC5T8xC.qYdxSf7jMcRKW",
+  "email": "matigonzalo@live.com.ar",
+  "avatar": "/images/users/avatar-1592168607085.jpeg"
  }
 ]
