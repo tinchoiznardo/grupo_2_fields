@@ -15,6 +15,9 @@
     top: 0;
     display: inline-block;
 }
+.section3{
+    height: 80vh;
+}
 
 .wrap .section:nth-child(1) {
     background-size: cover;
@@ -34,9 +37,13 @@
     /* background-image: url(../images/banner3.PNG); */
 }
 .wrap .section:nth-child(4) {
+    
+    
+}
+
+.imagenbottom{
     background-image: url(../images/rails2.jpeg);
     background-size: cover;
-    height: 50vh;
 }
 
 .wrap .section:nth-child(5) {
