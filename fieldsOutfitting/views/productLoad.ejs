@@ -10,6 +10,7 @@
                 <article class="card-body mx-auto" style="max-width: 400px;">
                     <h4 class="card-title mt-3 text-center">Load your Field</h4>
                     <p class="text-center">Welcome to Fields!</p>
+                    <!-- action= "/products/load" -->
                     <form method="POST" enctype="multipart/form-data">
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
@@ -70,8 +71,8 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for='image-product' class='form-label input-group-btn'>Imágen del producto: </label>
-                            <input accept=".jpg,.png,.jpeg,.gif" class="" id="banner_captura" name="image-product" type="file">
+                            <label for='image-product' class='form-label input-group-btn'>Product image: </label>
+                            <input accept=".jpg,.png,.jpeg,.gif" class="" id="banner_captura" name="image-product" type="file" required>
                         </div> 
                                             
                         <div class="form-group">

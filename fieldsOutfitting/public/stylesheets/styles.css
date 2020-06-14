@@ -9,6 +9,9 @@ body {
     padding: 0px;
 }
 
+.name{
+    text-transform: capitalize;
+}
 
 /*HEADER*/
 
@@ -247,7 +250,7 @@ a:hover {
 }
 
 .carousel img {
-    width: 100%;
+    width: 80%;
 }
 
 .carouselIndex {

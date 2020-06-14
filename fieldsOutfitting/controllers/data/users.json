@@ -3,24 +3,41 @@
   "id": 0
  },
  {
-  "id": 1,
-  "name": "Santiago",
-  "lastname": "Rodríguez Salinas",
-  "password": "$2b$10$JViY3/XymevasAUuApJC9uY9YsWNx0acRV5l5AZ3Wya8qqdZwbmKe",
-  "email": "santirodriguezsalinas@gmail.com"
+  "id": 4,
+  "name": "Juan",
+  "lastname": "Perez",
+  "password": "$2b$10$aS3lkoyBs79NBUh5Y7PxpukIT3iiWOfNSUgUNR/Im/pMwVlKCii8G",
+  "email": "JuanP@gmail.com"
  },
  {
-  "id": 2,
-  "name": "Santiago Rodríguez Salinas",
-  "lastname": "Rodríguez Salinas",
-  "password": "$2b$10$r50aqQYNmI.BOVUYVmCVaunfqD477N.MAw7uv0xeGGF6ii.qabCma",
-  "email": "santirodriguezsalinas@gmail.com"
+  "id": 5,
+  "name": "Jorge",
+  "lastname": "Perez",
+  "password": "$2b$10$jkVENGwUAlJlvTFyjat06eIw4HgEunfop9zpaal9UgXjhvRQoynwq",
+  "email": "jorgeperez@gmail.com"
  },
  {
-  "id": 3,
+  "id": 6,
   "name": "Santiago Rodríguez Salinas",
   "lastname": "Rodríguez Salinas",
-  "password": "$2b$10$l9wYCY9OwSFY5ccYzoyMH.TSpjTaEHvZIDnTAVic6vwC4epcb7GGW",
-  "email": "santirodriguezsalinas@gmail.com"
+  "password": "$2b$10$KpqaV14T.qF8Kq2NzzVrfuTfbwVUYsFKV6UT11T8YDDwtxB1Yxj4e",
+  "email": "santirodriguezsalinas@gmail.com",
+  "avatar": "/images/users/avatar-1592081978974.png"
+ },
+ {
+  "id": 7,
+  "name": "Santiago Rodríguez Salinas",
+  "lastname": "Rodríguez Salinas",
+  "password": "$2b$10$X9xMbMZ.sX1argFCDLICeudDOJxtjiDZRgv5MtVTjFkSVo57n1vH6",
+  "email": "santirodriguezsalinas@gmail.com",
+  "avatar": "/images/users/avatar-1592089529345.png"
+ },
+ {
+  "id": 8,
+  "name": "jose",
+  "lastname": "lopez",
+  "password": "$2b$10$Lkjye1Eum6z5ukGWUKFyW.JP5yzdKT43PC4U1AB4iSYyDR0e2CFUu",
+  "email": "joselopez@gmail.com",
+  "avatar": "/images/users/avatar-1592091006142.jpg"
  }
 ]
