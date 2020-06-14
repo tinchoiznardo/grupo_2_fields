@@ -53,10 +53,6 @@ body {
     list-style-type: none;
 }
 
-#navbarSupportedContent a {
-    color: ;
-}
-
 
 /*FIN HEADER*/
 
@@ -137,9 +133,6 @@ hr {
     width: 58%;
 }
 
-.suscribirse{
-
-}
 
 .footerContainer{
     margin-left: 0px;
@@ -173,7 +166,7 @@ a:hover {
 
 .policy{
     justify-content: end;
-    align-items: ;
+    
 }
 
 .policy a{
