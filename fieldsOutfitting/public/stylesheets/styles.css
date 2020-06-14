@@ -18,6 +18,7 @@ body {
 .navbar {
     height: 15vh;
     z-index: 100;
+    align-items: baseline;
 }
 
 .nav {
@@ -28,10 +29,14 @@ body {
 
 .logo {
     width: 100px;
+    top: 0;
+    margin-top: 10px;
+    
 }
 
 .logo img {
     width: 100%;
+    margin-top: 10px;
 }
 
 .carrito img {
@@ -51,35 +56,148 @@ body {
     list-style-type: none;
 }
 
-.navbar a {
-    color: black;
-}
-
 
 /*FIN HEADER*/
 
 
 /* FOOTER*/
 
-.footer {
-    background-color: black;
-    color: white;
-    height: 50vh;
-    width: auto;
-    padding: none;
-    margin: none;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+body {
+    background-color: #f3f6fd;
+    font-size: 11.5px;
+    font-weight: bold;
+    color: rgb(189, 196, 203)
 }
 
-footer ul {
-    text-decoration: none;
-    list-style: none;
+.card {
+    padding: 2% 7%;
+    color: #646771;
+    background-color: #16151a;
+    border-radius: 0%;
 }
 
-footer a {
-    color: white;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+ul>li {
+    padding: 4px
+}
+
+ul>li:hover {
+    color: #FAD919;
+    cursor: pointer
+}
+
+hr {
+    border-width: 3px
+}
+
+.social>i {
+    padding: 1%;
+    font-size: 15px
+}
+
+.social>i:hover {
+    color: #FAD919;
+    cursor: pointer
+}
+
+.policy>div {
+    padding: 4px
+}
+
+.heading {
+    font-family: 'Titillium Web', sans-serif;
+    color: white
+}
+
+.divider {
+    border-top: 2px solid rgba(189, 196, 203, 0.5);
+}
+
+.pagos {
+    text-align: right;
+}
+
+.pagos li img{
+    width: 30px;
+}
+
+.logoFooter {
+    margin: auto;
+}
+.logoFooter img {
+    width: 58%;
 }
 
 
+.footerContainer{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+}
+.contacto li{
+    
+    margin-bottom: 10px;
+}
+
+.contacto a {
+    color: #646771;
+}
+a:hover {
+    color: #FAD919;
+}
+
+.envios{
+    margin-top: 20px;
+}
+
+.pagos li{
+    float: right;
+}
+
+.policyContainer{
+
+    display: flex;
+}
+
+.policy{
+    justify-content: end;
+    
+}
+
+.policy a{
+    color: #646771;
+}
+
+.policy a:hover{
+    color: #FAD919;
+}
+
+@media (max-width: 576px){
+    .footerContainer{
+        display:flex;
+        flex-flow: column;
+    }
+    .contacto{
+        order: 2;
+    }
+
+    .logoFooter{
+        order: 1;
+        margin-bottom: 25px;
+    }
+
+    .pagos{
+        order: 3;
+    }
+}
 /*FIN FOOTER*/
 
 
