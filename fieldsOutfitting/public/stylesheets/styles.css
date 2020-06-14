@@ -235,7 +235,8 @@ a:hover {
 }
 
 .cwcontainer img {
-    width: 100%;
+    width: 103%;
+    margin-left: -1.5%;
 }
 
 .zoom a {
