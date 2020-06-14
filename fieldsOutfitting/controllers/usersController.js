@@ -49,10 +49,12 @@ const usersController = {
     },
     store: (req, res, next) => {
         const errors = validationResult(req);
-
-        console.log(req.body)
-        console.log(errors.errors);
         
+        const userExistenceCheck = users.find(user => user.email == req.body.email)
+
+        if (userExistenceCheck) {
+            errors.errors.push({msg: "An user with that email already exists"});
+        }
 
         if (!errors.isEmpty()) {
             return res.render('signIn', {

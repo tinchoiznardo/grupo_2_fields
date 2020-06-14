@@ -7,8 +7,11 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsController = {
     // Root - Show all products
 	root: (req, res) => {
+		var flag = req.session.user? true: false;
+		
 		res.render('products', {
 			products: products,
+			flag: flag
 		});
 	},
 

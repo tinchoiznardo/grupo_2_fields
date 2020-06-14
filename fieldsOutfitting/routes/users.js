@@ -8,9 +8,6 @@ var path = require('path');
 var authMiddleware = require('../middlewares/authMiddleware');
 var userExistenceMiddleware = require('../middlewares/userExistenceMiddleware');
 
-const usersFilePath = path.join(__dirname, '../controllers/data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, './public/images/users')
@@ -52,8 +49,3 @@ router.post('/log-out/', usersController.logOut)
 
 module.exports = router;
 
-// ,
-//     body('email').custom((email, { req }) => {
-//         const user = users.find(user => user.email == req.body.email)
-//         return !user
-//     }).withMessage("Email already registered")
