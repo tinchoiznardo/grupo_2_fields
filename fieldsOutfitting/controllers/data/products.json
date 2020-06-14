@@ -7,7 +7,7 @@
   "discount": 40,
   "image": "/images/products/fields1.jpg",
   "description": "Alto pantalon.",
-  "category": "highlighted"
+  "category": ""
  },
  {
   "id": 2,
@@ -37,7 +37,7 @@
   "discount": 40,
   "image": "/images/products/fields8.jpg",
   "description": "Alto pantalon.",
-  "category": "highlighted"
+  "category": ""
  },
  {
   "id": 5,
@@ -77,7 +77,7 @@
   "discount": 40,
   "image": "/images/products/fields4.jpg",
   "description": "Alto pantalon.",
-  "category": "highlighted"
+  "category": ""
  },
  {
   "id": 9,

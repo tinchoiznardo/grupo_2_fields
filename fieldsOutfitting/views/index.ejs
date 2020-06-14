@@ -1,27 +1,27 @@
 <%- include('./partials/head.ejs') %>
 
 
-    <%- include('./partials/header.ejs') %>
+<%- include('./partials/header.ejs') %>
 
-        <main>
-
-            <div class="wrap">
-                <section class="galeria section">
-                    <img src="/images/inicio.jpg">
-                    <!-- <img src="/images/handstand.PNG"> -->
-                    <div class="zoom">
-                        <a href="/products">
-                            <h2>20% OFF <br> IN WALKERS!</h2>
-                        </a>
-                    </div>
-                </section>
-
-                <!-- <section class="galeria">
+<main>
+    
+    <div class="wrap">
+        <section class="galeria section">
+            <img src="/images/inicio.jpg">
+            <!-- <img src="/images/handstand.PNG"> -->
+            <div class="zoom">
+                <a href="/products">
+                    <h2>20% OFF <br> IN WALKERS!</h2>
+                </a>
+            </div>
+        </section>
+        
+        <!-- <section class="galeria">
             <img src="/images/inicio.jpg">
             <img src="/images/handstand.PNG"> 
         </section> -->
-
-                <!-- <div class='cwcontainer '>
+        
+        <!-- <div class='cwcontainer '>
             
             <div class="col-6">
                 <div class="conoceMas img-fluid">
@@ -40,20 +40,18 @@
                     <h2>CONOCE NUESTRAS FIELDS!</h2>
                 </a>
             </div> -->
+            
+            <div class='cwcontainer section'> 
+                <!-- SAQUE EL ROW -->
+                
+                <div class="col-12">
+                    <img src="/images/indexDiv.png" alt="">
+                </div>
 
-                <div class='cwcontainer section'>
-                    <!-- SAQUE EL ROW -->
-
-                    <div class="col-12">
-                        <img src="/images/indexDiv.png" alt="">
-                    </div>
-
-                    <div class="zoom">
-                        <a href="/products">
-                            <h2>SHOP WALKERS / FIELDS</h2>
-                        </a>
-                    </div>
-
+                <div class="zoom">
+                    <a href="/products">
+                        <h2>SHOP WALKERS / FIELDS</h2>
+                    </a>
                 </div>
                 
             </div>
@@ -76,23 +74,24 @@
                                                     <h4><a class='name' href='/products/detail/<%= product.id %>'><%= product.name %></a></h4>
                                                     <p class="item-price"> <span><%= product.price %></span></p>
                                                     <a href="#" class="btn btn-dark">Add to Cart</a>
-
                                                 </div>
                                             </div>
-                                            <% } %>
+                                        </div>
+                                        <% } %>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="imagenbottom section">
                     <!-- <div class="box">
                         <img src="/images/rails.PNG">
                     </div>   -->
                     <div class="mision">
-                        <p>Our mission is to combine argentinian passions and fashion design, redefining the "bombacha de campo" as a trouser which can be used not only for daily life, but also for riding a horse in the Patagonia. </p>
+                        <p>Our mission is to combine argentinian passions and fashion design, redefining the "bombacha de campo" as a trouser which can be used not only for daily life, 
+                            but also for riding a horse in the Patagonia. </p>
                     </div>
                 </div>
                 <div class="imagenbottom section">
@@ -100,11 +99,12 @@
                         <img src="/images/rails.PNG">
                     </div>   -->
                     <div class="mision2">
-                        <p>Our mission is to combine , redefining the "bombacha de campo" as a trouser which can be used not only for daily life, but also for riding a horse in the Patagonia. </p>
+                        <p>Our mission is to combine , redefining the "bombacha de campo" as a trouser which can be used not only for daily life, 
+                            but also for riding a horse in the Patagonia.  </p>
                     </div>
                 </div>
-
-            </div>
-        </main>
-
-        <%- include('./partials/footer.ejs') %>
+                    
+    </div>
+</main>
+            
+            <%- include('./partials/footer.ejs') %>
