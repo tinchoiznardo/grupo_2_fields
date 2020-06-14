@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "fieldsOutfitting"
+		},
+		{
+			"path": "../../Clases/29_05/colors/color"
 		}
 	]
 }

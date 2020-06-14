@@ -5,7 +5,7 @@
 <main>
   <div class="">
     <div class="row">
-      <h1 class="page-header"> GEOMETRICAL TOAST</h1>
+      <h1 class="page-header">Detail</h1>
     </div>
 
     <div class="row detalleProducto">
@@ -18,7 +18,7 @@
           
           <div class="form-group row">
             <div class="col-sm-8 col-md-9 description">
-              <h1><%= product.name %></h1>
+              <h1 class='name'><%= product.name %></h1>
             </div>
           </div>
 
@@ -63,11 +63,14 @@
 
             </div>
           </div>
+            <% if(flag) { %>
+              <a href="/products/edit/<%= product.id %>" class="btn btn-primary">EDIT PRODUCT</a>
+                
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                  <button type="submit" class="btn btn-danger">DELETE</button>
+                </form>
+            <% } %>
 
-          	<a href="/products/edit/<%= product.id %>" class="action-button edit btn-primary">EDIT PRODUCT</a>
-            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-							<button type="submit" class="action-button delete bg-danger">DELETE</button>
-						</form>
 
           <div class="talles img-fluid rounded float-left">
             <img src="/images/talles.jpg" class="img">

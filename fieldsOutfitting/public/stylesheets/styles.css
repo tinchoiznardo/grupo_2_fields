@@ -9,6 +9,9 @@ body {
     padding: 0px;
 }
 
+.name{
+    text-transform: capitalize;
+}
 
 /*HEADER*/
 
@@ -129,7 +132,7 @@ footer a {
 }
 
 .carousel img {
-    width: 100%;
+    width: 80%;
 }
 
 .carouselIndex {
