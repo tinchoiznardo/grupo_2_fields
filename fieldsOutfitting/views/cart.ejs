@@ -1,24 +1,24 @@
 <%- include('./partials/head.ejs') %>
 
-<%- include('./partials/header.ejs') %>
+    <%- include('./partials/header.ejs') %>
 
-  
-  <main>
-    <div class="card bg-light compras">
-      <div class="comprasSub">
-        <h1>Cart</h1>
-      </div>
-      <div class='comprasSub'>
-        <div class='img'>
-          <img src="/images/WalkersW.PNG" alt="">
-          <div class= "close">
-            <img src="https://img.icons8.com/ios/50/000000/close-window.png"/>
-          </div>
-        </div>
-        <h5>Product:</h5>
-        <h5>Price:</h5>
-        <h5> Quantity:
-          <select name="" class="form- groupbtn btn-default btn-lg dropdown-toggle" placeholder="Cantidad" type="number">
+
+        <main>
+            <div class="card bg-light compras">
+                <div class="comprasSub">
+                    <h1>Cart</h1>
+                </div>
+                <div class='comprasSub'>
+                    <div class='img'>
+                        <img src="/images/WalkersW.PNG" alt="">
+                        <div class="close">
+                            <img src="https://img.icons8.com/ios/50/000000/close-window.png" />
+                        </div>
+                    </div>
+                    <h5>Product:</h5>
+                    <h5>Price:</h5>
+                    <h5> Quantity:
+                        <select name="" class="form- groupbtn btn-default btn-lg dropdown-toggle" placeholder="Cantidad" type="number">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -26,27 +26,25 @@
             <option>5</option>
             <option>...</option>
           </select>
-        </h5>
-      
-        <h5>Subtotal:</h5>
-      </div>
-      <div class="comprasSub">
-        <h3>Total</h3>
-        
-        
-        <div>
-          <h5>Subtotal:</h5>
-          <h5>Send Charges:</h5>
-          <h5>Total:</h5>
-        </div>
-        
-        <div>
-          <button type="button" class="btn btn-dark">End Purchase</button>
-        </div>
-      </div>
-    </div>
-  </main> 
-  
-  <%- include('./partials/footer.ejs') %>
+                    </h5>
 
-  
+                    <h5>Subtotal:</h5>
+                </div>
+                <div class="comprasSub">
+                    <h3>Total</h3>
+
+
+                    <div>
+                        <h5>Subtotal:</h5>
+                        <h5>Send Charges:</h5>
+                        <h5>Total:</h5>
+                    </div>
+
+                    <div>
+                        <button type="button" class="btn btn-dark">End Purchase</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <%- include('./partials/footer2.ejs') %>

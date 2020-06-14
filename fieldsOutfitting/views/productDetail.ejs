@@ -1,86 +1,90 @@
 <%- include('./partials/head.ejs') %>
 
-<%- include('./partials/header.ejs') %>
+    <%- include('./partials/header.ejs') %>
 
-<main>
-  <div class="">
-    <div class="row">
-      <h1 class="page-header"> GEOMETRICAL TOAST</h1>
-    </div>
+        <main>
+            <div class="">
+                <div class="row">
+                    <h1 class="page-header"> GEOMETRICAL TOAST</h1>
+                </div>
 
-    <div class="row detalleProducto">
-      <div class="col-lg-6 mb-4">
-        <div class="main-product-image">
-          <img src="<%= product.image %>" class="img-fluid">
-        </div>
-      </div>
-      <div class="col-lg-6">
-          
-          <div class="form-group row">
-            <div class="col-sm-8 col-md-9 description">
-              <h1><%= product.name %></h1>
+                <div class="row detalleProducto">
+                    <div class="col-lg-6 mb-4">
+                        <div class="main-product-image">
+                            <img src="<%= product.image %>" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+
+                        <div class="form-group row">
+                            <div class="col-sm-8 col-md-9 description">
+                                <h1>
+                                    <%= product.name %>
+                                </h1>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-md-3 form-control-label">Description:</label>
+                            <div class="col-sm-8 col-md-9 description">
+                                <p>
+                                    <%= product.description %>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Product Price  -->
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-md-3 form-control-label nopaddingtop">Precio:</label>
+                            <div class="col-sm-8 col-md-9">
+                                <span class="product-form-price" id="product-form-price"><%= product.price %></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="size" class="col-sm-3 col-md-3 form-control-label">Size:</label>
+                            <div class="col-sm-8 col-md-9">
+
+                                <input type="number" class="qty form-control" id="input-qty" name="qty" maxlength="7" value="1">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="Quantity" class="col-sm-3 col-md-3 form-control-label">Quantity:</label>
+                            <div class="col-sm-8 col-md-9">
+
+                                <input type="number" class="qty form-control" id="input-qty" name="qty" maxlength="5" value="1">
+                            </div>
+                        </div>
+
+                        <div class="form-group product-stock product-available row visible">
+
+                            <div class="col-sm-8 col-sm-offset-3 col-md-9 col-md-offset-3">
+
+                                <input type="submit" class="adc btn btn-dark" value="Add to Shopping Cart">
+
+                                <a href="javascript:history.back()" class="btn btn-link btn-sm" title="Continue Shopping">← Continue Shopping</a>
+
+                            </div>
+                        </div>
+
+                        <a href="/products/edit/<%= product.id %>" class="action-button edit btn-primary">EDIT PRODUCT</a>
+                        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="action-button delete bg-danger">DELETE</button>
+                        </form>
+
+                        <div class="talles img-fluid rounded float-left">
+                            <img src="/images/talles.jpg" class="img">
+                            <p><a href="/images/fieldsTalles.jpg"> Sizes</a></p>
+                        </div>
+
+                        <input type="hidden" value="nDolT3hRvGuCl5YcE9D1e3DIe1z0Kg127Xg43qTwtqA=" name="authenticity_token">
+
+                    </div>
+
+                </div>
             </div>
-          </div>
 
-          <div class="form-group row">
-            <label class="col-sm-3 col-md-3 form-control-label">Description:</label>
-            <div class="col-sm-8 col-md-9 description">
-              <p><%= product.description %></p>
-            </div>
-          </div>
+        </main>
 
-          <!-- Product Price  -->
-          <div class="form-group row">
-            <label class="col-sm-3 col-md-3 form-control-label nopaddingtop">Precio:</label>
-            <div class="col-sm-8 col-md-9">
-              <span class="product-form-price" id="product-form-price"><%= product.price %></span>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label for="size" class="col-sm-3 col-md-3 form-control-label">Size:</label>
-            <div class="col-sm-8 col-md-9">
-
-              <input type="number" class="qty form-control" id="input-qty" name="qty" maxlength="7" value="1">
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label for="Quantity" class="col-sm-3 col-md-3 form-control-label">Quantity:</label>
-            <div class="col-sm-8 col-md-9">
-
-              <input type="number" class="qty form-control" id="input-qty" name="qty" maxlength="5" value="1">
-            </div>
-          </div>
-
-          <div class="form-group product-stock product-available row visible">
-
-            <div class="col-sm-8 col-sm-offset-3 col-md-9 col-md-offset-3">
-
-              <input type="submit" class="adc btn btn-dark" value="Add to Shopping Cart">
-
-              <a href="javascript:history.back()" class="btn btn-link btn-sm" title="Continue Shopping">← Continue Shopping</a>
-
-            </div>
-          </div>
-
-          	<a href="/products/edit/<%= product.id %>" class="action-button edit btn-primary">EDIT PRODUCT</a>
-            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-							<button type="submit" class="action-button delete bg-danger">DELETE</button>
-						</form>
-
-          <div class="talles img-fluid rounded float-left">
-            <img src="/images/talles.jpg" class="img">
-            <p><a href="/images/fieldsTalles.jpg"> Sizes</a></p>
-          </div>
-
-          <input type="hidden" value="nDolT3hRvGuCl5YcE9D1e3DIe1z0Kg127Xg43qTwtqA=" name="authenticity_token">
-        
-      </div>
-
-    </div>
-  </div>
-
-</main>
-
-<%- include('./partials/footer.ejs') %>
+        <%- include('./partials/footer2.ejs') %>

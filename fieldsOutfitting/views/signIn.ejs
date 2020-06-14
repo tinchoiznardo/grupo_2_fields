@@ -1,81 +1,79 @@
 <%- include('./partials/head.ejs') %>
 
     <%- include('./partials/header.ejs') %>
-    
-    
-    <main>
-             
-        <div>
-            
-            <div class="card bg-light">
-                <article class="card-body mx-auto" style="max-width: 400px;">
-                    <h4 class="card-title mt-3 text-center">Sign In</h4>
-                    <p class="text-center">Welcome to Fields!</p>
-                    <p>
-                        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Sign in with facebook</a>
-                    </p>
-                    <p>
-                        <a href="" class="btn btn-block bg-warning"> <i class="fab"></i>   Sign in with gmail</a>
-                    </p>
-                    <p class="divider-text">
-                        <span class="bg-light">Or</span>
-                    </p>
-                    <form action= "/user/sign-in" method="POST">
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+
+
+        <main>
+
+            <div>
+
+                <div class="card bg-light">
+                    <article class="card-body mx-auto" style="max-width: 400px;">
+                        <h4 class="card-title mt-3 text-center">Sign In</h4>
+                        <p class="text-center">Welcome to Fields!</p>
+                        <p>
+                            <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Sign in with facebook</a>
+                        </p>
+                        <p>
+                            <a href="" class="btn btn-block bg-warning"> <i class="fab"></i>   Sign in with gmail</a>
+                        </p>
+                        <p class="divider-text">
+                            <span class="bg-light">Or</span>
+                        </p>
+                        <form action="/user/sign-in" method="POST">
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                </div>
+                                <input name="name" id="name" class="form-control" placeholder="Name" type="text">
                             </div>
-                            <input name="name" id="name" class="form-control" placeholder="Name" type="text">
-                        </div> 
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                </div>
+                                <input name="lastname" id="lastname" class="form-control" placeholder="Lastname" type="text">
                             </div>
-                            <input name="lastname" id="lastname" class="form-control" placeholder="Lastname" type="text">
-                        </div>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                                </div>
+                                <input name="email" id="email" class="form-control" placeholder="Email" type="email">
                             </div>
-                            <input name="email" id="email" class="form-control" placeholder="Email" type="email">
-                        </div> 
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                            </div>
-                            <select class="custom-select" style="max-width: 120px;">
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                                </div>
+                                <select class="custom-select" style="max-width: 120px;">
                                 <option selected="">+54 9</option>
                                 <option value="1">+972</option>
                                 <option value="2">+198</option>
                                 <option value="3">+701</option>
                             </select>
-                            <input name="telefono" id= "telefono" class="form-control" placeholder="Cellphone" type="text">
-                        </div>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                <input name="telefono" id="telefono" class="form-control" placeholder="Cellphone" type="text">
                             </div>
-                            <input class="form-control" name= "password" id = "password" placeholder="Password" type="password">
-                        </div> 
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                </div>
+                                <input class="form-control" name="password" id="password" placeholder="Password" type="password">
                             </div>
-                            <input class="form-control" placeholder="Repeat Password" type="password">
-                        </div>                                       
-                        <div class="form-group">
-                            <button type="submit" id= "submit" name= "submit" class="btn btn-primary btn-block"> Sign In </button>
-                        </div>       
-                        <p class="text-center">Already registered? <a href="/users/log-in">Log In</a> </p>                                                                 
-                    </form>
-                </article>
-            </div> 
-            
-        </div> 
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                </div>
+                                <input class="form-control" placeholder="Repeat Password" type="password">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="submit" name="submit" class="btn btn-primary btn-block"> Sign In </button>
+                            </div>
+                            <p class="text-center">Already registered? <a href="/users/log-in">Log In</a> </p>
+                        </form>
+                    </article>
+                </div>
 
-        
-            </main> 
-            
-            <%- include('./partials/footer.ejs') %>
-            
-     
+            </div>
+
+
+        </main>
+
+        <%- include('./partials/footer2.ejs') %>
