@@ -63,7 +63,7 @@
 
             </div>
           </div>
-            <% if(flag) { %>
+            <% if(user != undefined) { %>
               <a href="/products/edit/<%= product.id %>" class="btn btn-primary">EDIT PRODUCT</a>
                 
                 <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
