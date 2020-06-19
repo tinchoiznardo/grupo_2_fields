@@ -8,7 +8,6 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     logIn: (req, res) => {
-        
         res.render('logIn', {
             error: undefined
         });
