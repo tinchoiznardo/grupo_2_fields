@@ -47,5 +47,13 @@
   "password": "$2b$10$GlvFaHVZ.453cwxfh4GNXuGqURvf8sDmaC5T8xC.qYdxSf7jMcRKW",
   "email": "matigonzalo@live.com.ar",
   "avatar": "/images/users/avatar-1592168607085.jpeg"
+ },
+ {
+  "id": 10,
+  "name": "martin ",
+  "lastname": "iznardo",
+  "password": "$2b$10$NJ8KgWIZbhnnlpheu0ef4.Rm.G3Fdm.A1Hh9dB5V8pSLFXwO7V1Z2",
+  "email": "tinchoiznardo@hotmail.com",
+  "avatar": "/images/users/avatar-1592573876465.jpg"
  }
 ]

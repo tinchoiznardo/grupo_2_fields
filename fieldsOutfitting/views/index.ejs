@@ -1,79 +1,82 @@
 <%- include('./partials/head.ejs') %>
 
 
-<%- include('./partials/header.ejs') %>
+    <%- include('./partials/header.ejs') %>
 
-<main>
-    
-    <div class="wrap">
-        <section class="galeria ">
-            <img src="/images/inicio.jpg">
-            <!-- <img src="/images/handstand.PNG"> -->
-            <div class="zoom">
-                <a href="/products">
-                    <h2>20% OFF <br> IN WALKERS!</h2>
-                </a>
-            </div>
-        </section>
+        <main>
 
-        <div class=" ">
-            <div class='cwcontainer'> 
-                <!-- SAQUE EL ROW -->
-                
-                <div class="col-12">
-                    <img src="/images/indexDiv.png" alt="">
-                </div>
+            <div class="wrap">
+                <section class="galeria container">
+                    <img src="/images/inicio.jpg">
+                    <!-- <img src="/images/handstand.PNG"> -->
+                    <div class="zoom">
+                        <a href="/products">
+                            <h2>20% OFF <br> IN WALKERS!</h2>
+                        </a>
+                    </div>
+                </section>
 
-                <div class="zoom">
-                    <a href="/products">
-                        <h2>SHOP WALKERS / FIELDS</h2>
-                    </a>
-                </div>
-                
-            
-            
-            <div class=" carouselIndex">
-                <!-- SAQUE EL ROW -->
-                <div class="col-md-12 prod">
-                    <h2>Highlighted!</h2>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-                        <div class="carousel-inner">
-                            <div class="    ">
-                                <div class="row">
-                                    <% for (product of highlightedProducts) { %>
-                                        <div class="col-sm-3 cart">
-                                            <div class="thumb-wrapper">
-                                                <div class="img-box">
-                                                    <img src="<%= product.image %>" class="img-responsive img-fluid" alt="">
-                                                </div>
-                                                <div class="thumb-content prod">
-                                                    <h4><a class='name' href='/products/detail/<%= product.id %>'><%= product.name %></a></h4>
-                                                    <p class="item-price"> <span><%= product.price %></span></p>
-                                                    <a href="#" class="btn btn-dark">Add to Cart</a>
-                                                </div>
+                <div class=" ">
+                    <div class='cwcontainer'>
+                        <!-- SAQUE EL ROW -->
+
+                        <div class="col-12">
+                            <img src="/images/indexDiv.png" alt="">
+                        </div>
+
+                        <div class="zoom">
+                            <a href="/products">
+                                <h2>SHOP WALKERS / FIELDS</h2>
+                            </a>
+                        </div>
+
+
+
+                        <div class=" carouselIndex">
+                            <!-- SAQUE EL ROW -->
+                            <div class="col-md-12 prod">
+                                <h2>Highlighted!</h2>
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                                    <div class="carousel-inner">
+                                        <div class="    ">
+                                            <div class="row">
+                                                <% for (product of highlightedProducts) { %>
+                                                    <div class="col-sm-3 cart">
+                                                        <div class="thumb-wrapper">
+                                                            <div class="img-box">
+                                                                <img src="<%= product.image %>" class="img-responsive img-fluid" alt="">
+                                                            </div>
+                                                            <div class="thumb-content prod">
+                                                                <h4>
+                                                                    <a class='name' href='/products/detail/<%= product.id %>'>
+                                                                        <%= product.name %>
+                                                                    </a>
+                                                                </h4>
+                                                                <p class="item-price"> <span><%= product.price %></span></p>
+                                                                <a href="#" class="btn btn-dark">Add to Cart</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <% } %>
                                             </div>
                                         </div>
-                                        <% } %>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>    
                 <div class="imagenbottom  ">
                     <!-- <div class="box">
                         <img src="/images/rails.PNG">
                     </div>   -->
                     <div class="mision">
-                        <p>Our mission is to combine argentinian passions and fashion design, redefining the "bombacha de campo" as a trouser which can be used not only for daily life, 
-                            but also for riding a horse in the Patagonia. </p>
+                        <p>Our mission is to combine argentinian passions and fashion design, redefining the "bombacha de campo" as a trouser which can be used not only for daily life, but also for riding a horse in the Patagonia. </p>
                     </div>
                 </div>
 
-                    
-    </div>
-</main>
-            
-            <%- include('./partials/footer.ejs') %>
+
+            </div>
+        </main>
+
+        <%- include('./partials/footer.ejs') %>

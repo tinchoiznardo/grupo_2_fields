@@ -9,9 +9,10 @@ body {
     padding: 0px;
 }
 
-.name{
+.name {
     text-transform: capitalize;
 }
+
 
 /*HEADER*/
 
@@ -31,7 +32,6 @@ body {
     width: 100px;
     top: 0;
     margin-top: 10px;
-    
 }
 
 .logo img {
@@ -61,8 +61,6 @@ body {
 
 
 /* FOOTER*/
-
-
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
 body {
@@ -125,79 +123,78 @@ hr {
     text-align: right;
 }
 
-.pagos li img{
+.pagos li img {
     width: 30px;
 }
 
 .logoFooter {
     margin: auto;
 }
+
 .logoFooter img {
     width: 58%;
 }
 
-
-.footerContainer{
+.footerContainer {
     margin-left: 0px;
     margin-right: 0px;
     padding: 0px;
 }
-.contacto li{
-    
+
+.contacto li {
     margin-bottom: 10px;
 }
 
 .contacto a {
     color: #646771;
 }
+
 a:hover {
     color: #FAD919;
 }
 
-.envios{
+.envios {
     margin-top: 20px;
 }
 
-.pagos li{
+.pagos li {
     float: right;
 }
 
-.policyContainer{
-
+.policyContainer {
     display: flex;
 }
 
-.policy{
+.policy {
     justify-content: end;
-    
 }
 
-.policy a{
+.policy a {
     color: #646771;
 }
 
-.policy a:hover{
+.policy a:hover {
     color: #FAD919;
 }
 
-@media (max-width: 576px){
-    .footerContainer{
-        display:flex;
+@media (max-width: 576px) {
+    .footerContainer {
+        display: flex;
         flex-flow: column;
     }
-    .contacto{
+    .contacto {
         order: 2;
     }
-
-    .logoFooter{
+    .logoFooter {
         order: 1;
         margin-bottom: 25px;
     }
-
-    .pagos{
+    .pagos {
         order: 3;
     }
 }
+
+
 /*FIN FOOTER*/
 
 
@@ -209,7 +206,12 @@ a:hover {
     justify-content: center;
     text-align: center;
     width: 100%;
-    
+    padding: 0%;
+}
+
+.galeria img {
+    width: 100%;
+    padding: 0%;
 }
 
 .contenedor {
@@ -261,7 +263,7 @@ a:hover {
     float: left;
 }
 
-.prod{
+.prod {
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -291,7 +293,6 @@ a:hover {
     font-weight: bold;
     padding: 2%;
     width: auto;
-    
 }
 
 .mision2 {
@@ -504,24 +505,29 @@ a:hover {
 
 /*FIN DETALLE PRODUCTO*/
 
+
 /*PROFILE*/
 
 body {
     background: #F1F3FA;
-  }
-  
-  /* Profile container */
-  .profile {
+}
+
+
+/* Profile container */
+
+.profile {
     margin: 20px 0;
-  }
-  
-  /* Profile sidebar */
-  .profile-sidebar {
+}
+
+
+/* Profile sidebar */
+
+.profile-sidebar {
     padding: 20px 0 10px 0;
     background: #fff;
-  }
-  
-  .profile-userpic img {
+}
+
+.profile-userpic img {
     float: none;
     margin-left: 25%;
     width: 50%;
@@ -529,83 +535,84 @@ body {
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
-  }
-  
-  .profile-usertitle {
+}
+
+.profile-usertitle {
     text-align: center;
     margin-top: 20px;
-  }
-  
-  .profile-usertitle-name {
+}
+
+.profile-usertitle-name {
     color: #5a7391;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 7px;
-  }
-  
-  .profile-usermail {
+}
+
+.profile-usermail {
     text-transform: uppercase;
     color: #5b9bd1;
     font-size: 10px;
     font-weight: 600;
     margin-bottom: 15px;
-  }
-  
-  .profile-userbuttons {
+}
+
+.profile-userbuttons {
     text-align: center;
     margin-top: 10px;
-  }
-  
-  .profile-userbuttons .btn {
+}
+
+.profile-userbuttons .btn {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
     padding: 6px 15px;
     margin-right: 5px;
-  }
-  
-  .profile-userbuttons .btn:last-child {
+}
+
+.profile-userbuttons .btn:last-child {
     margin-right: 0px;
-  }
-      
-  .profile-usermenu {
+}
+
+.profile-usermenu {
     margin-top: 30px;
     text-align: center;
-  }
-  
-  .profile-usermenu ul li {
+}
+
+.profile-usermenu ul li {
     border-bottom: 1px solid #f0f4f7;
-  }
-  
-  .profile-usermenu ul li:last-child {
+}
+
+.profile-usermenu ul li:last-child {
     border-bottom: none;
-  }
-  
-  .profile-usermenu ul li a {
+}
+
+.profile-usermenu ul li a {
     color: #93a3b5;
     font-size: 14px;
     font-weight: 400;
-  }
-  
-  .profile-usermenu ul li a i {
+}
+
+.profile-usermenu ul li a i {
     margin-right: 8px;
     font-size: 14px;
-  }
-  
-  .profile-usermenu ul li a:hover {
+}
+
+.profile-usermenu ul li a:hover {
     background-color: #fafcfd;
     color: #5b9bd1;
-  }
-  
-  .profile-usermenu ul li.active {
+}
+
+.profile-usermenu ul li.active {
     border-bottom: none;
-  }
-  
-  .profile-usermenu ul li.active a {
+}
+
+.profile-usermenu ul li.active a {
     color: #5b9bd1;
     background-color: #f6f9fb;
     border-left: 2px solid #5b9bd1;
     margin-left: -2px;
-  }
-  
+}
+
+
 /*FIN PROFILE*/
