@@ -1,5 +1,7 @@
 const cartController = function(req, res, next) {
-    res.render('cart', { title: 'Express' });
+    res.render('cart', { 
+      user: req.session.user 
+    });
   }
 
 module.exports = cartController

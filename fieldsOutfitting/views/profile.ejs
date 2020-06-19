@@ -22,6 +22,11 @@
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR MENU -->
+				<div class="profile-userbuttons">
+					<form action="/user/log-out/" method='POST'>
+						<button type="submit" class="btn btn-light">Log out</button>
+					</form>
+				</div>
 				<div class="profile-usermenu">
 					<ul class="nav-info">
 						<li class="">
@@ -42,9 +47,7 @@
 					</ul>
 				</div>
 				<!-- SIDEBAR BUTTONS -->
-				<div class="profile-userbuttons">
-					<button type="submit" class="btn btn-light">Log out</button>
-				</div>
+				
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- END MENU -->
 			</div>
@@ -81,4 +84,5 @@
 	</div>
 </div>
 <br>
+
 <%- include('./partials/footer.ejs') %>

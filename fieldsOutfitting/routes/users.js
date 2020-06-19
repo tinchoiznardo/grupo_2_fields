@@ -45,7 +45,7 @@ router.post('/sign-in/', upload.any(), [
 
 router.get('/profile/', authMiddleware, usersController.profile);
 
-router.post('/log-out/', usersController.logOut)
+router.post('/log-out/', usersController.logOut);
 
 module.exports = router;
 

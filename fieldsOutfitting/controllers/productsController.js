@@ -5,13 +5,11 @@ const productsFilePath = path.join(__dirname, './data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
-    // Root - Show all products
+	// Root - Show all products
 	root: (req, res) => {
-		var flag = req.session.user? true: false;
-		
 		res.render('products', {
 			products: products,
-			flag: flag
+			user: req.session.user
 		});
 	},
 
@@ -19,18 +17,17 @@ const productsController = {
 	detail: (req, res) => {
 		const id = req.params.id;
 		const product = products.find(p => p.id == id);
-
-		var flag = req.session.user? true: false;
-
 		res.render('productDetail',{
 			product: product, 
-			flag: flag
+			user: req.session.user
 		});
 	},
 
 	// Create - Form to create
 	create: (req, res) => {
-		res.render('productLoad');
+		res.render('productLoad',{
+			user: req.session.user
+		});
 	},
 	
 	// Create -  Method to store
@@ -51,7 +48,6 @@ const productsController = {
 
 		};
 
-		console.log(req.body)
 		const finalproducts = [...products, newProduct];
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalproducts, null, ' '));
 		res.redirect('/');
@@ -62,7 +58,8 @@ const productsController = {
 		const id = req.params.id;
 		const productToEdit = products.find(p => p.id == id);
 		res.render('productEdit',{
-			productToEdit: productToEdit
+			productToEdit: productToEdit,
+			user: req.session.user
 		});
 	},
 

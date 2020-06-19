@@ -9,7 +9,8 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const usersController = {
     logIn: (req, res) => {
         res.render('logIn', {
-            error: undefined
+            error: undefined,
+            user: req.session.user
         });
     },
     validate: (req, res) => {
@@ -25,13 +26,15 @@ const usersController = {
         
         if (!userValidator) {
             res.render('logIn', {
-                error: 'User not found!'
+                error: 'User not found!',
+                user: req.session.user
             });
         }  
 
         if(!passwordValidator) {
             res.render('logIn', {
-                error: 'Wrong password!'
+                error: 'Wrong password!',
+                user: req.session.user
             });
         }
 
@@ -57,7 +60,8 @@ const usersController = {
 
         if (!errors.isEmpty()) {
             return res.render('signIn', {
-                errors: errors.errors
+                errors: errors.errors,
+                user: req.session.user
             });
         }
 
@@ -77,7 +81,8 @@ const usersController = {
     },
     signIn: (req, res) => {
         res.render('signIn', {
-            errors: undefined
+            errors: undefined,
+            user: req.session.user
         });
     },
     profile: (req, res) => {     
