@@ -6,7 +6,7 @@ let { check, validationResult, body } = require('express-validator'); //es neces
 let usersFilePath = path.join(__dirname, './data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-// let db = require('../database/models');
+let db = require('../database/models');
 
 const usersController = {
     logIn: (req, res) => {
@@ -15,16 +15,18 @@ const usersController = {
             user: req.session.user
         });
     },
-    validate: (req, res) => {
-        const email = req.body.email;
-        const password = req.body.password;
+    validate: async (req, res) => {
+        let email = req.body.email;
+        let password = req.body.password;
 
-        const user = users.find((user) => {
-            return user.email == email;
-        });
+        let user = await db.User.findAll({
+            where: {
+                mail: req.body.mail
+            }
+        })
 
-        const userValidator = user != undefined;
-        const passwordValidator = user? bcrypt.compareSync(password, user.password): undefined;
+        let userValidator = user != undefined;
+        let passwordValidator = user? bcrypt.compareSync(password, user.password): undefined;
         
         if (!userValidator) {
             res.render('logIn', {
@@ -51,10 +53,16 @@ const usersController = {
 
         res.redirect('/user/profile')
     },
-    store: (req, res, next) => {
+    store: async (req, res, next) => {
         const errors = validationResult(req);
+
+        let user = await db.User.findAll({
+            where: {
+                mail: req.body.mail
+            }
+        });
         
-        const userExistenceCheck = users.find(user => user.email == req.body.email)
+        const userExistenceCheck = user
 
         if (userExistenceCheck) {
             errors.errors.push({msg: "An user with that email already exists"});
@@ -67,17 +75,17 @@ const usersController = {
             });
         }
 
-        const newUser = {
-            id: users[users.length - 1].id + 1,
-            name: req.body.name,
-            lastname: req.body.lastname,
+        db.Users.create({
+            first_name: req.body.name,
+            last_name: req.body.lastname,
             password: bcrypt.hashSync(req.body.password, 10),
-            email: req.body.email,
-            avatar: "/images/users/" + req.files[0].filename
-        };
+            mail: req.body.mail,
+            adress: req.body.adress,
+            phone: req.body.phone,
+            avatar: "/images/users/" + req.files[0].filename,
+            category_id: 2
+        });
 
-        const usersToSave = [...users, newUser];
-        fs.writeFileSync(usersFilePath, JSON.stringify(usersToSave, null, ' '));
         res.redirect('/user/log-in');
         next()
     },

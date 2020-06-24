@@ -1,4 +1,4 @@
-// let db = require('../database/models');
+let db = require('../database/models');
 
 const cartController = function(req, res, next) {
     res.render('cart', { 

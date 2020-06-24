@@ -32,15 +32,15 @@ const productsController = {
 
 	// Create - Form to create
 	create: async (req, res) => {
-		// let sizes = await db.Size.findAll();
-		// let colors = await db.Color.findAll();
-		// let categories = await db.ProductCategory.findAll();
+		let sizes = await db.Size.findAll();
+		let colors = await db.Color.findAll();
+		let categories = await db.ProductCategory.findAll();
 
 		res.render('productLoad',{
 			user: req.session.user,
-			// sizes: sizes,
-			// color: colors,
-			// categories: categories
+			sizes: sizes,
+			color: colors,
+			categories: categories
 		});
 	},
 	
@@ -56,51 +56,69 @@ const productsController = {
 			category: req.body.category,
 			size: req.body.size,
 			color: req.body.color,
-			type: req.body.type,
+			highlighted: req.body.highlighted,
 		});
 
 		res.redirect('/');
 	},
 
 	// Update - Form to edit
-	edit: (req, res) => {
-		const id = req.params.id;
-		const productToEdit = products.find(p => p.id == id);
+	edit: async (req, res) => {
+		let sizes = await db.Size.findAll();
+		let colors = await db.Color.findAll();
+		let categories = await db.ProductCategory.findAll();
+
 		res.render('productEdit',{
 			productToEdit: productToEdit,
-			user: req.session.user
+			user: req.session.user,
+			sizes: sizes,
+			color: colors,
+			categories: categories
 		});
 	},
 
 	// Update - Method to update
 	update: (req, res) => {
-		const id = req.params.id;
-		const productToEdit = products.find(p => p.id == id);
-		console.log(productToEdit)
-		products[id - 1] =({
-			...productToEdit,
+		db.Product.update({
 			name: req.body.name,
+			price: req.body.price,
 			description: req.body.description,
-			discount: req.body.discount,
 			category: req.body.category,
 			highlighted: req.body.highlighted,
-			price: req.body.price
-		});
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+			size: req.body.size,
+			color: req.body.color,
+        }, { where: {
+            id: req.params.id
+		}});
 		
-		res.redirect('/');
-		
+		res.redirect('/');		
 	},
 
 	// Delete - Delete one product from DB
 	delete : (req, res) => {
-		const id = req.params.id;
-		const productsWithout = products.filter( product => id != product.id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(productsWithout, null, ' '));
-		res.redirect('/');
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
 
+        res.redirect('/');
+	},
+
+	// Scearching
+	scearch: async function(req, res) {
+        const scearchedProducts = await db.Product.findAll({
+            where: {
+              title: {
+                [db.Sequelize.Op.like]: '%' + req.body.search + '%'
+              }
+            }
+         });
+
+         res.render('products', {
+            products: scearchedProducts,
+        });
 	}
-}
+};
 
 module.exports = productsController;
