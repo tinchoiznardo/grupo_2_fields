@@ -1,12 +1,17 @@
-const fs = require('fs');
-const path = require('path');
+let fs = require('fs');
+let path = require('path');
 
-const productsFilePath = path.join(__dirname, './data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let productsFilePath = path.join(__dirname, './data/products.json');
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+let db = require('../database/models');
+
 
 const productsController = {
 	// Root - Show all products
-	root: (req, res) => {
+	root: async (req, res) => {
+		let products = await db.Product.findAll();
+
 		res.render('products', {
 			products: products,
 			user: req.session.user
@@ -14,9 +19,11 @@ const productsController = {
 	},
 
 	// Detail - Detail from one product
-	detail: (req, res) => {
-		const id = req.params.id;
-		const product = products.find(p => p.id == id);
+	detail: async (req, res) => {
+		let product = await db.Product.findByPk(req.params.id, {
+            include: [{association: 'sizes'}, {association: 'colors'}, {association: 'product_categories'}]
+		});
+		
 		res.render('productDetail',{
 			product: product, 
 			user: req.session.user
@@ -24,32 +31,34 @@ const productsController = {
 	},
 
 	// Create - Form to create
-	create: (req, res) => {
+	create: async (req, res) => {
+		// let sizes = await db.Size.findAll();
+		// let colors = await db.Color.findAll();
+		// let categories = await db.ProductCategory.findAll();
+
 		res.render('productLoad',{
-			user: req.session.user
+			user: req.session.user,
+			// sizes: sizes,
+			// color: colors,
+			// categories: categories
 		});
 	},
 	
 	// Create -  Method to store
 	store: (req, res, next) => {
-		const newId = products[products.length - 1].id + 1;
+		let image = req.files[0].filename
 
-		const image = req.files[0].filename
-
-		const newProduct = {
-			id : newId,
+		db.Product.create({
 			name: req.body.name,
-			type: req.body.type,
 			price: req.body.price,
-			discount: req.body.discount,
 			image: "/images/products/" + image,
 			description: req.body.description,
-			category: req.body.category
+			category: req.body.category,
+			size: req.body.size,
+			color: req.body.color,
+			type: req.body.type,
+		});
 
-		};
-
-		const finalproducts = [...products, newProduct];
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalproducts, null, ' '));
 		res.redirect('/');
 	},
 
@@ -74,7 +83,7 @@ const productsController = {
 			description: req.body.description,
 			discount: req.body.discount,
 			category: req.body.category,
-			type: req.body.type,
+			highlighted: req.body.highlighted,
 			price: req.body.price
 		});
 

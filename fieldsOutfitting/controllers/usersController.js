@@ -1,10 +1,12 @@
-const fs = require('fs');
-const path = require('path');
-const bcrypt = require('bcrypt');
-var { check, validationResult, body } = require('express-validator'); //es necesario?
+let fs = require('fs');
+let path = require('path');
+let bcrypt = require('bcrypt');
+let { check, validationResult, body } = require('express-validator'); //es necesario?
 
-const usersFilePath = path.join(__dirname, './data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+let usersFilePath = path.join(__dirname, './data/users.json');
+let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+// let db = require('../database/models');
 
 const usersController = {
     logIn: (req, res) => {
