@@ -45,12 +45,12 @@ module.exports = function(sequelize, dataTypes) {
 
     Product.associate = function(models) {
         Product.belongsTo(models.Size, {
-            as: 'size',
+            as: 'sizes',
             foreignKey: 'size_id'
             });
 
         Product.belongsTo(models.Color, {
-            as: 'color',
+            as: 'colors',
             foreignKey: 'color_id'
             });
 

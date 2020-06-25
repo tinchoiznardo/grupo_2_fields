@@ -3,8 +3,8 @@ let path = require('path');
 let bcrypt = require('bcrypt');
 let { check, validationResult, body } = require('express-validator'); //es necesario?
 
-let usersFilePath = path.join(__dirname, './data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// let usersFilePath = path.join(__dirname, './data/users.json');
+// let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 let db = require('../database/models');
 
@@ -16,17 +16,17 @@ const usersController = {
         });
     },
     validate: async (req, res) => {
-        let email = req.body.email;
-        let password = req.body.password;
-
         let user = await db.User.findAll({
             where: {
                 mail: req.body.mail
             }
-        })
+        });
+
+        console.log(typeof user)
+        console.log(user.id)
 
         let userValidator = user != undefined;
-        let passwordValidator = user? bcrypt.compareSync(password, user.password): undefined;
+        let passwordValidator = user? bcrypt.compareSync(req.body.password, user.password): undefined;
         
         if (!userValidator) {
             res.render('logIn', {
@@ -61,10 +61,10 @@ const usersController = {
                 mail: req.body.mail
             }
         });
-        
-        const userExistenceCheck = user
+        console.log(user.password)
+        console.log(user.first_name)
 
-        if (userExistenceCheck) {
+        if (user != '') {
             errors.errors.push({msg: "An user with that email already exists"});
         }
 
@@ -73,9 +73,9 @@ const usersController = {
                 errors: errors.errors,
                 user: req.session.user
             });
-        }
+        };
 
-        db.Users.create({
+        await db.User.create({
             first_name: req.body.name,
             last_name: req.body.lastname,
             password: bcrypt.hashSync(req.body.password, 10),
@@ -83,11 +83,12 @@ const usersController = {
             adress: req.body.adress,
             phone: req.body.phone,
             avatar: "/images/users/" + req.files[0].filename,
-            category_id: 2
+            category_id: 2,
+            cart_id: 1
         });
 
         res.redirect('/user/log-in');
-        next()
+        //next()
     },
     signIn: (req, res) => {
         res.render('signIn', {

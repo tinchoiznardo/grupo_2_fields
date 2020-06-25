@@ -26,7 +26,7 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.STRING
         },
         cart_id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
         },
         phone: {
             type: dataTypes.INTEGER

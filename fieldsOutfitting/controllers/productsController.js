@@ -1,8 +1,8 @@
 let fs = require('fs');
 let path = require('path');
 
-let productsFilePath = path.join(__dirname, './data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+// let productsFilePath = path.join(__dirname, './data/products.json');
+// let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 let db = require('../database/models');
 
@@ -21,7 +21,7 @@ const productsController = {
 	// Detail - Detail from one product
 	detail: async (req, res) => {
 		let product = await db.Product.findByPk(req.params.id, {
-            include: [{association: 'sizes'}, {association: 'colors'}, {association: 'product_categories'}]
+            include: [{association: 'sizes'}, {association: 'colors'}, {association: 'productCategories'}]
 		});
 		
 		res.render('productDetail',{
@@ -105,18 +105,19 @@ const productsController = {
         res.redirect('/');
 	},
 
-	// Scearching
-	scearch: async function(req, res) {
-        const scearchedProducts = await db.Product.findAll({
+	// searching
+	search: async function(req, res) {
+        const searchedProducts = await db.Product.findAll({
             where: {
-              title: {
+              name: {
                 [db.Sequelize.Op.like]: '%' + req.body.search + '%'
               }
             }
          });
 
          res.render('products', {
-            products: scearchedProducts,
+			user: req.session.user,
+            products: searchedProducts
         });
 	}
 };
