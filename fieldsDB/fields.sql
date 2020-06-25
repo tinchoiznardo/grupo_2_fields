@@ -7,16 +7,10 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
--- -----------------------------------------------------
--- Schema fields
--- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `fields` ;
+DROP DATABASE IF EXISTS fields;
+CREATE DATABASE fields;
+USE fields;
 
--- -----------------------------------------------------
--- Schema fields
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `fields` DEFAULT CHARACTER SET utf8 ;
-USE `fields` ;
 
 -- -----------------------------------------------------
 -- Table `fields`.`sizes`
@@ -68,19 +62,13 @@ CREATE TABLE IF NOT EXISTS `fields`.`products` (
   INDEX `fk_products_category1_idx` (`category_id` ASC) ,
   CONSTRAINT `fk_products_size1`
     FOREIGN KEY (`size_id`)
-    REFERENCES `fields`.`sizes` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES `fields`.`sizes` (`id`),
   CONSTRAINT `fk_products_color1`
     FOREIGN KEY (`color_id`)
-    REFERENCES `fields`.`colors` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES `fields`.`colors` (`id`),
   CONSTRAINT `fk_products_category1`
     FOREIGN KEY (`category_id`)
-    REFERENCES `fields`.`product_categories` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `fields`.`product_categories` (`id`))
 ENGINE = InnoDB;
 
 
@@ -124,14 +112,10 @@ CREATE TABLE IF NOT EXISTS `fields`.`users` (
   INDEX `fk_users_user_category1_idx` (`category_id` ASC) ,
   CONSTRAINT `fk_Users_cart1`
     FOREIGN KEY (`cart_id`)
-    REFERENCES `fields`.`carts` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES `fields`.`carts` (`id`),
   CONSTRAINT `fk_users_user_category1`
     FOREIGN KEY (`category_id`)
-    REFERENCES `fields`.`user_categories` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `fields`.`user_categories` (`id`))
 ENGINE = InnoDB;
 
 
@@ -148,14 +132,10 @@ CREATE TABLE IF NOT EXISTS `fields`.`product_cart` (
   INDEX `fk_Products_has_cart_Products1_idx` (`product_id` ASC) ,
   CONSTRAINT `fk_Products_has_cart_Products1`
     FOREIGN KEY (`product_id`)
-    REFERENCES `fields`.`products` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES `fields`.`products` (`id`),
   CONSTRAINT `fk_Products_has_cart_cart1`
     FOREIGN KEY (`cart_id`)
-    REFERENCES `fields`.`carts` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `fields`.`carts` (`id`))
 ENGINE = InnoDB;
 
 

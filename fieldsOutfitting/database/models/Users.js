@@ -50,7 +50,7 @@ module.exports = function(sequelize, dataTypes) {
         });
 
         User.belongsTo(models.UserCategory, {
-            as: 'user_categories',
+            as: 'userCategories',
             foreignKey: 'category_id'
             });
     };

@@ -20,12 +20,11 @@ INSERT INTO carts (total) VALUES
 INSERT INTO product_cart (product_id,cart_id,quantity) VALUES
 (1,1,3);
 
-INSERT INTO user_category (type) VALUES
+INSERT INTO user_categories (type) VALUES
 ('admin'),('user');
 
 INSERT INTO users (first_name,last_name,mail,adress,password,avatar,cart_id,phone,category_id) VALUES
 ("santiago","Rodriguez",'santirodriguezsalinas@gmail.com',"123 bulnes","asd","/images/users/avatar-1592089529345.png",1,12345678,1),
 ("tincho","iznardo",'tinchoiznardo@gmail.com',"1234 bulnes","12344","/images/users/avatar-1592091006142.jpg",2,12345678,2);
-
 
 

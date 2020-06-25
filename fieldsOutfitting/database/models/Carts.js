@@ -26,7 +26,7 @@ module.exports = function(sequelize, dataTypes) {
         });
 
         Cart.hasMany(models.ProductCart, {
-            as: 'product_cart',
+            as: 'cartProduct',
             foreignKey: 'cart_id'
         });
 

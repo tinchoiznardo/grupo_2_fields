@@ -55,13 +55,13 @@ module.exports = function(sequelize, dataTypes) {
             });
 
         Product.belongsTo(models.ProductCategory, {
-            as: 'product_category',
+            as: 'productCategories',
             foreignKey: 'category_id'
             });
 
         Product.hasMany(models.ProductCart, {
-                as: 'product_cart',
-                foreignKey: 'product_id'
+            as: 'productCart',
+            foreignKey: 'product_id'
             });
 
         Product.belongsToMany(models.Cart, {
