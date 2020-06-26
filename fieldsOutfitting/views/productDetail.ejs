@@ -18,7 +18,7 @@
           
           <div class="form-group row">
             <div class="col-sm-8 col-md-9 description">
-              <h1 class='name'><%= product.name %></h1>
+              <h1 class='name' style='color: black'><%= product.name %></h1>
             </div>
           </div>
 
@@ -41,7 +41,15 @@
             <label for="size" class="col-sm-3 col-md-3 form-control-label">Size:</label>
             <div class="col-sm-8 col-md-9">
 
-              <input type="number" class="qty form-control" id="input-qty" name="qty" maxlength="7" value="1">
+              <%= size.size%>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="color" class="col-sm-3 col-md-3 form-control-label">Color:</label>
+            <div class="col-sm-8 col-md-9">
+
+              <%= color.color %>
             </div>
           </div>
 

@@ -33,4 +33,7 @@ router.put('/edit/:id', productsController.update); /* PUT - Update in DB */
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', authMiddleware, productsController.delete); /* DELETE - Delete from DB */
 
+/*** SCEARCH ***/
+router.post('/', productsController.search); /* POST - Store in DB */
+
 module.exports = router;

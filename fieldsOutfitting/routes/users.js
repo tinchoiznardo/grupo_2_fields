@@ -25,7 +25,7 @@ router.post('/log-in/', usersController.validate);
 
 router.get('/sign-in/', usersController.signIn);
 router.post('/sign-in/', upload.any(), [
-    check('email').isEmail().withMessage('Invalid email'),
+    check('mail').isEmail().withMessage('Invalid email'),
     check('name').isLength({
         min: 3,
         max: 50
