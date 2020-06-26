@@ -23,10 +23,14 @@ const productsController = {
 		let product = await db.Product.findByPk(req.params.id, {
             include: [{association: 'sizes'}, {association: 'colors'}, {association: 'productCategories'}]
 		});
+		let size = await db.Size.findOne({where: {id: product.size_id}});
+		let color = await db.Color.findOne({where: {id: product.color_id}});
 		
 		res.render('productDetail',{
 			product: product, 
-			user: req.session.user
+			user: req.session.user,
+			size: size,
+			color: color
 		});
 	},
 
