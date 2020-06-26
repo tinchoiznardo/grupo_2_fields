@@ -31,7 +31,7 @@
                                 <select name='size'> 
                                     <% for( let i = 0; i < sizes.length; i++) {%>
                                     <option value="<%= sizes[i].id %>">
-                                        <%= sizes[i].name %>
+                                        <%= sizes[i].size %>
                                     </option>
                                     <% } %>
                                 </select>
@@ -42,7 +42,7 @@
                                 <select name='color'> 
                                     <% for( let i = 0; i < colors.length; i++) {%>
                                     <option value="<%= colors[i].id %>">
-                                        <%= colors[i].name %>
+                                        <%= colors[i].color %>
                                     </option>
                                     <% } %>
                                 </select>
@@ -70,9 +70,9 @@
                         <div>
                             <label for="">Category</label>
                             <select name='category'> 
-                                <% for( let i = 0; i < productCategories.length; i++) {%>
-                                <option value="<%= productCategories[i].id %>">
-                                    <%= productCategories[i].name %>
+                                <% for( let i = 0; i < categories.length; i++) {%>
+                                <option value="<%= categories[i].id %>">
+                                    <%= categories[i].type %>
                                 </option>
                                 <% } %>
                             </select>

@@ -19,12 +19,12 @@ module.exports = function(sequelize, dataTypes) {
     
     let Color = sequelize.define(alias, cols, config);
 
-    // Color.associate = function(models) {
-    //     Color.hasMany(models.Product, {
-    //         as: 'products',
-    //         foreignKey: 'color_id'
-    //     });
-    // };
+    Color.associate = function(models) {
+        Color.hasMany(models.Product, {
+            as: 'products',
+            foreignKey: 'color_id'
+        });
+    };
 
     return Color
 };

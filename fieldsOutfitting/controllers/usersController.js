@@ -16,14 +16,12 @@ const usersController = {
         });
     },
     validate: async (req, res) => {
-        let user = await db.User.findAll({
+        let user = await db.User.findOne({
             where: {
                 mail: req.body.mail
             }
         });
 
-        console.log(typeof user)
-        console.log(user.id)
 
         let userValidator = user != undefined;
         let passwordValidator = user? bcrypt.compareSync(req.body.password, user.password): undefined;
@@ -56,13 +54,12 @@ const usersController = {
     store: async (req, res, next) => {
         const errors = validationResult(req);
 
-        let user = await db.User.findAll({
+        let user = await db.User.findOne({
             where: {
                 mail: req.body.mail
             }
         });
-        console.log(user.password)
-        console.log(user.first_name)
+
 
         if (user != '') {
             errors.errors.push({msg: "An user with that email already exists"});

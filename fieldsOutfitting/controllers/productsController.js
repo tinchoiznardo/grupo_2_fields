@@ -39,7 +39,7 @@ const productsController = {
 		res.render('productLoad',{
 			user: req.session.user,
 			sizes: sizes,
-			color: colors,
+			colors: colors,
 			categories: categories
 		});
 	},
@@ -67,6 +67,8 @@ const productsController = {
 		let sizes = await db.Size.findAll();
 		let colors = await db.Color.findAll();
 		let categories = await db.ProductCategory.findAll();
+
+		let productToEdit = await db.Product.findByPk(req.params.id)
 
 		res.render('productEdit',{
 			productToEdit: productToEdit,
