@@ -45,6 +45,9 @@ router.post('/sign-in/', upload.any(), [
 
 router.get('/profile/', authMiddleware, usersController.profile);
 
+router.get('/edit/:id', authMiddleware, usersController.edit);
+router.post('/edit/:id', authMiddleware, usersController.update);
+
 router.post('/log-out/', usersController.logOut);
 
 module.exports = router;
