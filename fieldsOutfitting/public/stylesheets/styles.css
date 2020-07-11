@@ -203,7 +203,7 @@ a:hover {
 .galeria {
     margin-top: 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     width: 100%;
     padding: 0%;
@@ -391,11 +391,15 @@ a:hover {
 }
 
 .fg {
-    padding: 5%;
+    padding-bottom: 5%;
 }
 
 .fg img {
     width: 70%;
+}
+
+.search{
+    margin-top: 7vh;
 }
 
 
