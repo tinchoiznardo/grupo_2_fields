@@ -1,0 +1,78 @@
+<%- include('./partials/head.ejs') %>
+
+    <%- include('./partials/header.ejs') %>
+        
+    <main>
+             
+        <div>
+            
+            <div class="card bg-light">
+                <article class="card-body mx-auto" style="max-width: 400px;">
+                    <h4 class="card-title mt-3 text-center">Edit your profile</h4>
+                                        
+                    <form action= "/user/edit/<%= userToEdit.id %>" method="POST" >
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+                            <input name="name" id="name" class="form-control" placeholder="Name" type="text" value="<%= userToEdit.first_name %>">
+                        </div> 
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+                            <input name="lastname" id="lastname" class="form-control" placeholder="Lastname" type="text" value="<%= userToEdit.last_name %>">
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+                            <input name="adress" id="adress" class="form-control" placeholder="Adress" type="text" value="<%= userToEdit.adress %>">
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                            </div>
+                            <input name="mail" id="email" class="form-control" placeholder="Email" type="email" value="<%= userToEdit.mail %>">
+                        </div> 
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                            </div>
+                            <select class="custom-select" style="max-width: 120px;">
+                                <option selected="">+54 9</option>
+                                <option value="1">+972</option>
+                                <option value="2">+198</option>
+                                <option value="3">+701</option>
+                            </select>
+                            <input name="phone" id= "phone" class="form-control" placeholder="Cellphone" type="text" value="<%= userToEdit.phone %>">
+                        </div>
+                      
+                        <!-- <div class="form-group">
+                            <label for='avatar' class='form-label input-group-btn'>Profile image: </label>
+                            <input accept=".jpg,.png,.jpeg,.gif" class="" id="banner_captura" name="avatar" type="file" required>
+                        </div>       -->
+                        <div style='color: red'>
+                            <% if (typeof errors != 'undefined') {%>  
+                                <ul style='list-style: none'>
+                                <% for (error of errors) {%>
+                                        <li><%= error.msg%></li>
+                                <% } %>
+                            </ul>
+                            <% } %>
+                            </div>                                 
+                        <div class="form-group">
+                            <button type="submit" id= "submit" name= "submit" class="btn btn-primary btn-block"> Update </button>
+                        </div>       
+                        <p class="text-center"> <a href="/users/profile">Cancel</a> </p>                                                                 
+                    </form>
+                </article>
+            </div> 
+            
+        </div> 
+
+        
+            </main> 
+            
+            <%- include('./partials/footer.ejs') %>
+            

@@ -60,8 +60,7 @@ const usersController = {
             }
         });
 
-
-        if (user != '') {
+        if (user != null) {
             errors.errors.push({msg: "An user with that email already exists"});
         }
 
@@ -102,7 +101,34 @@ const usersController = {
         req.session.user = null;
         res.cookie('user', null, { maxAge: -1});
         res.redirect('/user/log-in')
-    }
+    },
+    edit: async (req, res) => {
+		
+		let userToEdit = await db.User.findByPk(req.params.id)
+
+		res.render('userEdit',{
+			userToEdit: userToEdit,
+			user: req.session.user,
+		});
+    },
+    update: async (req, res) => {
+		await db.User.update({
+			first_name: req.body.name,
+			last_name: req.body.lastname,
+			mail: req.body. mail,
+			adress: req.body.adress,
+            // avatar: req.body.color,
+            phone: req.body.phone,
+        }, { where: {
+            id: req.params.id
+		}});
+        
+        let user = await db.User.findByPk(req.params.id)
+
+        req.session.user = user
+
+		res.redirect('/user/profile');		
+	},
 };
 
 module.exports = usersController;
