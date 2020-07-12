@@ -72,7 +72,7 @@
                 <button type="submit">Scearch</button>
                 </form>
 
-                <div class="row col-9 galeria">
+                <div class="row col-12 galeria">
                     <% for (product of products) { %>
                     <div class="col-lg-4 sm-12 fg">
                         <img src="<%= product.image %>" alt="">
@@ -84,7 +84,7 @@
                 </div>
 
                 <% if(user != undefined) { %>
-                    <a href="/products/load" class="btn btn-light">LOAD PRODUCT</a>
+                    <a href="/products/load" class="btn btn-warning">LOAD PRODUCT</a>
                   <% } %>
 
         </main>
