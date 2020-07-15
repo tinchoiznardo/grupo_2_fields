@@ -51,6 +51,7 @@ const productsController = {
 	// Create -  Method to store
 	store: (req, res, next) => {
 		let image = req.files[0].filename
+		
 
 		db.Product.create({
 			name: req.body.name,
@@ -58,6 +59,7 @@ const productsController = {
 			image: "/images/products/" + image,
 			description: req.body.description,
 			category: req.body.category,
+			stock: req.body.quantity,
 			size: req.body.size,
 			color: req.body.color,
 			highlighted: req.body.highlighted,
