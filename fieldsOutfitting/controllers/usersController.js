@@ -71,6 +71,11 @@ const usersController = {
             });
         };
 
+        const cart = await db.Cart.create({
+            total:0 
+        });
+        console.log(cart);
+
         await db.User.create({
             first_name: req.body.name,
             last_name: req.body.lastname,
@@ -80,7 +85,7 @@ const usersController = {
             phone: req.body.phone,
             avatar: "/images/users/" + req.files[0].filename,
             category_id: 2,
-            cart_id: 1
+            cart_id: cart.id
         });
 
         res.redirect('/user/log-in');
