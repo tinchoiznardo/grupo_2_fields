@@ -21,16 +21,13 @@ const productsController = {
 	// Detail - Detail from one product
 	detail: async (req, res) => {
 		let product = await db.Product.findByPk(req.params.id, {
-            include: [{association: 'sizes'}, {association: 'colors'}, {association: 'productCategories'}]
+            include: [{association: 'productCategories'}]
 		});
-		let size = await db.Size.findOne({where: {id: product.size_id}});
-		let color = await db.Color.findOne({where: {id: product.color_id}});
+		// let size = await db.Size.findOne({where: {id: product.size_id}});
 		
 		res.render('productDetail',{
 			product: product, 
 			user: req.session.user,
-			size: size,
-			color: color
 		});
 	},
 
@@ -42,8 +39,6 @@ const productsController = {
 
 		res.render('productLoad',{
 			user: req.session.user,
-			sizes: sizes,
-			colors: colors,
 			categories: categories
 		});
 	},
@@ -58,9 +53,6 @@ const productsController = {
 			image: "/images/products/" + Pimage,
 			description: req.body.description,
 			category_id: req.body.category,
-			stock: req.body.quantity,
-			size_id: req.body.size,
-			color_id: req.body.color,
 			highlighted: req.body.highlighted,
 		});
 
@@ -78,8 +70,6 @@ const productsController = {
 		res.render('productEdit',{
 			productToEdit: productToEdit,
 			user: req.session.user,
-			sizes: sizes,
-			color: colors,
 			categories: categories
 		});
 	},
@@ -92,8 +82,6 @@ const productsController = {
 			description: req.body.description,
 			category: req.body.category,
 			highlighted: req.body.highlighted,
-			size: req.body.size,
-			color: req.body.color,
         }, { where: {
             id: req.params.id
 		}});

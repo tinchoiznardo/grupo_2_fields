@@ -3,16 +3,16 @@ INSERT INTO product_categories (type) VALUES
 ('fields'),('walkers');
 
 INSERT INTO sizes (size) VALUES
-('S'),('M'),('L'),('XL');
+('S'),('M'),('L');
 
-INSERT INTO colors (color) VALUES
-('azul'),('negro'),('bordo'),('tostada'),('flores'),('night');
+INSERT INTO products (price,name,category_id,description,image,highlighted) VALUES
+(1150,'bordo floreada',1,"alto pantalon","/images/products/fields1.jpg",1),
+(1150,'negra floreada',1,"alto pantalon","/images/products/fields2.jpg",0),
+(650,'walkers flores',2,"altas llantas","/images/products/fieldsB.jpg",1),
+(650,'walkers nigthth',2,"altas llantas","/images/products/fieldsW.jpg",0);
 
-INSERT INTO products (price,stock,name,size_id,color_id,category_id,description,image,highlighted) VALUES
-(1150,2,'bordo floreada',2,3,1,"alto pantalon","/images/products/fields1.jpg",1),
-(1150,2,'negra floreada',4,2,1,"alto pantalon","/images/products/fields2.jpg",0),
-(650,5,'walkers flores',2,5,2,"altas llantas","/images/products/fieldsB.jpg",1),
-(650,4,'walkers nigthth',1,6,2,"altas llantas","/images/products/fieldsW.jpg",0);
+INSERT INTO product_size (size_id,stock,product_id) VALUES
+(1,1,3), (2,1,3),(2,2,2),(2,3,2),(2,4,1);
 
 INSERT INTO carts (total) VALUES
 ("650"),("1300");
