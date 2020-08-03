@@ -21,12 +21,17 @@ const productsController = {
 	// Detail - Detail from one product
 	detail: async (req, res) => {
 		let product = await db.Product.findByPk(req.params.id, {
-            include: [{association: 'productCategories'}]
+            include: [{association: 'productCategories'}, {association: 'productSize'}]
 		});
+		let availableSizes = await db.ProductSize.findAll({where: {product_id: req.params.id}});
+		console.log(availableSizes[0].size_id)
+		let sizes = await db.Size.findAll();
 		// let size = await db.Size.findOne({where: {id: product.size_id}});
 		
 		res.render('productDetail',{
 			product: product, 
+			sizes: sizes, 
+			availableSizes: availableSizes,
 			user: req.session.user,
 		});
 	},
