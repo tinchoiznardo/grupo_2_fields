@@ -108,6 +108,7 @@ CREATE TABLE IF NOT EXISTS `fields`.`product_cart` (
   `cart_id` INT NOT NULL,
   `id` INT NOT NULL AUTO_INCREMENT,
   `quantity` INT NOT NULL,
+  `size_id` INT NOT NULL,
   PRIMARY KEY (`id`, `product_id`, `cart_id`),
   INDEX `fk_Products_has_cart_cart1_idx` (`cart_id` ASC) ,
   INDEX `fk_Products_has_cart_Products1_idx` (`product_id` ASC) ,
