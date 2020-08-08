@@ -47,9 +47,9 @@ const usersController = {
             res.cookie('user', user.id, {
                 maxAge: 10000
             });
-        };
+        }
 
-        res.redirect('/user/profile')
+        res.redirect('/user/profile');
     },
     store: async (req, res, next) => {
         const errors = validationResult(req);
@@ -69,10 +69,10 @@ const usersController = {
                 errors: errors.errors,
                 user: req.session.user
             });
-        };
+        }
 
         const cart = await db.Cart.create({
-            total:0 
+            total:1 
         });
         console.log(cart);
 
@@ -105,11 +105,11 @@ const usersController = {
     logOut: (req, res) => {
         req.session.user = null;
         res.cookie('user', null, { maxAge: -1});
-        res.redirect('/user/log-in')
+        res.redirect('/user/log-in');
     },
     edit: async (req, res) => {
 		
-		let userToEdit = await db.User.findByPk(req.params.id)
+		let userToEdit = await db.User.findByPk(req.params.id);
 
 		res.render('userEdit',{
 			userToEdit: userToEdit,
@@ -128,9 +128,9 @@ const usersController = {
             id: req.params.id
 		}});
         
-        let user = await db.User.findByPk(req.params.id)
+        let user = await db.User.findByPk(req.params.id);
 
-        req.session.user = user
+        req.session.user = user;
 
 		res.redirect('/user/profile');		
 	},
