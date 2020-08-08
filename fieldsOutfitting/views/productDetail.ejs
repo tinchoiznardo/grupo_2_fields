@@ -37,20 +37,19 @@
             </div>
           </div>
 
+          <form action= "/cart" method="POST" >
+
           <div class="form-group row">
             <label for="size" class="col-sm-3 col-md-3 form-control-label">Size:</label>
-            <div class="col-sm-8 col-md-9">
-
-              <%= size.size%>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label for="color" class="col-sm-3 col-md-3 form-control-label">Color:</label>
-            <div class="col-sm-8 col-md-9">
-
-              <%= color.color %>
-            </div>
+            <select class="col-sm-8 col-md-9">
+              <% availableSizes.forEach((avaSize) => {%>
+              <% sizes.forEach((size) => {%>
+                <%if (avaSize.size_id === size.id && avaSize.stock != 0) {%>
+                <option><%= size.size %></option>
+              <% }%>
+              <% })%>
+              <% })%>
+            </select>
           </div>
 
           <div class="form-group row">
@@ -64,9 +63,9 @@
           <div class="form-group product-stock product-available row visible">
 
             <div class="col-sm-8 col-sm-offset-3 col-md-9 col-md-offset-3">
-
-              <input type="submit" class="adc btn btn-dark" value="Add to Shopping Cart">
-
+              <!-- FORM AL CARRITO -->
+              <button type="submit" class="adc btn btn-dark" value="Add to Shopping Cart">Add to Shopping Cart </button>
+            </form>  
               <a href="javascript:history.back()" class="btn btn-link btn-sm" title="Continue Shopping">← Continue Shopping</a>
 
             </div>

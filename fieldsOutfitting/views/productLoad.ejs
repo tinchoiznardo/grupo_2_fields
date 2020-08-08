@@ -37,19 +37,9 @@
                                 </select>
                             </div>
 
-                            <div>
-                                <label for="">Color</label>
-                                <select name='color'> 
-                                    <% for( let i = 0; i < colors.length; i++) {%>
-                                    <option value="<%= colors[i].id %>">
-                                        <%= colors[i].color %>
-                                    </option>
-                                    <% } %>
-                                </select>
-                            </div>
-
                             <div class="input-group-prepend col-2">
                             </div>
+                            Quantity
                             <input name="quantity" value="1" class="form-control" placeholder="Quantity" type="number" required>
                         </div>
                         <div class="form-group input-group row">
