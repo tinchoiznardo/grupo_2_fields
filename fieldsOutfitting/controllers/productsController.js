@@ -39,17 +39,17 @@ const productsController = {
 	// Create - Form to create
 	create: async (req, res) => {
 		let sizes = await db.Size.findAll();
-		let colors = await db.Color.findAll();
 		let categories = await db.ProductCategory.findAll();
 
 		res.render('productLoad',{
 			user: req.session.user,
-			categories: categories
+			categories: categories,
+			sizes: sizes
 		});
 	},
 	
 	// Create -  Method to store
-	store: (req, res, next) => {
+	store: async (req, res, next) => {
 		let Pimage = req.files[0].filename
 		
 		db.Product.create({
@@ -60,6 +60,15 @@ const productsController = {
 			category_id: req.body.category,
 			highlighted: req.body.highlighted,
 		});
+
+		let products = await db.Product.findAll();
+		let product_id = len(products)
+
+		db.ProductSize.create({
+			size_id: req.body.size,
+			product_id: product_id,
+			stock: req.body.quantity
+		})
 
 		res.redirect('/');
 	},
