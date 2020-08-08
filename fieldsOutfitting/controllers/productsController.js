@@ -76,7 +76,6 @@ const productsController = {
 	// Update - Form to edit
 	edit: async (req, res) => {
 		let sizes = await db.Size.findAll();
-		let colors = await db.Color.findAll();
 		let categories = await db.ProductCategory.findAll();
 
 		let productToEdit = await db.Product.findByPk(req.params.id)
