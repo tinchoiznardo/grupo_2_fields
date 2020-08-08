@@ -19,7 +19,7 @@ const productsController = {
             ]
         });
         for (let i = 0 ; i < products.length ;i++) {
-            await products[i].setDataValue ('endpoint', `/api/users/${products[i].id}`)
+            await products[i].setDataValue ('endpoint', `/api/products/${products[i].id}`)
         } 
 
         
@@ -27,7 +27,7 @@ const productsController = {
             meta: {
                 status:200,
                 total: products.length,
-                url: '/api/users', 
+                url: '/api/products', 
             },
             data: products
             }

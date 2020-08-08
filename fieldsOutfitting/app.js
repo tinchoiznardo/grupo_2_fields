@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 const methodOverride =  require('method-override');
 const session = require('express-session');
 
@@ -19,6 +20,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -36,6 +38,7 @@ app.use('/cart', cartRouter);
 app.use('/user', usersRouter);
 app.use('/products', productsRouter);
 app.use ('/api/users',apiUsersRouter);
+app.use ('/api/products',apiProductsRouter);
 //app.use ('/api/products',apiProductsRouter);
 
 
