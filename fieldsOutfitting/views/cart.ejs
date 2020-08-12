@@ -9,7 +9,20 @@
         <h1>Cart</h1>
       </div>
       <div class='comprasSub'>
-        <div class='img'>
+        <div class="row col-12 galeria">
+          <% for (purchase of productCart) { %>
+            <% for (product of products) { %>
+              <% if (product.id == purchase.product_id) { %>
+          <div class="col-lg-6 sm-12 fg">
+              <img src="<%= product.image %>" alt="">
+              <h5><a class='name' href="/products/detail/<%= product.id %>"><%= product.name %></a></h5>
+              <p><%= product.price %></p>
+          </div>
+              <% } %>
+            <% } %>
+          <% } %>
+      </div>
+        <!-- <div class='img'>
           <img src="/images/WalkersW.PNG" alt="">
           <div class= "close">
             <img src="https://img.icons8.com/ios/50/000000/close-window.png"/>
@@ -29,7 +42,7 @@
         </h5>
       
         <h5>Subtotal:</h5>
-      </div>
+      </div> -->
       <div class="comprasSub">
         <h3>Total</h3>
         
