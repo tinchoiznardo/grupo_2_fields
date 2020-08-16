@@ -50,19 +50,10 @@ body {
     display: flex;
     margin-left: 0px;
     justify-content: space-between;
-   
 }
 
 .navbar ul {
     list-style-type: none;
-    
-}
-
-@media (max-width: 576px) {
-.navbar-nav{
-    background-color: rgba(0, 0, 0, 0.12);
-} 
-
 }
 
 
@@ -193,10 +184,7 @@ a:hover {
     }
     .contacto {
         order: 2;
-      }
-    .contacto ul{
-        display: flex;
-    justify-content: space-evenly;
+        display: inline;
     }
     .logoFooter {
         order: 1;
@@ -248,14 +236,18 @@ a:hover {
     flex-wrap: wrap;
     position: relative;
     float: left;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 20px;
 }
 
 .cwcontainer img {
     width: 103%;
     margin-left: -1.5%;
-    
+    margin-bottom: 2.5vh;
+}
+
+.zoom a {
+    text-decoration: none;
+    color: white;
 }
 
 .zoom {
@@ -264,21 +256,7 @@ a:hover {
     align-self: center;
     color: white;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100.3%;
-    margin-left: -1.5%;
-    margin-top: 25%;
-    
 }
-
-.zoom h2 {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    opacity: 1;
-    font-weight: bold;  
-}
-
 
 .carousel img {
     width: 80%;
@@ -362,11 +340,6 @@ a:hover {
 @media (max-width: 576px) {
     .zoom h2 {
         font-size: 0.8em;
-        padding-top: 2%;       
-    }
-    .zoom {
-       margin-left: -3.9%;   
-       width: 100%;    
     }
     .carouselIndex {
         display: none;
@@ -376,11 +349,6 @@ a:hover {
     }
     .imagenbottom {   
         height: 25vh;
-    }
-    .cwcontainer img {
-        width: 108%;
-        margin-left: -4%;
-        
     }
 }
 
