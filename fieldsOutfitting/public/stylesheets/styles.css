@@ -191,6 +191,16 @@ a:hover {
     }
     .contacto {
         order: 2;
+
+      }
+      .contacto h5{
+          display: flex;
+          justify-content: space-evenly;
+      }
+    .contacto ul{
+        display: flex;
+    justify-content: space-evenly;
+
     }
     .logoFooter {
         order: 1;
