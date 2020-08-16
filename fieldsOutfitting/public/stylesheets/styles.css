@@ -184,17 +184,14 @@ a:hover {
     }
     .contacto {
         order: 2;
-        display: inline;
     }
     .logoFooter {
         order: 1;
         margin-bottom: 25px;
     }
     .pagos {
-        display: none;
         order: 3;
     }
-
 }
 
 
@@ -242,7 +239,6 @@ a:hover {
 .cwcontainer img {
     width: 103%;
     margin-left: -1.5%;
-    margin-bottom: 2.5vh;
 }
 
 .zoom a {
@@ -346,9 +342,6 @@ a:hover {
     }
     .prod {
         display: none;
-    }
-    .imagenbottom {   
-        height: 25vh;
     }
 }
 
