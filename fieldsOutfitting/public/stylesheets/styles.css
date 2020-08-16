@@ -56,6 +56,13 @@ body {
     list-style-type: none;
 }
 
+.img-Profile{
+    width: 100%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
 
 /*FIN HEADER*/
 
@@ -535,7 +542,7 @@ body {
     float: none;
     margin-left: 25%;
     width: 50%;
-    height: 40%;
+    height: 50%;
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
@@ -548,16 +555,16 @@ body {
 
 .profile-usertitle-name {
     color: #5a7391;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 400;
     margin-bottom: 7px;
 }
 
 .profile-usermail {
     text-transform: uppercase;
     color: #5b9bd1;
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 5px;
+    font-weight: 400;
     margin-bottom: 15px;
 }
 
@@ -581,6 +588,7 @@ body {
 .profile-usermenu {
     margin-top: 30px;
     text-align: center;
+    margin-bottom: 60%;
 }
 
 .profile-usermenu ul li {
@@ -616,6 +624,13 @@ body {
     background-color: #f6f9fb;
     border-left: 2px solid #5b9bd1;
     margin-left: -2px;
+}
+
+.profile-information {
+    display: hidden;
+}
+.profile-reclaims {
+    display: none;
 }
 
 
