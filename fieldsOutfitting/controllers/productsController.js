@@ -21,35 +21,35 @@ const productsController = {
 	// Detail - Detail from one product
 	detail: async (req, res) => {
 		let product = await db.Product.findByPk(req.params.id, {
-            include: [{association: 'sizes'}, {association: 'colors'}, {association: 'productCategories'}]
+            include: [{association: 'productCategories'}, {association: 'productSize'}]
 		});
-		let size = await db.Size.findOne({where: {id: product.size_id}});
-		let color = await db.Color.findOne({where: {id: product.color_id}});
+		let availableSizes = await db.ProductSize.findAll({where: {product_id: req.params.id}});
+		console.log(availableSizes[0].size_id)
+		let sizes = await db.Size.findAll();
+		// let size = await db.Size.findOne({where: {id: product.size_id}});
 		
 		res.render('productDetail',{
 			product: product, 
+			sizes: sizes, 
+			availableSizes: availableSizes,
 			user: req.session.user,
-			size: size,
-			color: color
 		});
 	},
 
 	// Create - Form to create
 	create: async (req, res) => {
 		let sizes = await db.Size.findAll();
-		let colors = await db.Color.findAll();
 		let categories = await db.ProductCategory.findAll();
 
 		res.render('productLoad',{
 			user: req.session.user,
-			sizes: sizes,
-			colors: colors,
-			categories: categories
+			categories: categories,
+			sizes: sizes
 		});
 	},
 	
 	// Create -  Method to store
-	store: (req, res, next) => {
+	store: async (req, res, next) => {
 		let Pimage = req.files[0].filename
 		
 		db.Product.create({
@@ -58,11 +58,17 @@ const productsController = {
 			image: "/images/products/" + Pimage,
 			description: req.body.description,
 			category_id: req.body.category,
-			stock: req.body.quantity,
-			size_id: req.body.size,
-			color_id: req.body.color,
 			highlighted: req.body.highlighted,
 		});
+
+		let products = await db.Product.findAll();
+		let product_id = len(products)
+
+		db.ProductSize.create({
+			size_id: req.body.size,
+			product_id: product_id,
+			stock: req.body.quantity
+		})
 
 		res.redirect('/');
 	},
@@ -70,7 +76,6 @@ const productsController = {
 	// Update - Form to edit
 	edit: async (req, res) => {
 		let sizes = await db.Size.findAll();
-		let colors = await db.Color.findAll();
 		let categories = await db.ProductCategory.findAll();
 
 		let productToEdit = await db.Product.findByPk(req.params.id)
@@ -78,8 +83,6 @@ const productsController = {
 		res.render('productEdit',{
 			productToEdit: productToEdit,
 			user: req.session.user,
-			sizes: sizes,
-			color: colors,
 			categories: categories
 		});
 	},
@@ -92,8 +95,6 @@ const productsController = {
 			description: req.body.description,
 			category: req.body.category,
 			highlighted: req.body.highlighted,
-			size: req.body.size,
-			color: req.body.color,
         }, { where: {
             id: req.params.id
 		}});
