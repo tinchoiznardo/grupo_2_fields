@@ -50,19 +50,17 @@ body {
     display: flex;
     margin-left: 0px;
     justify-content: space-between;
-   
 }
 
 .navbar ul {
     list-style-type: none;
-    
 }
 
-@media (max-width: 576px) {
-.navbar-nav{
-    background-color: rgba(0, 0, 0, 0.12);
-} 
-
+.img-Profile{
+    width: 100%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
 }
 
 
@@ -193,6 +191,7 @@ a:hover {
     }
     .contacto {
         order: 2;
+
       }
       .contacto h5{
           display: flex;
@@ -201,16 +200,15 @@ a:hover {
     .contacto ul{
         display: flex;
     justify-content: space-evenly;
+
     }
     .logoFooter {
         order: 1;
         margin-bottom: 25px;
     }
     .pagos {
-        display: none;
         order: 3;
     }
-
 }
 
 
@@ -252,14 +250,17 @@ a:hover {
     flex-wrap: wrap;
     position: relative;
     float: left;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 20px;
 }
 
 .cwcontainer img {
     width: 103%;
     margin-left: -1.5%;
-    
+}
+
+.zoom a {
+    text-decoration: none;
+    color: white;
 }
 
 .zoom {
@@ -268,21 +269,7 @@ a:hover {
     align-self: center;
     color: white;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100.3%;
-    margin-left: -1.5%;
-    margin-top: 25%;
-    
 }
-
-.zoom h2 {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    opacity: 1;
-    font-weight: bold;  
-}
-
 
 .carousel img {
     width: 80%;
@@ -366,25 +353,12 @@ a:hover {
 @media (max-width: 576px) {
     .zoom h2 {
         font-size: 0.8em;
-        padding-top: 2%;       
-    }
-    .zoom {
-       margin-left: -3.9%;   
-       width: 100%;    
     }
     .carouselIndex {
         display: none;
     }
     .prod {
         display: none;
-    }
-    .imagenbottom {   
-        height: 25vh;
-    }
-    .cwcontainer img {
-        width: 108%;
-        margin-left: -4%;
-        
     }
 }
 
@@ -578,7 +552,7 @@ body {
     float: none;
     margin-left: 25%;
     width: 50%;
-    height: 40%;
+    height: 50%;
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
@@ -591,16 +565,16 @@ body {
 
 .profile-usertitle-name {
     color: #5a7391;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 400;
     margin-bottom: 7px;
 }
 
 .profile-usermail {
     text-transform: uppercase;
     color: #5b9bd1;
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 5px;
+    font-weight: 400;
     margin-bottom: 15px;
 }
 
@@ -624,6 +598,7 @@ body {
 .profile-usermenu {
     margin-top: 30px;
     text-align: center;
+    margin-bottom: 60%;
 }
 
 .profile-usermenu ul li {
@@ -659,6 +634,13 @@ body {
     background-color: #f6f9fb;
     border-left: 2px solid #5b9bd1;
     margin-left: -2px;
+}
+
+.profile-information {
+    display: hidden;
+}
+.profile-reclaims {
+    display: none;
 }
 
 

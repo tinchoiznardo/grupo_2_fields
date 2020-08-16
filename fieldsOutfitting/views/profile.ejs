@@ -2,88 +2,89 @@
 
 <%- include('./partials/header.ejs') %>
 
-<div class="container">
-    <div class="row profile">
-		<div class="col-md-6">
-			<div class="profile-sidebar">
-				<!-- SIDEBAR USERPIC -->
-				<div class="profile-userpic">
-					<img src="<%= user.avatar %>"class="img-responsive" alt="">
-				</div>
-				<!-- END SIDEBAR USERPIC -->
-				<!-- SIDEBAR USER TITLE -->
-				<div class="profile-usertitle">
-					<div class="profile-usertitle-name">
-						<h2><%= user.name %> <%= user.lastname %></h2>
+<main>
+	<div class="container">
+		<div class="row profile">
+			<div class="col-md-6">
+				<div class="profile-sidebar">
+					<!-- SIDEBAR USERPIC -->
+					<div class="profile-userpic">
+						<img src="<%=user.avatar %>"class="img-responsive" alt="">
 					</div>
-					<div class="profile-usermail">
-						<h2><%= user.email %></h2>
-					</div>
-				</div>
-				<!-- END SIDEBAR USER TITLE -->
-				<!-- SIDEBAR MENU -->
-				<div class="profile-userbuttons">
-					<form action="/user/log-out/" method='POST'>
-						<button type="submit" class="btn btn-light">Log out</button>
-					</form>
-					<p class="text-center"> <a href="/user/edit/<%= user.id %>">Edit Profile</a> </p>                                             
-				</div>
-				<div class="profile-usermenu">
-					<ul class="nav-info">
-						<li class="">
-							<a href="#">
-							<i class="glyphicon glyphicon-home"></i>
-							My Orders</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="glyphicon glyphicon-user"></i>
-							My Personal Information </a>
-						</li>
-						<li>
-							<a href="#" target="_blank">
-							<i class="glyphicon glyphicon-ok"></i>
-							Claim and Suggestions</a>
-						</li>
-					</ul>
-				</div>
-				<!-- SIDEBAR BUTTONS -->
-				
-				<!-- END SIDEBAR BUTTONS -->
-				<!-- END MENU -->
-			</div>
-		</div>
-				<!-- INFO MENU -->	
-		<div class="col-md-6">
-			<div class="profile-sidebar">
-				<!-- *ACA HABRIA QUE HACER UN IF, DE ACUERDO A LO QUE CLIQUEE, SI VA A COMPRAS, EL HISTORIAL DE COMPRAS, O LA ULTIMA COMPRA (A DECIDIR)-->
-				<div class="profile-userbuttons">
-
-
-				</div>
-
-				<!--*LOS DATOS DEBERIAN SER (NOMBRE  / APELLIDO / MAIL / DIRECCION) -->
-				<div class="profile-userbuttons">
-
-
-				</div>
-				<!--* reclamos y sugerencias deberia ir un espacio para escribir con un bottom enviar-->
-				<div class="profile-userbuttons">
-					<div class="form-group">
-						<label for="InputRequest">Claim and Suggestions</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Description">
-						<div class="form-group">
-							<label for="TextRequest">Please leave your comment below</label>
-							<textarea class="form-control" id="TextRequest" rows="10"></textarea>
+					<!-- END SIDEBAR USERPIC -->
+					<!-- SIDEBAR USER TITLE -->
+					<div class="profile-usertitle">
+						<div class="profile-usertitle-name">
+							<h4><%= user.first_name %> <%= user.last_name %></h2>
+						</div>
+						<div class="profile-usermail">
+							<h5><%= user.mail %></h5>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-light"href="mailto:administrationfields@gmail.com">Send</button>
+					<!-- END SIDEBAR USER TITLE -->
+					<!-- SIDEBAR MENU -->
+					<div class="profile-userbuttons">
+						<form action="/user/log-out/" method='POST'>
+							<button type="submit" class="btn btn-light">Log out</button>
+						</form>
+					</div>
+					<div class="profile-usermenu">
+						<ul class="nav-info">
+							<li>
+								<a href="#">
+								<i class="glyphicon glyphicon-user"></i>
+								My Personal Information </a>
+							</li>
+							<li>
+								<a href="#">
+								<i class="glyphicon glyphicon-ok"></i>
+								Claim and Suggestions</a>
+							</li>
+						</ul>
+					</div>
+					<!-- SIDEBAR BUTTONS -->
+					
+					<!-- END SIDEBAR BUTTONS -->
+					<!-- END MENU -->
 				</div>
 			</div>
+					<!-- INFO MENU -->	
+			<div class="col-md-6 form-group">
+				<div class="personal-profile" >
+					<!--*LOS DATOS DEBERIAN SER (NOMBRE  / APELLIDO / MAIL / DIRECCION) -->
+					<div class="profile-information">
+						<h1> Personal Information</h1>
+						<label>First Name</label><br>
+						<input type="text" value="<%= user.first_name %>" class="input-xlarge"><br>
+						<label>Last Name</label><br>
+						<input type="text" value="<%= user.last_name %>" class="input-xlarge"><br>
+						<label>Email</label><br>
+						<input type="text" value="<%= user.mail %>" class="input-xlarge"><br>
+						<label>Adress</label><br>
+						<input type="text" value="<%= user.adress %>" class="input-xlarge"><br>
+
+						<p class="text-center"> <a href="/user/edit/= user.id %">Edit Profile</a> </p>
+					</div>
+					<!--* reclamos y sugerencias deberia ir un espacio para escribir con un bottom enviar-->
+					<div class="profile-reclaims">
+						<div class="form-group">
+							<label for="InputRequest">Claim and Suggestions</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Description">
+							<div class="form-group">
+								<label for="TextRequest">Please leave your comment below</label>
+								<textarea class="form-control" id="TextRequest" rows="10"></textarea>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-light"href="mailto:administrationfields@gmail.com">Sent</button>
+					</div>
+				</div>
+			</div>
+			
 		</div>
-		
 	</div>
-</div>
-<br>
+	<br>
+
+	<script src= "../public/js/userProfile.js"></script>
+</main>
 
 <%- include('./partials/footer.ejs') %>

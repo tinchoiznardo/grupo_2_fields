@@ -38,9 +38,11 @@
                                 Cart
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item row">
                             <% if(user != undefined) { %>
-                                <a class="nav-link col-9" href="/user/profile"><%= user.first_name %></a>
+                                <a class="nav-link col-2" href="/user/profile">
+                                    <img class=" Img-Profile" src="<%=user.avatar %>">
+                                </a>
                             <% }  else { %>
                                 <a class="nav-link" href="/user/profile">Profile</a>
                             <% } %>

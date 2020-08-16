@@ -12,8 +12,7 @@ window.addEventListener("load", function (){
     name.addEventListener("blur", () => {
         if (name.value.length < 3) {
             name.style.borderColor = "red"
-            var errorName = document.querySelector(".errorName")
-            errorName.innerHTML = "Must be 3 characters minimum"
+            name.value = "Must be 3 characters minimum";
             name.value.style.color = "red"
         }else {
             name.style.borderColor = ""
@@ -23,8 +22,7 @@ window.addEventListener("load", function (){
       lastName.addEventListener("blur", () => {
         if (lastName.value.length < 3) {
             lastName.style.borderColor = "red"
-            var errorLastname = document.querySelector(".errorLastname")
-            errorLastname.innerHTML = "Must be 3 characters minimum"
+            lastName.value = "Must be 3 characters minimum";
             lastName.value.style.color = "red"
         }else {
             lastName.style.borderColor = ""
@@ -32,10 +30,10 @@ window.addEventListener("load", function (){
       });
 
       password.addEventListener("blur", () => {
-        if (password.value.length < 5) {
+        if (password.value.length < 9) {
             password.style.borderColor = "red"
             var passwordError = document.querySelector(".errorpassword")
-            passwordError.innerHTML = "Must be 6 characters minimum" 
+            passwordError.innerHTML = "Must be 9 characters minimum" 
             password.value.style.color = "red"
         }else {
             password.style.borderColor = ""
