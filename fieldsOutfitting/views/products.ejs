@@ -44,7 +44,7 @@
               </div>
 
             <div class="row">
-                <div class="row col-lg-3 col-sm-12 lateral text-center">
+                <div class="row col-3 lateral text-center">
                     <div class="selector">
                         <ul list-type='none'>
                             <li>
@@ -66,20 +66,20 @@
                     </div>
 
                 </div>
-
-                <div class="row col-lg-3 col-sm-12 lateral text-center form-group search">
+                <div class="col-1"></div>
+                <div class="row  col-8 lateral text-centerform-group search">
                     <form action="/products" method='POST'>
                         <input type="text" name="search" id="">
                         <button type="submit">Search</button>
                     </form>
                 </div>
 
-                <div class="row col-12 galeria">
+                <div class="row  galeria">
                     <% for (product of products) { %>
-                    <div class="col-lg-3 sm-12 fg">
+                    <div class="col-lg-3 col-6 fg ">
                         <img src="<%= product.image %>" alt="">
                         <h5><a class='name' href="/products/detail/<%= product.id %>"><%= product.name %></a></h5>
-                        <p><%= product.price %></p>
+                        <p>$<%= product.price %></p>
                         <a href="#" class="btn btn-dark">Add to cart</a>
                     </div>
                     <% } %>

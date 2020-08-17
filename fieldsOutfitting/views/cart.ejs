@@ -4,47 +4,86 @@
 
   
   <main>
-    <div class="card bg-light compras">
-      <div class="comprasSub">
-        <h1>Cart</h1>
-      </div>
-      <div class='comprasSub'>
-        <div class='img'>
-          <img src="/images/WalkersW.PNG" alt="">
-          <div class= "close">
-            <img src="https://img.icons8.com/ios/50/000000/close-window.png"/>
+    <div class="container ">
+      <div class="row">
+          <div class="col-sm-12 col-md-12 col-md-offset-1">
+              <table class="table table-hover mt-5">
+                  <thead>
+                      <tr>
+                          <th>Product</th>
+                          <th>Quantity</th>
+                          <th class="text-center">Price</th>
+                          <th class="text-center">Total</th>
+                          <th> </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td class="col-sm-8 col-md-6">
+                          <div class="media">
+                              <a class="thumbnail pull-left" href="#"> <img class="media-object" src="images/fields1.jpg" style="width: 72px; height: 72px;"> </a>
+                              <div class="media-body">
+                                  <h4 class="media-heading"><a href="#" class="text-dark">Negra Azteca</a></h4>
+                                  <h5 class="media-heading text-dark"> Nuestras Fields Classics en color azul con detalles camuflajeados</h5>
+                              </div>
+                          </div></td>
+                          <td class="col-sm-1 col-md-1" style="text-align: center">
+                            <select name="" class="form-control" placeholder="Cantidad" type="number">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>...</option>
+                            </select>
+                          </td>
+                          <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
+                          <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
+                          <td class="col-sm-1 col-md-1">
+                            <form action="xxx" method="POST">
+                              <button type="button" class="btn btn-danger">
+                                  <span class="glyphicon glyphicon-remove"></span> Remove
+                              </button></td>
+                            </form>
+                      </tr>
+                      
+                      <tr>
+                          <td>   </td>
+                          <td>   </td>
+                          <td>   </td>
+                          <td><h5 >Subtotal</h5></td>
+                          <td class="text-right"><h5><strong>$24.59</strong></h5></td>
+                      </tr>
+                      <tr>
+                          <td>   </td>
+                          <td>   </td>
+                          <td colspan="2"><h5>Estimated shipping</h5></td>
+                          <td class="text-right"><h5><strong>$6.94</strong></h5></td>
+                      </tr>
+                      <tr>
+                          <td>   </td>
+                          <td>   </td>
+                          <td>   </td>
+                          <td><h3>Total</h3></td>
+                          <td class="text-right"><h3><strong>$31.53</strong></h3></td>
+                      </tr>
+                      <tr>
+                          <td>   </td>
+                          <td colspan="2" align="center">
+                          <button type="button" class="btn btn-dark text-center">
+                              <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                          </button></td>
+                          <td colspan="2" align="center">
+                          <button type="button" class="btn btn-warning text-cente">
+                              Proceed to Checkout <span class="glyphicon glyphicon-play"></span>
+                          </button></td>
+                      </tr>
+                  </tbody>
+              </table>
           </div>
-        </div>
-        <h5>Product:</h5>
-        <h5>Price:</h5>
-        <h5> Quantity:
-          <select name="" class="form- groupbtn btn-default btn-lg dropdown-toggle" placeholder="Cantidad" type="number">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>...</option>
-          </select>
-        </h5>
-      
-        <h5>Subtotal:</h5>
       </div>
-      <div class="comprasSub">
-        <h3>Total</h3>
-        
-        
-        <div>
-          <h5>Subtotal:</h5>
-          <h5>Send Charges:</h5>
-          <h5>Total:</h5>
-        </div>
-        
-        <div>
-          <button type="button" class="btn btn-dark">End Purchase</button>
-        </div>
-      </div>
-    </div>
+  </div>
+    
   </main> 
   
   <%- include('./partials/footer.ejs') %>

@@ -66,6 +66,7 @@ body {
 } 
 .navbar-light .navbar-nav .nav-link {
     color: white;
+    text-align: center
 }
 
 }
@@ -447,7 +448,7 @@ a:hover {
 }
 
 .search{
-    margin-top: 7vh;
+    margin-top: 2vh;
 }
 
 

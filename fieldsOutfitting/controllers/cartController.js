@@ -2,8 +2,13 @@ let db = require('../database/models');
 
 const cartController = {
   show: (req, res) => {
+    // const cartProducts = await db.Cart.findAll({
+    //   where: {
+    //     cart_id: 
+    //   }
     res.render('cart', { 
-      user: req.session.user 
+      user: req.session.user,
+      // cartProducts: cartProducts
     });
   },
   save: async (req, res) => {
