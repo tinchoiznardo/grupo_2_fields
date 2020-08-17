@@ -61,8 +61,12 @@ body {
 
 @media (max-width: 576px) {
 .navbar-nav{
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: rgba(0, 0, 0, 0.2);
+
 } 
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
 
 }
 
@@ -80,20 +84,20 @@ body {
     color: rgb(189, 196, 203)
 }
 
-.card {
+.footer {
     padding: 2% 7%;
     color: #646771;
-    background-color: #16151a;
+    background-color: #16151a; 
     border-radius: 0%;
 }
 
-ul {
+.footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0
 }
 
-ul>li {
+.footer ul>li {
     padding: 4px
 }
 

@@ -32,29 +32,31 @@
                         <div class=" carouselIndex">
                             <!-- SAQUE EL ROW -->
                             <div class="col-md-12 prod">
-                                <h2>Highlighted!</h2>
+                                <h2 class="text-dark">Highlighted!</h2>
                                 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-                                    <div class="carousel-inner row w-100 mx-auto">
-                                        <div class="row">
-                                            <% for (product of highlightedProducts) { %>
-                                                <div class="col-sm-3 cart">
-                                                    <div class="thumb-wrapper">
-                                                        <div class="img-box">
-                                                            <img src="<%= product.image %>" class="img-responsive img-fluid" alt="">
-                                                        </div>
-                                                        <div class="thumb-content prod">
-                                                            <h4>
-                                                                <a class='name' href='/products/detail/<%= product.id %>'>
-                                                                    <%= product.name %>
-                                                                </a>
-                                                            </h4>
-                                                            <p class="item-price"> <span><%= product.price %></span></p>
-                                                            <a href="#" class="btn btn-warning">Add to Cart</a>
+                                    <div class="carousel-inner">
+                            
+                                            <div class="row">
+                                                <% for (product of highlightedProducts) { %>
+                                                    <div class="col-sm-3 cart">
+                                                        <div class="thumb-wrapper">
+                                                            <div class="img-box">
+                                                                <img src="<%= product.image %>" class="img-responsive img-fluid" alt="">
+                                                            </div>
+                                                            <div class="thumb-content prod">
+                                                                <h4>
+                                                                    <a class='name text-dark' href='/products/detail/<%= product.id %>'>
+                                                                        <%= product.name %>
+                                                                    </a>
+                                                                </h4>
+                                                                <p class="item-price"> <span><%= product.price %></span></p>
+                                                                <a href="#" class="btn btn-warning">Add to Cart</a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <% } %>
-                                        </div>
+                                                    <% } %>
+                                            </div>
+                                        
                                     </div>
                                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -65,7 +67,6 @@
                                         <span class="sr-only">Next</span>
                                       </a>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
