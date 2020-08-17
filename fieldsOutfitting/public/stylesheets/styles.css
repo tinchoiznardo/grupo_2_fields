@@ -59,6 +59,13 @@ body {
     
 }
 
+.img-Profile {
+    width: 100%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
 @media (max-width: 576px) {
 .navbar-nav{
     background-color: rgba(0, 0, 0, 0.2);
