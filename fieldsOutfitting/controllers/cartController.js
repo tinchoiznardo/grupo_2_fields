@@ -18,7 +18,12 @@ const cartController = {
       cart_id: user.cart_id,
       quantity: req.body.quantity,
   });
-
-  },}
+  },
+  // delete: async (req, res) => {
+  //   const deletedItem = await db.ProductCart.delete({
+  //     product_id: req.body.product_id,
+  //     cart_id: user.cart_id,
+  // })
+  }
 
 module.exports = cartController

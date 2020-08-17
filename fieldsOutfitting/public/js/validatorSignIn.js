@@ -30,10 +30,10 @@ window.addEventListener("load", function (){
       });
 
       password.addEventListener("blur", () => {
-        if (password.value.length < 9) {
+        if (password.value.length < 6) {
             password.style.borderColor = "red"
             var passwordError = document.querySelector(".errorpassword")
-            passwordError.innerHTML = "Must be 9 characters minimum" 
+            passwordError.innerHTML = "Must be 6 characters minimum" 
             password.value.style.color = "red"
         }else {
             password.style.borderColor = ""
