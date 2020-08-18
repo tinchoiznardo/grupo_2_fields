@@ -2,90 +2,49 @@
 
 <%- include('./partials/header.ejs') %>
 
-  
-  <main>
-    <div class="container ">
-      <div class="row">
-          <div class="col-sm-12 col-md-12 col-md-offset-1">
-              <table class="table table-hover mt-5">
-                  <thead>
-                      <tr>
-                          <th>Product</th>
-                          <th>Quantity</th>
-                          <th class="text-center">Price</th>
-                          <th class="text-center">Total</th>
-                          <th> </th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td class="col-sm-8 col-md-6">
-                          <div class="media">
-                              <a class="thumbnail pull-left" href="#"> <img class="media-object" src="images/fields1.jpg" style="width: 72px; height: 72px;"> </a>
-                              <div class="media-body">
-                                  <h4 class="media-heading"><a href="#" class="text-dark">Negra Azteca</a></h4>
-                                  <h5 class="media-heading text-dark"> Nuestras Fields Classics en color azul con detalles camuflajeados</h5>
-                              </div>
-                          </div></td>
-                          <td class="col-sm-1 col-md-1" style="text-align: center">
-                            <select name="" class="form-control" placeholder="Cantidad" type="number">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>...</option>
-                            </select>
-                          </td>
-                          <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
-                          <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
-                          <td class="col-sm-1 col-md-1">
-                            <form action="cart/delete" method="POST">
-                              <button type="button" class="btn btn-danger">
-                                  <span class="glyphicon glyphicon-remove"></span> Remove
-                              </button></td>
-                            </form>
-                      </tr>
-                      
-                      <tr>
-                          <td>   </td>
-                          <td>   </td>
-                          <td>   </td>
-                          <td><h5 >Subtotal</h5></td>
-                          <td class="text-right"><h5><strong>$24.59</strong></h5></td>
-                      </tr>
-                      <tr>
-                          <td>   </td>
-                          <td>   </td>
-                          <td colspan="2"><h5>Estimated shipping</h5></td>
-                          <td class="text-right"><h5><strong>$6.94</strong></h5></td>
-                      </tr>
-                      <tr>
-                          <td>   </td>
-                          <td>   </td>
-                          <td>   </td>
-                          <td><h3>Total</h3></td>
-                          <td class="text-right"><h3><strong>$31.53</strong></h3></td>
-                      </tr>
-                      <tr>
-                          <td>   </td>
-                          <td colspan="2" align="center">
-                          <button type="button" class="btn btn-dark text-center">
-                              <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
-                          </button></td>
-                          <td colspan="2" align="center">
-                          <button type="button" class="btn btn-warning text-cente">
-                              Proceed to Checkout <span class="glyphicon glyphicon-play"></span>
-                          </button></td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
-      </div>
-  </div>
-    
-  </main> 
-  
-  <%- include('./partials/footer.ejs') %>
-
-  
+<div class="container">
+	<table id="cart" class="table table-hover table-condensed">
+    				<thead>
+						<tr>
+							<th style="width:50%">Your Products</th>
+							<th style="width:10%">Price</th>
+							<th style="width:8%">Quantity</th>
+							<th style="width:22%" class="text-center subtotal">Subtotal</th>
+							<th style="width:10%"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-th="Your Products">
+								<div class="row">
+									<div class="col-sm-2 hidden-xs thumbnail pull-left"><img src="images/fields1.jpg" alt="..." class="img-responsive media-object" style="width: 72px; height: 72px;"/></div>
+									<div class="col-sm-10">
+										<h4 class="nomargin">Negra Azteca</h4>
+										<p>Nuestras Fields Classics en color azul con detalles camuflajeados</p>
+									</div>
+								</div>
+							</td>
+							<td data-th="Price">$1.99</td>
+							<td data-th="Quantity">
+								<input type="number" class="form-control text-center" value="1">
+							</td>
+                            <td data-th="Subtotal" class="text-center subtotal">1.99</td>
+                            <td class="text-center productTotal"><strong>Total 1.99</strong></td>
+							<td colspan="2" class="actions" data-th="">
+                                <form action="cart/delete" method="POST">
+                                <button class="btn btn-danger text-dark text-dark">Remove Item</button>	
+                            </form>	
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						
+						<tr>
+							<td class="continueShopping"><a href="/products" class="btn btn-dark ">Continue Shopping</a></td>
+							<td colspan="2" class="hidden-xs"></td>
+							<td colspan="2" class="hidden-xs text-right"><strong>Total $1.99</strong></td>
+							<td><a href="#" class="btn btn-warning btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+						</tr>
+					</tfoot>
+				</table>
+</div>
