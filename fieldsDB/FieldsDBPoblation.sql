@@ -12,13 +12,13 @@ INSERT INTO products (price,name,category_id,description,image,highlighted) VALU
 (650,'walkers nigthth',2,"altas llantas","/images/products/fieldsW.jpg",0);
 
 INSERT INTO product_size (size_id,stock,product_id) VALUES
-(1,1,3), (2,1,3),(2,2,2),(2,3,2),(2,4,1);
+(1,1,3), (2,1,3),(2,2,2),(3,3,2),(2,4,1);
 
 INSERT INTO carts (total) VALUES
 ("650"),("1300");
 
-INSERT INTO product_cart (product_id,cart_id,quantity) VALUES
-(1,1,3);
+INSERT INTO product_cart (product_id,cart_id,quantity,size_id) VALUES
+(1,1,3,2);
 
 INSERT INTO user_categories (type) VALUES
 ('admin'),('user');

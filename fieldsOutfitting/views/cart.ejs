@@ -2,51 +2,55 @@
 
 <%- include('./partials/header.ejs') %>
 
-  
-  <main>
-    <div class="card bg-light compras">
-      <div class="comprasSub">
-        <h1>Cart</h1>
-      </div>
-      <div class='comprasSub'>
-        <div class='img'>
-          <img src="/images/WalkersW.PNG" alt="">
-          <div class= "close">
-            <img src="https://img.icons8.com/ios/50/000000/close-window.png"/>
-          </div>
-        </div>
-        <h5>Product:</h5>
-        <h5>Price:</h5>
-        <h5> Quantity:
-          <select name="" class="form- groupbtn btn-default btn-lg dropdown-toggle" placeholder="Cantidad" type="number">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>...</option>
-          </select>
-        </h5>
-      
-        <h5>Subtotal:</h5>
-      </div>
-      <div class="comprasSub">
-        <h3>Total</h3>
-        
-        
-        <div>
-          <h5>Subtotal:</h5>
-          <h5>Send Charges:</h5>
-          <h5>Total:</h5>
-        </div>
-        
-        <div>
-          <button type="button" class="btn btn-dark">End Purchase</button>
-        </div>
-      </div>
-    </div>
-  </main> 
-  
-  <%- include('./partials/footer.ejs') %>
-
-  
+<div class="container">
+	<table id="cart" class="table table-hover table-condensed">
+    				<thead>
+						<tr>
+							<th style="width:50%">Your Products</th>
+							<th style="width:10%">Price</th>
+							<th style="width:8%">Quantity</th>
+							<th style="width:22%" class="text-center subtotal">Subtotal</th>
+							<th style="width:10%"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<% for (purchase of productCart) { %>
+							<% for (product of products) { %>
+							  <% if (product.id == purchase.product_id) { %>
+								<tr>
+									<td data-th="Your Products">
+										<div class="row">
+											<div class="col-sm-2 hidden-xs thumbnail pull-left"><img src="<%= product.image %>" alt="..." class="img-responsive media-object" style="width: 72px; height: 72px;"/></div>
+											<div class="col-sm-10">
+												<h4 class="nomargin"><%= product.name %></h4>
+												<p><%= product.description %></p>
+											</div>
+										</div>
+									</td>
+									<td data-th="Price"><%= product.price %></td>
+									<td data-th="Quantity">
+										<input type="number" class="form-control text-center" value="1">
+									</td>
+									<td data-th="Subtotal" class="text-center subtotal"><%= product.price %></td>
+									<td class="text-center productTotal"><strong>Total 1.99</strong></td>
+									<td colspan="2" class="actions" data-th="">
+										<form action="cart/delete" method="POST">
+										<button class="btn btn-danger text-dark text-dark">Remove Item</button>	
+									</form>	
+									</td>
+								</tr>
+							  <% } %>
+							<% } %>
+						  <% } %>
+					</tbody>
+					<tfoot>
+						
+						<tr>
+							<td class="continueShopping"><a href="/products" class="btn btn-dark ">Continue Shopping</a></td>
+							<td colspan="2" class="hidden-xs"></td>
+							<td colspan="2" class="hidden-xs text-right"><strong>Total $1.99</strong></td>
+							<td><a href="#" class="btn btn-warning btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+						</tr>
+					</tfoot>
+				</table>
+</div>

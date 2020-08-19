@@ -37,15 +37,15 @@
             </div>
           </div>
 
-          <form action= "/cart" method="POST" >
+          <form action= "/cart/save" method="POST" >
 
           <div class="form-group row">
             <label for="size" class="col-sm-3 col-md-3 form-control-label">Size:</label>
-            <select class="col-sm-8 col-md-9">
+            <select name="size_id" class="col-sm-8 col-md-9">
               <% availableSizes.forEach((avaSize) => {%>
               <% sizes.forEach((size) => {%>
                 <%if (avaSize.size_id === size.id && avaSize.stock != 0) {%>
-                <option><%= size.size %></option>
+                <option value=<%= size.id %>><%= size.size %></option>
               <% }%>
               <% })%>
               <% })%>
@@ -56,9 +56,11 @@
             <label for="Quantity" class="col-sm-3 col-md-3 form-control-label">Quantity:</label>
             <div class="col-sm-8 col-md-9">
 
-              <input type="number" class="qty form-control" id="input-qty" name="qty" maxlength="5" value="1">
+              <input type="number" class="qty form-control" id="input-qty" name="quantity" maxlength="5" value="1">
             </div>
           </div>
+
+          <input type="hidden" value=<%= product.id %> name="product_id">
 
           <div class="form-group product-stock product-available row visible">
 
@@ -70,11 +72,11 @@
 
             </div>
           </div>
-            <% if(user != undefined) { %>
-              <a href="/products/edit/<%= product.id %>" class="btn btn-primary">EDIT PRODUCT</a>
+            <% if(user.category_id == 1) { %>
+              <a href="/products/edit/<%= product.id %>" class="btn btn-primary admin-btn">EDIT PRODUCT</a>
                 
                 <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                  <button type="submit" class="btn btn-danger">DELETE</button>
+                  <button type="submit" class="btn btn-danger admin-btn">DELETE</button>
                 </form>
             <% } %>
 
