@@ -11,25 +11,20 @@
                     <!-- <img src="/images/handstand.PNG"> -->
                     <div class="zoom">
                         <a href="/products">
-                            <h2>20% OFF <br> IN WALKERS!</h2>
+                            <!-- <h2>20% OFF <br> IN WALKERS!</h2> -->
                         </a>
                     </div>
                 </section>
 
                 <div class=" ">
                     <div class='cwcontainer'>
-                        <!-- SAQUE EL ROW -->
-
                         <div class="col-12">
-                            <a href="/products">
-                                <!-- <h2>SHOP WALKERS / FIELDS</h2> -->
+                                <div class="zoom">
+                                    <a href="/products">
+                                        <h2>Winter SALE! <br> 20% OFF IN WALKERS</h2>
+                                    </a>
+                                </div>
                                 <img src="/images/indexDiv.png" alt="">
-                            </a>
-                      
-                        </div>
-
-                        <div class="zoom">
-                            
                         </div>
 
 
@@ -37,10 +32,10 @@
                         <div class=" carouselIndex">
                             <!-- SAQUE EL ROW -->
                             <div class="col-md-12 prod">
-                                <h2>Highlighted!</h2>
+                                <h2 class="text-dark">Highlighted!</h2>
                                 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
                                     <div class="carousel-inner">
-                                        <div class="    ">
+                            
                                             <div class="row">
                                                 <% for (product of highlightedProducts) { %>
                                                     <div class="col-sm-3 cart">
@@ -50,11 +45,12 @@
                                                             </div>
                                                             <div class="thumb-content prod">
                                                                 <h4>
-                                                                    <a class='name' href='/products/detail/<%= product.id %>'>
+                                                                    <a class='name text-dark' href='/products/detail/<%= product.id %>'>
                                                                         <%= product.name %>
                                                                     </a>
                                                                 </h4>
                                                                 <p class="item-price"> <span><%= product.price %></span></p>
+
                                                                 <a href="/products/detail/<%= product.id %>" class="btn btn-dark">Add to Cart</a>
 
                                                             </div>
@@ -62,8 +58,16 @@
                                                     </div>
                                                     <% } %>
                                             </div>
-                                        </div>
+                                        
                                     </div>
+                                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                      </a>
+                                      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                      </a>
                                 </div>
                             </div>
                         </div>
