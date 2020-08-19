@@ -618,5 +618,12 @@ body {
     margin-left: -2px;
 }
 
+.admin-btn{
+    width:18vw;
+    height: 5vh;
+    margin:10px;
+    margin-left: 0px;
+}
+
 
 /*FIN PROFILE*/

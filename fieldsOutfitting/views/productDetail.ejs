@@ -72,11 +72,11 @@
 
             </div>
           </div>
-            <% if(user != undefined) { %>
-              <a href="/products/edit/<%= product.id %>" class="btn btn-primary">EDIT PRODUCT</a>
+            <% if(user.category_id == 1) { %>
+              <a href="/products/edit/<%= product.id %>" class="btn btn-primary admin-btn">EDIT PRODUCT</a>
                 
                 <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                  <button type="submit" class="btn btn-danger">DELETE</button>
+                  <button type="submit" class="btn btn-danger admin-btn">DELETE</button>
                 </form>
             <% } %>
 

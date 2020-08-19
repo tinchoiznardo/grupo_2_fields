@@ -80,14 +80,14 @@
                         <img src="<%= product.image %>" alt="">
                         <h5><a class='name' href="/products/detail/<%= product.id %>"><%= product.name %></a></h5>
                         <p><%= product.price %></p>
-                        <a href="#" class="btn btn-dark">Add to cart</a>
+                        <a href="/products/detail/<%= product.id %>" class="btn btn-dark">Add to cart</a>
                     </div>
                     <% } %>
                 </div>
 
                 <div class="col-3 ">
-                    <% if(user != undefined) { %>
-                        <a href="/products/load" class="btn btn-warning">LOAD NEW PRODUCT</a>
+                    <% if(user.category_id == 1) { %>
+                        <a href="/products/load" class="btn btn-warning admin-btn">LOAD NEW PRODUCT</a>
                     <% } %>
                 </div>
 
