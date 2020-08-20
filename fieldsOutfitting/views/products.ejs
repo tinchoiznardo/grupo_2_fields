@@ -81,7 +81,6 @@
                         <h5><a class='name' href="/products/detail/<%= product.id %>"><%= product.name %></a></h5>
                         <p>$ <%= product.price %></p>
                         <a href="/products/detail/<%= product.id %>" class="btn btn-dark">Add to cart</a>
-                        <%= product.productCategories.type %>
                     </div>
                     <% } %>
                 </div>
@@ -93,4 +92,4 @@
                 </div>
 
         </main>
-        <%- include('./partials/footer.ejs') %>
+    <%- include('./partials/footer.ejs') %>
