@@ -46,6 +46,14 @@ const cartController = {
 
     res.redirect("/")
     },
+    delete : (req, res) => {
+      db.ProductCart.destroy({ where: {
+        cart_id: user.cart_id ,
+        id: req.params.product_id
+      }});
+
+      res.redirect('/');
+  },
   }
 
 module.exports = cartController
