@@ -24,7 +24,6 @@ const productsController = {
             include: [{association: 'productCategories'}, {association: 'productSize'}]
 		});
 		let availableSizes = await db.ProductSize.findAll({where: {product_id: req.params.id}});
-		console.log(availableSizes[0].size_id)
 		let sizes = await db.Size.findAll();
 		// let size = await db.Size.findOne({where: {id: product.size_id}});
 		
