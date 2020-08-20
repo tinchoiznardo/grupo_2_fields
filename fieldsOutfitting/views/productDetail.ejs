@@ -41,12 +41,15 @@
 
           <div class="form-group row">
             <label for="size" class="col-sm-3 col-md-3 form-control-label">Size:</label>
-            <select name="size_id" class="col-sm-8 col-md-9">
+            <select name="size_id" class="col-sm-3 col-md-3 form-control">
               <% availableSizes.forEach((avaSize) => {%>
               <% sizes.forEach((size) => {%>
-                <%if (avaSize.size_id === size.id && avaSize.stock != 0) {%>
-                <option value=<%= size.id %>><%= size.size %></option>
-              <% }%>
+                <%if (avaSize.size_id == size.id && avaSize.stock != 0) {%>
+                  <option value=<%= size.id %>><%= size.size %></option>
+              <% } %>
+              <%if (avaSize.stock == 0) {%>
+                <option value="NO STOCK">NO STOCK <%= size.size %></option>
+                <% } %>
               <% })%>
               <% })%>
             </select>
@@ -54,8 +57,7 @@
 
           <div class="form-group row">
             <label for="Quantity" class="col-sm-3 col-md-3 form-control-label">Quantity:</label>
-            <div class="col-sm-8 col-md-9">
-
+            <div class="col-sm-3 col-md-3">
               <input type="number" class="qty form-control" id="input-qty" name="quantity" maxlength="5" value="1">
             </div>
           </div>
@@ -72,7 +74,7 @@
 
             </div>
           </div>
-            <% if(user.category_id == 1) { %>
+            <% if(user =! "undefined" && user.category_id == 1) { %>
               <a href="/products/edit/<%= product.id %>" class="btn btn-primary admin-btn">EDIT PRODUCT</a>
                 
                 <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
