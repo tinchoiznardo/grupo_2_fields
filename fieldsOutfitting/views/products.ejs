@@ -28,7 +28,7 @@
                   <div class="carousel-item">
                     <img class="d-block w-100" src="/images/banner3.PNG" alt="Third slide">
                     <div class="carousel-caption">
-                        <h3 class="h3-responsive">Buy our products!</h3>
+                        <h3 class="h3-responsive">Choose your look!</h3>
                         <p>Fields Outfitting</p>
                     </div>
                 </div>
@@ -79,8 +79,9 @@
                     <div id="<%= product.productCategories.type %>" class="col-lg-3 sm-12 fg <%= product.productCategories.type %>">
                         <img src="<%= product.image %>" alt="">
                         <h5><a class='name' href="/products/detail/<%= product.id %>"><%= product.name %></a></h5>
-                        <p>$ <%= product.price %></p>
-                        <a href="/products/detail/<%= product.id %>" class="btn btn-dark">Add to cart</a>
+
+                        <p>$<%= product.price %></p>
+                        <a href="/products/detail/<%= product.id %>" class="btn btn-warning">Add to cart</a>
                     </div>
                     <% } %>
                 </div>

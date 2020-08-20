@@ -54,13 +54,14 @@ body {
    
 }
 
+
 .navbar ul {
     list-style-type: none;
     
 }
 
 .img-Profile {
-    width: 100%;
+    width: 40;
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
