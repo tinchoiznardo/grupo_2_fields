@@ -28,7 +28,7 @@
                   <div class="carousel-item">
                     <img class="d-block w-100" src="/images/banner3.PNG" alt="Third slide">
                     <div class="carousel-caption">
-                        <h3 class="h3-responsive">Buy Cat</h3>
+                        <h3 class="h3-responsive">Buy our products!</h3>
                         <p>Fields Outfitting</p>
                     </div>
                 </div>
@@ -48,10 +48,10 @@
                     <div class="selector">
                         <ul list-type='none'>
                             <li>
-                                <a href="">Classic</a>
+                                <p id="classicFilter">Classic</>
                             </li>
                             <li>
-                                <a href="">Walkers</a>
+                                <p id="walkersFilter">Walkers</p>
                             </li>
                             <li>
 
@@ -76,17 +76,18 @@
 
                 <div class="row col-12 galeria">
                     <% for (product of products) { %>
-                    <div class="col-lg-3 sm-12 fg">
+                    <div id="<%= product.productCategories.type %>" class="col-lg-3 sm-12 fg <%= product.productCategories.type %>">
                         <img src="<%= product.image %>" alt="">
                         <h5><a class='name' href="/products/detail/<%= product.id %>"><%= product.name %></a></h5>
-                        <p><%= product.price %></p>
+                        <p>$ <%= product.price %></p>
                         <a href="/products/detail/<%= product.id %>" class="btn btn-dark">Add to cart</a>
+                        <%= product.productCategories.type %>
                     </div>
                     <% } %>
                 </div>
 
                 <div class="col-3 ">
-                    <% if(user.category_id == 1) { %>
+                    <% if(user =! "undefined" && user.category_id == 1) { %>
                         <a href="/products/load" class="btn btn-warning admin-btn">LOAD NEW PRODUCT</a>
                     <% } %>
                 </div>

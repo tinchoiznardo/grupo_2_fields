@@ -10,7 +10,7 @@ let db = require('../database/models');
 const productsController = {
 	// Root - Show all products
 	root: async (req, res) => {
-		let products = await db.Product.findAll();
+		let products = await db.Product.findAll({include: [{association: 'productCategories'}]});
 
 		res.render('products', {
 			products: products,
