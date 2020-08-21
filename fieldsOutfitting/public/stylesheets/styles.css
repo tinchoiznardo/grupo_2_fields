@@ -580,7 +580,6 @@ body {
     margin: 20px 0;
 }
 
-
 /* Profile sidebar */
 
 .profile-sidebar {
@@ -683,7 +682,33 @@ body {
     margin-left: 0px;
 }
 
+.profile-information{
+    display: visible;
+}
+
+.profile-reclaims{
+    display: none;
+}
+
+@media(max-width: 576px) {
+    
+    .personal-profile{
+        padding-top: 7rem;
+        text-align: center;
+    }
+
+    .profile-information{
+        display: visible;
+    }
+    
+    .profile-reclaims{
+        display: none;
+    }
+
+}
+
 /*FIN PROFILE*/
+
 
 *INICIO CARRITO*/
 
