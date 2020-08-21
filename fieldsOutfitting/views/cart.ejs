@@ -27,11 +27,11 @@
 											</div>
 										</div>
 									</td>
-									<td data-th="Price"><%= product.price %></td>
-									<td data-th="Quantity">
-										<input type="number" min="1" class="form-control text-center" value="1">
+									<td data-th="Price" ><p class="priceContainer">$<%= product.price %></p></td>
+									<td data-th="Quantity" class="text-center">
+										<%= purchase.quantity %>
 									</td>
-									<td data-th="Subtotal" class="text-center subtotal"><%= product.price %></td>
+									<td data-th="Subtotal" class="text-center subtotal"><p class="subtotalContainer"><%= subtotals[purchase.product_id] %></p></td>
 
 								  <form action="cart/delete/<%= product.id %>?_method=DELETE" method="POST">
 									<td colspan="3" class="actions" data-th="">
@@ -50,9 +50,15 @@
 						<tr>
 							<td class="continueShopping"><a href="/products" class="btn btn-dark ">Continue Shopping</a></td>
 							<td colspan="2" class="hidden-xs"></td>
-							<td colspan="2" class="hidden-xs text-right"><strong>Total $1.99</strong></td>
+							<td colspan="2" class="hidden-xs text-right"><strong>Total $<%= total%></strong></td>
 							<td><a href="#" class="btn btn-warning btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
 						</tr>
 					</tfoot>
 				</table>
 </div>
+
+<script src="/js/cart.js"></script>
+</div>
+</body>
+
+</html>
