@@ -584,7 +584,7 @@ body {
 /* Profile sidebar */
 
 .profile-sidebar {
-    padding: 20px 0 10px 0;
+    padding: 20px 0 0 0;
     background: #fff;
 }
 
@@ -692,6 +692,9 @@ body {
 .btn-danger{
     float: right;
 }
+.subtotal{
+    text-align: center ;
+}
 
 
 @media (max-width: 576px) {
@@ -712,6 +715,9 @@ body {
         float: left;
         width: 100%;
         
+    }
+    .subtotal{
+        text-align: left ;
     }
     
    
