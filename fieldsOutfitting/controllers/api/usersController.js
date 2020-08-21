@@ -15,7 +15,10 @@ const usersController = {
                 "id",
                 "first_name",
                 "last_name",
-                "mail"
+                "mail",
+                "adress",
+                "phone",
+                "category_id"
             ]
         });
         for (let i = 0 ; i < users.length ;i++) {
@@ -32,6 +35,14 @@ const usersController = {
             data: users
             }
         res.json(answer)
+    },
+    edit: async (req, res) => {
+		
+        await db.User.update({
+			category_id: req.body.category_id
+        }, { where: {
+            id: req.body.id
+		}});
     },
 }
 

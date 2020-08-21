@@ -15,7 +15,10 @@ const productsController = {
                 "id",
                 "name",
                 "price",
-                "image"
+                "image",
+                "description",
+                "category_id",
+                "highlighted"
             ]
         });
         for (let i = 0 ; i < products.length ;i++) {

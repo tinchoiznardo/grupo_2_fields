@@ -7,19 +7,23 @@ const cartController = {
       cart_id: user.cart_id 
     }});
     const products = await db.Product.findAll()
-    let productsInCart = [];
+    let total = 0;
+    let subtotals = {}
+    let subtotal
 
-    // for (purchase of productCart){
-    //   console.log(products.filter(el => el.id == purchase.product_id))
-    //   productsInCart.push(products.filter(el => el.id == purchase.product_id))
-    // }
-
+    for (purchase of productCart){
+      total += (products.filter(el => el.id == purchase.product_id))[0].price * purchase.quantity;
+      subtotal = (products.filter(el => el.id == purchase.product_id))[0].price * purchase.quantity;
+      subtotals[purchase.product_id] = subtotal
+    }
 
     
     res.render('cart', { 
       user: req.session.user,
       products: products,
-      productCart: productCart
+      productCart: productCart,
+      total: total,
+      subtotals: subtotals
     });
   },
   save: async (req, res) => {
