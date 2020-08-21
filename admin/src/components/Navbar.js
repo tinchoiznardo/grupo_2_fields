@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector, useDispatch } from "react-redux"
 
 const style = {
     width: "25%",
@@ -6,6 +7,7 @@ const style = {
 };
 
 function Navbar() {
+	const dispatch = useDispatch()
   return (
     <div style={style}>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet"></link>
@@ -23,7 +25,9 @@ function Navbar() {
 			<hr className="sidebar-divider my-0"></hr>
 
 			<li className="nav-item active">
-				<a className="nav-link" href="/">
+				<a className="nav-link" onClick={() => {
+					dispatch({type:"SET_JUST_PRODUCTS",payload: false})
+					dispatch({type:"SET_JUST_USERS",payload: false})}} >
 					<i className="fas fa-fw fa-tachometer-alt"></i>
 					<span>Fields Outfitting</span></a>
 			</li>
@@ -32,18 +36,19 @@ function Navbar() {
 
 			<div className="sidebar-heading">Actions</div>
 
+
 			<li className="nav-item">
-				<a className="nav-link collapsed" href="/">
-					<i className="fas fa-fw fa-folder"></i>
+				<a className="nav-link collapsed" onClick={() => dispatch({type:"SET_JUST_PRODUCTS",payload: true})}>
+					<i className="fas fa-fw fa-tshirt"></i>
 					<span>Products</span>
 				</a>
 			</li>
 
-			<li className="nav-item">
-				<a className="nav-link" href="/">
+			{/* <li className="nav-item">
+				<a className="nav-link" onClick={() => dispatch({type:"SET_JUST_USERS",payload: true})}>
 					<i className="fas fa-fw fa-user"></i>
 					<span>Users</span></a>
-			</li>
+			</li> */}
 
 			<hr className="sidebar-divider d-none d-md-block"></hr>
 		</ul>
