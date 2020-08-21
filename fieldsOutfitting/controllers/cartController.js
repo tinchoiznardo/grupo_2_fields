@@ -43,7 +43,7 @@ const cartController = {
 		}});
     // localStorage.setItem('purchase', purchase)
 
-    res.redirect("/")
+    res.redirect("/cart")
     },
     delete : (req, res) => {
       const user = req.session.user 
@@ -55,7 +55,7 @@ const cartController = {
 
   
 
-      res.redirect('/');
+      res.redirect('/cart');
   },
   }
 

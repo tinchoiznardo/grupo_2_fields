@@ -744,7 +744,8 @@ body {
     }
     .subtotal{
         text-align: left ;
-
+    }
+    
 	table#cart thead { display: none; }
 	table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
 	table#cart tbody tr td:first-child { color: #333; }
