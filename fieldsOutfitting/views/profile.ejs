@@ -31,12 +31,12 @@
 					<div class="profile-usermenu">
 						<ul class="nav-info">
 							<li>
-								<a href="#">
+								<a href="#" class="p-info">
 								<i class="glyphicon glyphicon-user"></i>
 								My Personal Information </a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="p-reclaims">
 								<i class="glyphicon glyphicon-ok"></i>
 								Claim and Suggestions</a>
 							</li>
@@ -63,7 +63,7 @@
 						<label>Adress</label><br>
 						<input type="text" value="<%= user.adress %>" class="input-xlarge"><br>
 
-						<p class="text-center"> <a href="/user/edit/= user.id %">Edit Profile</a> </p>
+						<p class="text-center"> <a href="/user/edit/<%= user.id %>">Edit Profile</a> </p>
 					</div>
 					<!--* reclamos y sugerencias deberia ir un espacio para escribir con un bottom enviar-->
 					<div class="profile-reclaims">
@@ -84,7 +84,6 @@
 	</div>
 	<br>
 
-	<script src= "../public/js/userProfile.js"></script>
 </main>
 
 <%- include('./partials/footer.ejs') %>

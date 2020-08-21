@@ -1,10 +1,15 @@
 window.addEventListener ('load', function(){
-    var clicks = document.querySelector(".glyphicon glyphicon-user");
 
-    clicks.onclick = function(){
-        document.querySelector(".profile-reclaims").style.display = 'none';
-        document.querySelector(".profile-information").style.display = "visible";
+    var clientInfo = document.querySelector(".profile-information");
+    var reclaims = document.querySelector(".profile-reclaims");
+
+    document.querySelector(".p-info").onclick = function () {
+        clientInfo.style.display = "block",
+        reclaims.style.display = "none"
     }
 
-
+    document.querySelector(".p-reclaim").onclick = function () {
+       clientInfo.style.display = "none",
+       reclaims.style.display = "block"
+    }
 })
