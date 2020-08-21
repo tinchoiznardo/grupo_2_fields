@@ -29,13 +29,15 @@
 									</td>
 									<td data-th="Price"><%= product.price %></td>
 									<td data-th="Quantity">
-										<input type="number" class="form-control text-center" value="1">
+										<input type="number" min="1" class="form-control text-center" value="1">
 									</td>
 									<td data-th="Subtotal" class="text-center subtotal"><%= product.price %></td>
-									
+
+								  <form action="cart/delete/<%= product.id %>?_method=DELETE" method="POST">
 									<td colspan="3" class="actions" data-th="">
 										<form action="cart/delete" method="POST">
 										<button class="btn btn-danger text-dark text-dark" style="float:right;">Remove Item</button>	
+
 									</form>	
 									</td>
 								</tr>
