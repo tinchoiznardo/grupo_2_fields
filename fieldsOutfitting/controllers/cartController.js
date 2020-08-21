@@ -14,7 +14,7 @@ const cartController = {
     //   productsInCart.push(products.filter(el => el.id == purchase.product_id))
     // }
 
-    console.log(productCart)
+
     
     res.render('cart', { 
       user: req.session.user,
@@ -30,7 +30,6 @@ const cartController = {
       quantity: req.body.quantity,
       size_id: req.body.size_id
     }
-    console.log(purchase, "ASDASDASD")
     await db.ProductCart.create(purchase);
     
     const productCart = await db.ProductCart.findAll({ where: {
@@ -54,7 +53,7 @@ const cartController = {
         product_id: req.params.id
       }});
 
-      console.log("ENTRE AL DELETE")
+  
 
       res.redirect('/');
   },
