@@ -583,7 +583,7 @@ body {
 /* Profile sidebar */
 
 .profile-sidebar {
-    padding: 20px 0 10px 0;
+    padding: 20px 0 0 0;
     background: #fff;
 }
 
@@ -679,6 +679,30 @@ body {
     height: 5vh;
     margin:10px;
     margin-left: 0px;
+}
+
+.profile-information{
+    display: visible;
+}
+
+.profile-reclaims{
+    display: none;
+}
+
+@media(max-width: 576px) {
+    
+    .personal-profile{
+        padding-top: 7rem;
+        text-align: center;
+    }
+
+    .profile-information{
+        display: visible;
+    }
+    
+    .profile-reclaims{
+        display: none;
+    }
 }
 
 /*FIN PROFILE*/
