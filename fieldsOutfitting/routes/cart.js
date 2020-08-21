@@ -6,6 +6,6 @@ var authMiddleware = require('../middlewares/authMiddleware');
 /* GET home page. */
 router.get('/', authMiddleware, cartController.show);
 router.post('/save', authMiddleware, cartController.save);
-router.delete('/delete/:product_id', authMiddleware, cartController.delete);
+router.delete('/delete/:id', authMiddleware, cartController.delete);
 
 module.exports = router;

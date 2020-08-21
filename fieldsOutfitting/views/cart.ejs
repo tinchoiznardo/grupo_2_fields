@@ -29,12 +29,12 @@
 									</td>
 									<td data-th="Price"><%= product.price %></td>
 									<td data-th="Quantity">
-										<input type="number" class="form-control text-center" value="1">
+										<input type="number" min="1" class="form-control text-center" value="1">
 									</td>
 									<td data-th="Subtotal" class="text-center subtotal"><%= product.price %></td>
 									<td class="text-center productTotal"><strong>Total 1.99</strong></td>
 									<td colspan="2" class="actions" data-th="">
-										<form action="cart/delete" method="POST">
+										<form action="cart/delete/<%= product.id %>?_method=DELETE" method="POST">
 										<button class="btn btn-danger text-dark text-dark">Remove Item</button>	
 									</form>	
 									</td>

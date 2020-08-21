@@ -47,10 +47,14 @@ const cartController = {
     res.redirect("/")
     },
     delete : (req, res) => {
+      const user = req.session.user 
+
       db.ProductCart.destroy({ where: {
-        cart_id: user.cart_id ,
-        id: req.params.product_id
+        cart_id: user.cart_id,
+        product_id: req.params.id
       }});
+
+      console.log("ENTRE AL DELETE")
 
       res.redirect('/');
   },
