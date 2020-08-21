@@ -696,6 +696,10 @@ body {
     display: none;
 }
 
+.form-group {
+margin-bottom: 3rem;
+}
+
 @media(max-width: 576px) {
     
     .personal-profile{

@@ -9,7 +9,7 @@
 				<div class="profile-sidebar">
 					<!-- SIDEBAR USERPIC -->
 					<div class="profile-userpic">
-						<img src="<%=user.avatar %>"class="img-responsive" alt="">
+						<img src="<%= user.avatar %>"class="img-responsive" alt="">
 					</div>
 					<!-- END SIDEBAR USERPIC -->
 					<!-- SIDEBAR USER TITLE -->
@@ -29,27 +29,23 @@
 						</form>
 					</div>
 					<div class="profile-usermenu">
-						<ul class="nav-info">
+						<ul class="nav-info" style="list-style-type:none">
 							<li>
-								<a href="#" class="p-info">
+								<a href="#" class= "p-info">
 								<i class="glyphicon glyphicon-user"></i>
 								My Personal Information </a>
 							</li>
 							<li>
-								<a href="#" class="p-reclaims">
+								<a href="#"class = "p-reclaim">
 								<i class="glyphicon glyphicon-ok"></i>
 								Claim and Suggestions</a>
 							</li>
 						</ul>
-					</div>
-					<!-- SIDEBAR BUTTONS -->
-					
-					<!-- END SIDEBAR BUTTONS -->
-					<!-- END MENU -->
+						</div>
 				</div>
 			</div>
 					<!-- INFO MENU -->	
-			<div class="col-md-6 form-group">
+			<div class="col-md-6 form-group" style="position: static">
 				<div class="personal-profile" >
 					<!--*LOS DATOS DEBERIAN SER (NOMBRE  / APELLIDO / MAIL / DIRECCION) -->
 					<div class="profile-information">
@@ -63,7 +59,7 @@
 						<label>Adress</label><br>
 						<input type="text" value="<%= user.adress %>" class="input-xlarge"><br>
 
-						<p class="text-center"> <a href="/user/edit/<%= user.id %>">Edit Profile</a> </p>
+						<p class="text-center"> <a href="/user/edit/<%=user.id%>">Edit Profile</a> </p>
 					</div>
 					<!--* reclamos y sugerencias deberia ir un espacio para escribir con un bottom enviar-->
 					<div class="profile-reclaims">
