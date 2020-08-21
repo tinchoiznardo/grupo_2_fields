@@ -57,6 +57,7 @@ body {
 
 .navbar ul {
     list-style-type: none;
+    align-items: center;
     
 }
 
