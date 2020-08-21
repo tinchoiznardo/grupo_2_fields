@@ -682,4 +682,9 @@ body {
     margin-left: 0px;
 }
 
+.navbar-nav{
+    background-color: #F1F3FA;
+    border-radius: 10px;
+    opacity: 0.8;
+}
 /*FIN PROFILE*/

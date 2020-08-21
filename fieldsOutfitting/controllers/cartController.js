@@ -14,10 +14,6 @@ const cartController = {
     for (purchase of productCart){
       total += (products.filter(el => el.id == purchase.product_id))[0].price * purchase.quantity;
       subtotal = (products.filter(el => el.id == purchase.product_id))[0].price * purchase.quantity;
-    
-      console.log((products.filter(el => el.id == purchase.product_id))[0].price)
-      console.log(purchase.quantity)
-      console.log(total)
       subtotals[purchase.product_id] = subtotal
     }
 
