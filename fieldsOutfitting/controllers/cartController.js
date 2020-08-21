@@ -14,14 +14,9 @@ const cartController = {
     for (purchase of productCart){
       total += (products.filter(el => el.id == purchase.product_id))[0].price * purchase.quantity;
       subtotal = (products.filter(el => el.id == purchase.product_id))[0].price * purchase.quantity;
-    
-      console.log((products.filter(el => el.id == purchase.product_id))[0].price)
-      console.log(purchase.quantity)
-      console.log(total)
       subtotals[purchase.product_id] = subtotal
     }
 
-    console.log(subtotals)
     
     res.render('cart', { 
       user: req.session.user,
@@ -39,7 +34,6 @@ const cartController = {
       quantity: req.body.quantity,
       size_id: req.body.size_id
     }
-    console.log(purchase, "ASDASDASD")
     await db.ProductCart.create(purchase);
     
     const productCart = await db.ProductCart.findAll({ where: {
@@ -53,7 +47,7 @@ const cartController = {
 		}});
     // localStorage.setItem('purchase', purchase)
 
-    res.redirect("/")
+    res.redirect("/cart")
     },
     delete : (req, res) => {
       const user = req.session.user 
@@ -63,9 +57,9 @@ const cartController = {
         product_id: req.params.id
       }});
 
-      console.log("ENTRE AL DELETE")
+  
 
-      res.redirect('/');
+      res.redirect('/cart');
   },
   }
 

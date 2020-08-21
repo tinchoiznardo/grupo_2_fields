@@ -580,11 +580,10 @@ body {
     margin: 20px 0;
 }
 
-
 /* Profile sidebar */
 
 .profile-sidebar {
-    padding: 20px 0 10px 0;
+    padding: 20px 0 0 0;
     background: #fff;
 }
 
@@ -642,6 +641,7 @@ body {
 
 .profile-usermenu ul li {
     border-bottom: 1px solid #f0f4f7;
+
 }
 
 .profile-usermenu ul li:last-child {
@@ -682,4 +682,84 @@ body {
     margin-left: 0px;
 }
 
+.profile-information{
+    display: visible;
+}
+
+.profile-reclaims{
+    display: none;
+}
+
+@media(max-width: 576px) {
+    
+    .personal-profile{
+        padding-top: 7rem;
+        text-align: center;
+    }
+
+    .profile-information{
+        display: visible;
+    }
+    
+    .profile-reclaims{
+        display: none;
+    }
+
+}
+
 /*FIN PROFILE*/
+
+
+*INICIO CARRITO*/
+
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+.btn-danger{
+    float: right;
+}
+.subtotal{
+    text-align: center ;
+}
+
+
+@media (max-width: 576px) {
+    table#cart tbody td .form-control{
+		width:20%;
+		display: inline !important;
+	}
+	.actions .btn{
+		width:36%;
+		margin:1.5em 0;
+	}
+	
+	.actions .btn-info{
+		float:left;
+    }
+
+    .btn-danger{
+        float: left;
+        width: 100%;
+        
+    }
+    .subtotal{
+        text-align: left ;
+    }
+    
+	table#cart thead { display: none; }
+	table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+	table#cart tbody tr td:first-child { color: #333; }
+	table#cart tbody td:before {
+		content: attr(data-th); font-weight: bold;
+		display: inline-block; width: 8rem;
+	}
+	
+	
+	
+	table#cart tfoot td{display:block; }
+    table#cart tfoot td .btn{display:block;}
+    
+
+}
+
+/*FIN CARRITO*/

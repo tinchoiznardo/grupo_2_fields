@@ -9,7 +9,7 @@
 							<th style="width:50%">Your Products</th>
 							<th style="width:10%">Price</th>
 							<th style="width:8%">Quantity</th>
-							<th style="width:22%" class="text-center subtotal">Subtotal</th>
+							<th style="width:22%" class="text-center">Subtotal</th>
 							<th style="width:10%"></th>
 						</tr>
 					</thead>
@@ -34,13 +34,14 @@
 									<td data-th="Subtotal" class="text-center subtotal"><p class="subtotalContainer"><%= subtotals[purchase.product_id] %></p></td>
 
 								  <form action="cart/delete/<%= product.id %>?_method=DELETE" method="POST">
-									<td colspan="3" class="actions" data-th="">
+									<td colspan="2" class="actions remove" data-th="">
 										<form action="cart/delete" method="POST">
-										<button class="btn btn-danger text-dark text-dark" style="float:right;">Remove Item</button>	
+										<button class="btn btn-danger text-dark text-dark remove w-100 text-center" >Remove Item</button>	
 
 									</form>	
 									</td>
 								</tr>
+
 							  <% } %>
 							<% } %>
 						  <% } %>
