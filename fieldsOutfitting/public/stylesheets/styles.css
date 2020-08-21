@@ -642,6 +642,7 @@ body {
 
 .profile-usermenu ul li {
     border-bottom: 1px solid #f0f4f7;
+
 }
 
 .profile-usermenu ul li:last-child {
@@ -718,9 +719,6 @@ body {
     }
     .subtotal{
         text-align: left ;
-    }
-    
-   
 
 	table#cart thead { display: none; }
 	table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
@@ -735,9 +733,7 @@ body {
 	table#cart tfoot td{display:block; }
     table#cart tfoot td .btn{display:block;}
     
-    
-    
-	
+
 }
 
 /*FIN CARRITO*/
