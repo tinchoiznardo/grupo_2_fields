@@ -9,7 +9,7 @@
 							<th style="width:50%">Your Products</th>
 							<th style="width:10%">Price</th>
 							<th style="width:8%">Quantity</th>
-							<th style="width:22%" class="text-center subtotal">Subtotal</th>
+							<th style="width:22%" class="text-center">Subtotal</th>
 							<th style="width:10%"></th>
 						</tr>
 					</thead>
@@ -27,20 +27,20 @@
 											</div>
 										</div>
 									</td>
-									<td data-th="Price"><%= product.price %></td>
+									<td data-th="Price" class="productPrice"><%= product.price %></td>
 									<td data-th="Quantity">
-										<input type="number" min="1" class="form-control text-center" value="1">
+										<input type="number" min="1" class="form-control text-center productQuantity" value="1">
 									</td>
-									<td data-th="Subtotal" class="text-center subtotal"><%= product.price %></td>
-
+									<td data-th="Subtotal" class="text-center subtotal"> $1</td>
 								  <form action="cart/delete/<%= product.id %>?_method=DELETE" method="POST">
-									<td colspan="3" class="actions" data-th="">
+									<td colspan="2" class="actions remove" data-th="">
 										<form action="cart/delete" method="POST">
-										<button class="btn btn-danger text-dark text-dark" style="float:right;">Remove Item</button>	
+										<button class="btn btn-danger text-dark text-dark remove w-100 text-center" >Remove Item</button>	
 
 									</form>	
 									</td>
 								</tr>
+
 							  <% } %>
 							<% } %>
 						  <% } %>
@@ -50,8 +50,8 @@
 						<tr>
 							<td class="continueShopping"><a href="/products" class="btn btn-dark ">Continue Shopping</a></td>
 							<td colspan="2" class="hidden-xs"></td>
-							<td colspan="2" class="hidden-xs text-right"><strong>Total $1.99</strong></td>
-							<td><a href="#" class="btn btn-warning btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+							<td colspan="2" class="hidden-xs text-right "><strong>Total $1.99</strong></td>
+							<td><a href="#" class="btn btn-warning btn-block w-100">Checkout <i class="fa fa-angle-right"></i></a></td>
 						</tr>
 					</tfoot>
 				</table>
