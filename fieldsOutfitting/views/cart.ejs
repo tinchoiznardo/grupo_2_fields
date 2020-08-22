@@ -9,7 +9,7 @@
 							<th style="width:50%">Your Products</th>
 							<th style="width:10%">Price</th>
 							<th style="width:8%">Quantity</th>
-							<th style="width:22%" class="text-center subtotal">Subtotal</th>
+							<th style="width:22%" class="subtotal">Subtotal</th>
 							<th style="width:10%"></th>
 						</tr>
 					</thead>
@@ -28,15 +28,15 @@
 										</div>
 									</td>
 									<td data-th="Price" ><p class="priceContainer">$<%= product.price %></p></td>
-									<td data-th="Quantity" class="text-center">
+									<td data-th="Quantity" class="">
 										<%= purchase.quantity %>
 									</td>
-									<td data-th="Subtotal" class="text-center subtotal"><p class="subtotalContainer">$<%= subtotals[purchase.product_id] %></p></td>
+									<td data-th="Subtotal" class=" subtotal"><p class="subtotalContainer">$<%= subtotals[purchase.product_id] %></p></td>
 
 								  <form action="cart/delete/<%= product.id %>?_method=DELETE" method="POST">
-									<td colspan="3" class="actions" data-th="">
+									<td colspan="2" class="actions" data-th="">
 										<form action="cart/delete" method="POST">
-										<button class="btn btn-danger text-dark text-dark" style="float:right;">Remove Item</button>	
+										<button class="btn btn-danger text-dark text-dark text-center w-100" >Remove Item</button>	
 
 									</form>	
 									</td>
@@ -50,8 +50,8 @@
 						<tr>
 							<td class="continueShopping"><a href="/products" class="btn btn-dark ">Continue Shopping</a></td>
 							<td colspan="2" class="hidden-xs"></td>
-							<td colspan="2" class="hidden-xs text-right"><strong>Total $<%= total%></strong></td>
-							<td><a href="#" class="btn btn-warning btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+							<td colspan="2" class="hidden-xs text-right text-center"><strong>Total $<%= total%></strong></td>
+							<td colspan="2"><a href="#" class="btn btn-warning btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
 						</tr>
 					</tfoot>
 				</table>
